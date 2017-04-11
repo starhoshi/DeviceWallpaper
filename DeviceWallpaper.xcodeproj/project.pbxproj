@@ -32,7 +32,7 @@
 		5753D11FBB18425A9E087076 /* Pods-DeviceWallpaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeviceWallpaper.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeviceWallpaper/Pods-DeviceWallpaper.release.xcconfig"; sourceTree = "<group>"; };
 		CF75D06F704A4A0FDEF4E4EF /* Pods-DeviceWallpaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeviceWallpaper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeviceWallpaper/Pods-DeviceWallpaper.debug.xcconfig"; sourceTree = "<group>"; };
 		E350A80F1E9C9C6E00CECF5E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		E350A8121E9C9F0300CECF5E /* DefaultsKeys+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DefaultsKeys+Extension.swift"; path = "DeviceWallpaper/DefaultsKeys+Extension.swift"; sourceTree = SOURCE_ROOT; };
+		E350A8121E9C9F0300CECF5E /* DefaultsKeys+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DefaultsKeys+Extension.swift"; path = "DefaultsKeys+Extension.swift"; sourceTree = "<group>"; };
 		E350A8141E9C9FBD00CECF5E /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		E350A8151E9C9FBD00CECF5E /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		E350A8161E9C9FBD00CECF5E /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
@@ -100,6 +100,7 @@
 				E350A80F1E9C9C6E00CECF5E /* Log.swift */,
 			);
 			name = Utils;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		E363D9B233921FF76428FD7C /* Pods */ = {
@@ -115,9 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				E3803A051E936CBF0024D76E /* DeviceWallpaper */,
-				E3803A041E936CBF0024D76E /* Products */,
-				E363D9B233921FF76428FD7C /* Pods */,
 				A30695E29EC2613C1339A93F /* Frameworks */,
+				E363D9B233921FF76428FD7C /* Pods */,
+				E3803A041E936CBF0024D76E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,13 +133,13 @@
 		E3803A051E936CBF0024D76E /* DeviceWallpaper */ = {
 			isa = PBXGroup;
 			children = (
-				E350A80E1E9C9C6200CECF5E /* Utils */,
 				E393D7121E9C8AEE001CC93D /* Entities */,
 				E393D70F1E9C8ACD001CC93D /* Enums */,
 				E393D7101E9C8AD4001CC93D /* Extensions */,
 				E393D7111E9C8AE1001CC93D /* Modules */,
 				E393D7131E9C8AF6001CC93D /* Networks */,
 				E393D70E1E9C8971001CC93D /* Rosources */,
+				E350A80E1E9C9C6200CECF5E /* Utils */,
 				E3803A061E936CBF0024D76E /* AppDelegate.swift */,
 				E3803A081E936CBF0024D76E /* ViewController.swift */,
 			);
