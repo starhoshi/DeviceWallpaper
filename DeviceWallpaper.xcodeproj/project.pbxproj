@@ -54,14 +54,104 @@
 		E3803A051E936CBF0024D76E /* DeviceWallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				E393D7121E9C8AEE001CC93D /* Entities */,
+				E393D70F1E9C8ACD001CC93D /* Enums */,
+				E393D7101E9C8AD4001CC93D /* Extensions */,
+				E393D7111E9C8AE1001CC93D /* Modules */,
+				E393D7131E9C8AF6001CC93D /* Networks */,
+				E393D70E1E9C8971001CC93D /* Rosources */,
 				E3803A061E936CBF0024D76E /* AppDelegate.swift */,
 				E3803A081E936CBF0024D76E /* ViewController.swift */,
-				E3803A0A1E936CBF0024D76E /* Main.storyboard */,
-				E3803A0D1E936CBF0024D76E /* Assets.xcassets */,
-				E3803A0F1E936CBF0024D76E /* LaunchScreen.storyboard */,
-				E3803A121E936CBF0024D76E /* Info.plist */,
 			);
 			path = DeviceWallpaper;
+			sourceTree = "<group>";
+		};
+		E393D70E1E9C8971001CC93D /* Rosources */ = {
+			isa = PBXGroup;
+			children = (
+				E3803A0D1E936CBF0024D76E /* Assets.xcassets */,
+				E3803A121E936CBF0024D76E /* Info.plist */,
+				E3803A0F1E936CBF0024D76E /* LaunchScreen.storyboard */,
+				E3803A0A1E936CBF0024D76E /* Main.storyboard */,
+			);
+			name = Rosources;
+			path = Rosources;
+			sourceTree = "<group>";
+		};
+		E393D70F1E9C8ACD001CC93D /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Enums;
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		E393D7101E9C8AD4001CC93D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E393D7111E9C8AE1001CC93D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E393D7151E9C8EC0001CC93D /* DefaultWallpaper */,
+				E393D7161E9C8ECC001CC93D /* DetailWallpaper */,
+				E393D7171E9C8ED4001CC93D /* SimpleWallpaper */,
+				E393D7141E9C8D57001CC93D /* WallpaperList */,
+			);
+			name = Modules;
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E393D7121E9C8AEE001CC93D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entities;
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		E393D7131E9C8AF6001CC93D /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Networks;
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		E393D7141E9C8D57001CC93D /* WallpaperList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = WallpaperList;
+			path = WallpaperList;
+			sourceTree = "<group>";
+		};
+		E393D7151E9C8EC0001CC93D /* DefaultWallpaper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DefaultWallpaper;
+			path = DefaultWallpaper;
+			sourceTree = "<group>";
+		};
+		E393D7161E9C8ECC001CC93D /* DetailWallpaper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DetailWallpaper;
+			path = DetailWallpaper;
+			sourceTree = "<group>";
+		};
+		E393D7171E9C8ED4001CC93D /* SimpleWallpaper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SimpleWallpaper;
+			path = SimpleWallpaper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +240,7 @@
 				E3803A0B1E936CBF0024D76E /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		E3803A0F1E936CBF0024D76E /* LaunchScreen.storyboard */ = {
@@ -158,6 +249,7 @@
 				E3803A101E936CBF0024D76E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -261,7 +353,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = DeviceWallpaper/Info.plist;
+				INFOPLIST_FILE = DeviceWallpaper/Rosources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.starhoshi.DeviceWallpaper;
@@ -276,7 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = DeviceWallpaper/Info.plist;
+				INFOPLIST_FILE = DeviceWallpaper/Rosources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.starhoshi.DeviceWallpaper;
@@ -305,6 +397,7 @@
 				E3803A171E936CBF0024D76E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
