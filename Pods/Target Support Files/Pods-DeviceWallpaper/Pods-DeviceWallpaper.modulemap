@@ -1,0 +1,6 @@
+framework module Pods_DeviceWallpaper {
+  umbrella header "Pods-DeviceWallpaper-umbrella.h"
+
+  export *
+  module * { export * }
+}
