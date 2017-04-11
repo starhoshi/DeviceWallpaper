@@ -238,6 +238,7 @@
 				E3803A011E936CBF0024D76E /* Resources */,
 				520454CF3DBBF64F8748BDCB /* [CP] Embed Pods Frameworks */,
 				836E7767C18EF329CDEC7DED /* [CP] Copy Pods Resources */,
+				E379B4F81E9CAA8900D1CDEF /* Run Script - swiftlint */,
 			);
 			buildRules = (
 			);
@@ -364,6 +365,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		E379B4F81E9CAA8900D1CDEF /* Run Script - swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - swiftlint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 

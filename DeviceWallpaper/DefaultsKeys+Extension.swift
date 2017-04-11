@@ -13,8 +13,6 @@ import SwiftyUserDefaults
 extension DefaultsKeys {
     static let initialized = DefaultsKey<Bool>("initialized")
     static let colorTheme = DefaultsKey<UIColor>("colorTheme")
-    
-    
 }
 
 extension UserDefaults {

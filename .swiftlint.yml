@@ -1,0 +1,20 @@
+disabled_rules:
+  - nesting
+  - line_length
+  - function_body_length
+  - identifier_name
+
+excluded:
+  - Carthage
+  - Pods
+  - vendor
+
+type_name:
+  min_length:
+    warning: 3
+  max_length:
+    warning: 60
+  excluded:
+    - GA
+    - ID
+
