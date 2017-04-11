@@ -21,8 +21,3 @@ extension UserDefaults {
         set { archive(key, newValue) }
     }
 }
-
-enum ColorTheme {
-    case white
-    case black
-}

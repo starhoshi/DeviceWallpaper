@@ -16,6 +16,6 @@ protocol RootWireframe: class {
 final class RootRouter: RootWireframe {
     func presentArticlesScreen(in window: UIWindow) {
         window.makeKeyAndVisible()
-//        window.rootViewController = WallpaperListRouter.assembleModule()
+        window.rootViewController = CategoriesRouter.assembleModule()
     }
 }
