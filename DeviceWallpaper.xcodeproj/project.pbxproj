@@ -20,6 +20,7 @@
 		E350A8271E9C9FBD00CECF5E /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81C1E9C9FBD00CECF5E /* SwiftDate.framework */; };
 		E350A8281E9C9FBD00CECF5E /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81D1E9C9FBD00CECF5E /* SwiftyBeaver.framework */; };
 		E350A8291E9C9FBD00CECF5E /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81E1E9C9FBD00CECF5E /* SwiftyUserDefaults.framework */; };
+		E379B4FB1E9CB07400D1CDEF /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E379B4FA1E9CB07400D1CDEF /* RootRouter.swift */; };
 		E3803A071E936CBF0024D76E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3803A061E936CBF0024D76E /* AppDelegate.swift */; };
 		E3803A091E936CBF0024D76E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3803A081E936CBF0024D76E /* ViewController.swift */; };
 		E3803A0C1E936CBF0024D76E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3803A0A1E936CBF0024D76E /* Main.storyboard */; };
@@ -32,7 +33,7 @@
 		5753D11FBB18425A9E087076 /* Pods-DeviceWallpaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeviceWallpaper.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeviceWallpaper/Pods-DeviceWallpaper.release.xcconfig"; sourceTree = "<group>"; };
 		CF75D06F704A4A0FDEF4E4EF /* Pods-DeviceWallpaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeviceWallpaper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeviceWallpaper/Pods-DeviceWallpaper.debug.xcconfig"; sourceTree = "<group>"; };
 		E350A80F1E9C9C6E00CECF5E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		E350A8121E9C9F0300CECF5E /* DefaultsKeys+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DefaultsKeys+Extension.swift"; path = "DefaultsKeys+Extension.swift"; sourceTree = "<group>"; };
+		E350A8121E9C9F0300CECF5E /* DefaultsKeys+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DefaultsKeys+Extension.swift"; sourceTree = "<group>"; };
 		E350A8141E9C9FBD00CECF5E /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		E350A8151E9C9FBD00CECF5E /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		E350A8161E9C9FBD00CECF5E /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
@@ -44,6 +45,7 @@
 		E350A81C1E9C9FBD00CECF5E /* SwiftDate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDate.framework; path = Carthage/Build/iOS/SwiftDate.framework; sourceTree = "<group>"; };
 		E350A81D1E9C9FBD00CECF5E /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		E350A81E1E9C9FBD00CECF5E /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
+		E379B4FA1E9CB07400D1CDEF /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		E3803A031E936CBF0024D76E /* DeviceWallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceWallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3803A061E936CBF0024D76E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3803A081E936CBF0024D76E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,7 +101,6 @@
 			children = (
 				E350A80F1E9C9C6E00CECF5E /* Log.swift */,
 			);
-			name = Utils;
 			path = Utils;
 			sourceTree = "<group>";
 		};
@@ -110,6 +111,15 @@
 				5753D11FBB18425A9E087076 /* Pods-DeviceWallpaper.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E379B4F91E9CB03A00D1CDEF /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				E379B4FA1E9CB07400D1CDEF /* RootRouter.swift */,
+			);
+			name = Root;
+			path = Root;
 			sourceTree = "<group>";
 		};
 		E38039FA1E936CBF0024D76E = {
@@ -177,6 +187,7 @@
 			children = (
 				E393D7151E9C8EC0001CC93D /* DefaultWallpaper */,
 				E393D7161E9C8ECC001CC93D /* DetailWallpaper */,
+				E379B4F91E9CB03A00D1CDEF /* Root */,
 				E393D7171E9C8ED4001CC93D /* SimpleWallpaper */,
 				E393D7141E9C8D57001CC93D /* WallpaperList */,
 			);
@@ -389,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3803A091E936CBF0024D76E /* ViewController.swift in Sources */,
+				E379B4FB1E9CB07400D1CDEF /* RootRouter.swift in Sources */,
 				E3803A071E936CBF0024D76E /* AppDelegate.swift in Sources */,
 				E350A8101E9C9C6E00CECF5E /* Log.swift in Sources */,
 				E350A8131E9C9F0300CECF5E /* DefaultsKeys+Extension.swift in Sources */,
