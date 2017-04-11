@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = Defaults[.colorTheme]
+        log?.info(Defaults[.colorTheme])
         // Do any additional setup after loading the view, typically from a nib.
     }
 

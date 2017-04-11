@@ -1,0 +1,10 @@
+{
+  "xcodeVersion" : "Xcode 8.3.1\nBuild version 8E1000a",
+  "commitish" : "2.1.2",
+  "iOS" : [
+    {
+      "hash" : "9dbde7b4a5ad126ac3facdd72033ef610c202748a35bca0ecac1efc6b3edc0be",
+      "name" : "SVProgressHUD"
+    }
+  ]
+}
