@@ -9,14 +9,6 @@
 import Foundation
 import UIKit.UIViewController
 
-protocol CategoriesWireframe: class {
-    weak var viewController: UIViewController? { get set }
-
-//    func presentSortOptions(sortCompletion: ((ArticlesSortType) -> ())?)
-//    func presentDetails(forArticle article: Article)
-
-    static func assembleModule() -> UIViewController
-}
 
 final class CategoriesRouter: CategoriesWireframe {
     weak var viewController: UIViewController?

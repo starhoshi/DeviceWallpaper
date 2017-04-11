@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4D9DCAA1E2E2AE5F41D81A74 /* Pods_DeviceWallpaper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FABC786E00D464ACCD6F16 /* Pods_DeviceWallpaper.framework */; };
 		E319E89B1E9CB3260082BFDF /* CategoriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E319E89A1E9CB3260082BFDF /* CategoriesRouter.swift */; };
+		E32D05561E9CBB8B009C41D2 /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D05551E9CBB8B009C41D2 /* CategoriesPresenter.swift */; };
+		E32D05581E9CBB9C009C41D2 /* CategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D05571E9CBB9C009C41D2 /* CategoriesInteractor.swift */; };
+		E32D055A1E9CBBD7009C41D2 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D05591E9CBBD7009C41D2 /* CategoriesViewController.swift */; };
+		E32D055D1E9CD017009C41D2 /* CategoriesContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D055C1E9CD017009C41D2 /* CategoriesContract.swift */; };
 		E350A8101E9C9C6E00CECF5E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E350A80F1E9C9C6E00CECF5E /* Log.swift */; };
 		E350A8131E9C9F0300CECF5E /* DefaultsKeys+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E350A8121E9C9F0300CECF5E /* DefaultsKeys+Extension.swift */; };
 		E350A81F1E9C9FBD00CECF5E /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A8141E9C9FBD00CECF5E /* APIKit.framework */; };
@@ -33,7 +37,11 @@
 		52FABC786E00D464ACCD6F16 /* Pods_DeviceWallpaper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeviceWallpaper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5753D11FBB18425A9E087076 /* Pods-DeviceWallpaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeviceWallpaper.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeviceWallpaper/Pods-DeviceWallpaper.release.xcconfig"; sourceTree = "<group>"; };
 		CF75D06F704A4A0FDEF4E4EF /* Pods-DeviceWallpaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeviceWallpaper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeviceWallpaper/Pods-DeviceWallpaper.debug.xcconfig"; sourceTree = "<group>"; };
-		E319E89A1E9CB3260082BFDF /* CategoriesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesRouter.swift; path = CategoriesRouter.swift; sourceTree = "<group>"; };
+		E319E89A1E9CB3260082BFDF /* CategoriesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesRouter.swift; sourceTree = "<group>"; };
+		E32D05551E9CBB8B009C41D2 /* CategoriesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
+		E32D05571E9CBB9C009C41D2 /* CategoriesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesInteractor.swift; sourceTree = "<group>"; };
+		E32D05591E9CBBD7009C41D2 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		E32D055C1E9CD017009C41D2 /* CategoriesContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesContract.swift; sourceTree = "<group>"; };
 		E350A80F1E9C9C6E00CECF5E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		E350A8121E9C9F0300CECF5E /* DefaultsKeys+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DefaultsKeys+Extension.swift"; sourceTree = "<group>"; };
 		E350A8141E9C9FBD00CECF5E /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
@@ -96,6 +104,14 @@
 				52FABC786E00D464ACCD6F16 /* Pods_DeviceWallpaper.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E32D055B1E9CCEC9009C41D2 /* CategoriesContract */ = {
+			isa = PBXGroup;
+			children = (
+				E32D055C1E9CD017009C41D2 /* CategoriesContract.swift */,
+			);
+			name = CategoriesContract;
 			sourceTree = "<group>";
 		};
 		E350A80E1E9C9C6200CECF5E /* Utils */ = {
@@ -212,9 +228,12 @@
 		E393D7141E9C8D57001CC93D /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				E32D055B1E9CCEC9009C41D2 /* CategoriesContract */,
 				E319E89A1E9CB3260082BFDF /* CategoriesRouter.swift */,
+				E32D05551E9CBB8B009C41D2 /* CategoriesPresenter.swift */,
+				E32D05571E9CBB9C009C41D2 /* CategoriesInteractor.swift */,
+				E32D05591E9CBBD7009C41D2 /* CategoriesViewController.swift */,
 			);
-			name = Categories;
 			path = Categories;
 			sourceTree = "<group>";
 		};
@@ -404,10 +423,14 @@
 			files = (
 				E3803A091E936CBF0024D76E /* ViewController.swift in Sources */,
 				E379B4FB1E9CB07400D1CDEF /* RootRouter.swift in Sources */,
+				E32D055A1E9CBBD7009C41D2 /* CategoriesViewController.swift in Sources */,
 				E319E89B1E9CB3260082BFDF /* CategoriesRouter.swift in Sources */,
 				E3803A071E936CBF0024D76E /* AppDelegate.swift in Sources */,
 				E350A8101E9C9C6E00CECF5E /* Log.swift in Sources */,
+				E32D05561E9CBB8B009C41D2 /* CategoriesPresenter.swift in Sources */,
+				E32D05581E9CBB9C009C41D2 /* CategoriesInteractor.swift in Sources */,
 				E350A8131E9C9F0300CECF5E /* DefaultsKeys+Extension.swift in Sources */,
+				E32D055D1E9CD017009C41D2 /* CategoriesContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
