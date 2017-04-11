@@ -8,11 +8,12 @@
 
 import UIKit
 
-
 class CategoriesViewController: UIViewController {
+    var presenter: CategoriesPresentation!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .yellow
 
         // Do any additional setup after loading the view.
     }
@@ -31,5 +32,9 @@ class CategoriesViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
+
+extension CategoriesViewController: CategoriesView {
 
 }

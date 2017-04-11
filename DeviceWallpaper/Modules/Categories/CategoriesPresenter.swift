@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class CategoriesPresenter: CategoriesPresentation {
+    weak var view: CategoriesView?
+    var interactor: CategoriesUseCase!
+    var router: CategoriesWireframe!
+}
+
+extension CategoriesPresenter: CategoriesInteractorOutput {
+
+}

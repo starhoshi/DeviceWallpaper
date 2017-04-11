@@ -9,10 +9,6 @@
 import Foundation
 import UIKit.UIWindow
 
-protocol RootWireframe: class {
-    func presentArticlesScreen(in window: UIWindow)
-}
-
 final class RootRouter: RootWireframe {
     func presentArticlesScreen(in window: UIWindow) {
         window.makeKeyAndVisible()

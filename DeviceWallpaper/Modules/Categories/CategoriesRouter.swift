@@ -9,26 +9,25 @@
 import Foundation
 import UIKit.UIViewController
 
-
 final class CategoriesRouter: CategoriesWireframe {
     weak var viewController: UIViewController?
     static func assembleModule() -> UIViewController {
-        let vc = ViewController()
-//        let presenter = ArticlesPresenter()
-//        let interactor = ArticlesInteractor()
+        let view = CategoriesViewController()
+        let presenter = CategoriesPresenter()
+        let interactor = CategoriesInteractor()
         let router = CategoriesRouter()
-//
-        let navigation = UINavigationController(rootViewController: vc)
 
-//        view?.presenter = presenter
-//
-//        presenter.view = view
-//        presenter.interactor = interactor
-//        presenter.router = router
-//
-//        interactor.output = presenter
-//
-        router.viewController = vc
+        let navigation = UINavigationController(rootViewController: view)
+
+        view.presenter = presenter
+
+        presenter.view = view
+        presenter.interactor = interactor
+        presenter.router = router
+
+        interactor.output = presenter
+
+        router.viewController = view
 
         return navigation
     }

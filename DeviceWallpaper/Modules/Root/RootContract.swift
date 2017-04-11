@@ -1,5 +1,5 @@
 //
-//  CategoriesInteractor.swift
+//  RootContract.swift
 //  DeviceWallpaper
 //
 //  Created by Kensuke Hoshikawa on 2017/04/11.
@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import UIKit.UIWindow
 
-class CategoriesInteractor: CategoriesUseCase {
-    weak var output: CategoriesInteractorOutput!
+protocol RootWireframe: class {
+    func presentArticlesScreen(in window: UIWindow)
 }
