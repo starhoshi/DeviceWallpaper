@@ -112,6 +112,7 @@
 				E32D055C1E9CD017009C41D2 /* CategoriesContract.swift */,
 			);
 			name = CategoriesContract;
+			path = CategoriesContract;
 			sourceTree = "<group>";
 		};
 		E350A80E1E9C9C6200CECF5E /* Utils */ = {
@@ -229,9 +230,9 @@
 			isa = PBXGroup;
 			children = (
 				E32D055B1E9CCEC9009C41D2 /* CategoriesContract */,
-				E319E89A1E9CB3260082BFDF /* CategoriesRouter.swift */,
-				E32D05551E9CBB8B009C41D2 /* CategoriesPresenter.swift */,
 				E32D05571E9CBB9C009C41D2 /* CategoriesInteractor.swift */,
+				E32D05551E9CBB8B009C41D2 /* CategoriesPresenter.swift */,
+				E319E89A1E9CB3260082BFDF /* CategoriesRouter.swift */,
 				E32D05591E9CBBD7009C41D2 /* CategoriesViewController.swift */,
 			);
 			path = Categories;
