@@ -11,6 +11,11 @@ import UIKit
 class CategoriesViewController: UIViewController {
     let tableView = UITableView(frame: .zero, style: .plain)
     var presenter: CategoriesPresentation!
+    var wallpapers: [CategoriesType] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,25 +32,26 @@ class CategoriesViewController: UIViewController {
 }
 
 extension CategoriesViewController: CategoriesView {
-
+    func showWallpapers(_ wallpapers: [CategoriesType]) {
+        self.wallpapers = wallpapers
+    }
 }
 
 extension CategoriesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         log?.debug(indexPath)
     }
-
 }
 
 extension CategoriesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CategoriesType.count
+        return wallpapers.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = CategoriesType(rawValue: indexPath.row)?.title
+        cell.accessoryType = .disclosureIndicator
+        cell.textLabel?.text = wallpapers[indexPath.row].title
         return cell
     }
-
 }

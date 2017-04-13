@@ -12,8 +12,7 @@ import UIKit.UIViewController
 protocol CategoriesView: class {
     var presenter: CategoriesPresentation! { get set }
 
-//    func showNoContentScreen()
-//    func showArticlesData(_ articles: [Article])
+    func showWallpapers(_ articles: [CategoriesType])
 }
 
 protocol CategoriesPresentation: class {
