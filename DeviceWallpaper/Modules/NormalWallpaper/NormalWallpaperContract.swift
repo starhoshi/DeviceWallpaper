@@ -9,28 +9,28 @@
 import Foundation
 import UIKit.UIViewController
 
-//protocol WallpaperListView: class {
-//    var presenter: WallpaperListPresentation! { get set }
+//protocol NormalWallpaperView: class {
+//    var presenter: NormalWallpaperPresentation! { get set }
 //
 //    func show(wallpapers: [WallpapersType])
 //}
 //
-//protocol WallpaperListPresentation: class {
-//    weak var view: WallpaperListView? { get set }
-//    var interactor: WallpaperListUseCase! { get set }
-//    var router: WallpaperListWireframe! { get set }
+//protocol NormalWallpaperPresentation: class {
+//    weak var view: NormalWallpaperView? { get set }
+//    var interactor: NormalWallpaperUseCase! { get set }
+//    var router: NormalWallpaperWireframe! { get set }
 //
 //    func viewDidLoad()
 //    func didSelect(wallpaper: WallpapersType)
 //}
 //
-//protocol WallpaperListUseCase: class {
-//    weak var output: WallpaperListInteractorOutput! { get set }
+//protocol NormalWallpaperUseCase: class {
+//    weak var output: NormalWallpaperInteractorOutput! { get set }
 //
 //    func fetchWallpapers()
 //}
 //
-//protocol WallpaperListInteractorOutput: class {
+//protocol NormalWallpaperInteractorOutput: class {
 //    func wallpapersFetched(_ wallpapers: [WallpapersType])
 //}
 
