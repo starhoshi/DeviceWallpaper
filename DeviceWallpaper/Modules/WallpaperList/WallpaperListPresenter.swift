@@ -25,8 +25,7 @@ final class WallpaperListPresenter: WallpaperListPresentation {
     }
 
     func didSelect(wallpaper: WallpapersType) {
-//        router.presentDetails(for wallpaper: WallpapersType)
-        log?.info(wallpaper)
+        router.present(for: wallpaper)
     }
 }
 

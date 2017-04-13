@@ -37,8 +37,7 @@ protocol WallpaperListInteractorOutput: class {
 protocol WallpaperListWireframe: class {
     weak var viewController: UIViewController? { get set }
 
-//    func presentSortOptions(sortCompletion: ((ArticlesSortType) -> ())?)
-//    func presentDetails(forArticle article: Article)
+    func present(for wallpaper: WallpapersType)
 
     static func assembleModule() -> UIViewController
 }

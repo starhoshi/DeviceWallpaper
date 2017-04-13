@@ -31,4 +31,9 @@ final class WallpaperListRouter: WallpaperListWireframe {
 
         return navigation
     }
+
+    func present(for wallpaper: WallpapersType) {
+        let normalWallpaperModuleViewController = NormalWallpaperRouter.assembleModule()
+        viewController?.navigationController?.pushViewController(normalWallpaperModuleViewController, animated: true)
+    }
 }
