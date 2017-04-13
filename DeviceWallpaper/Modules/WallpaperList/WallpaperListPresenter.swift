@@ -15,12 +15,13 @@ final class WallpaperListPresenter: WallpaperListPresentation {
 
     var wallpapers: [WallpapersType] = [] {
         didSet {
+            log?.info(wallpapers)
             view?.show(wallpapers: wallpapers)
         }
     }
 
     func viewDidLoad() {
-//        interactor.fetchWallpaperList()
+        interactor.fetchWallpapers()
     }
 
     func didSelect(wallpaper: WallpapersType) {

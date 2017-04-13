@@ -13,6 +13,7 @@ final class WallpaperListViewController: UIViewController {
     var presenter: WallpaperListPresentation!
     var wallpapers: [WallpapersType] = [] {
         didSet {
+            log?.info(wallpapers)
             tableView.reloadData()
         }
     }
@@ -23,6 +24,7 @@ final class WallpaperListViewController: UIViewController {
         view = tableView
         tableView.delegate = self
         tableView.dataSource = self
+        presenter.viewDidLoad()
     }
 }
 
