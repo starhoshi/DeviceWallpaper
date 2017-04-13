@@ -34,7 +34,7 @@ extension WallpaperListViewController: WallpaperListView {
 
 extension WallpaperListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        log?.debug(indexPath)
+        presenter.didSelect(wallpaper: wallpapers[indexPath.row])
     }
 }
 

@@ -15,13 +15,9 @@ enum WallpapersType: Int {
 }
 
 extension WallpapersType {
-    public static let count: Int = {
-        var i = 0
-        while WallpapersType(rawValue: i) != nil {
-            i += 1
-        }
-        return i
-    }()
+    public static func toArray() -> [WallpapersType] {
+        return [.normal, .detail, .simple]
+    }
 }
 
 extension WallpapersType {

@@ -27,11 +27,11 @@ protocol WallpaperListPresentation: class {
 protocol WallpaperListUseCase: class {
     weak var output: WallpaperListInteractorOutput! { get set }
 
-//    func fetchArticles()
+    func fetchWallpapers()
 }
 
 protocol WallpaperListInteractorOutput: class {
-
+    func wallpapersFetched(_ wallpapers: [WallpapersType])
 }
 
 protocol WallpaperListWireframe: class {
