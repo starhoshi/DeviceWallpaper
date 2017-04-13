@@ -1,5 +1,5 @@
 //
-//  CategoriesInteractor.swift
+//  WallpaperListInteractor.swift
 //  DeviceWallpaper
 //
 //  Created by Kensuke Hoshikawa on 2017/04/11.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-class CategoriesInteractor: CategoriesUseCase {
-    weak var output: CategoriesInteractorOutput!
+final class WallpaperListInteractor: WallpaperListUseCase {
+    weak var output: WallpaperListInteractorOutput!
 }

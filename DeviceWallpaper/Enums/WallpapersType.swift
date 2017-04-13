@@ -8,23 +8,23 @@
 
 import Foundation
 
-enum CategoriesType: Int {
+enum WallpapersType: Int {
     case normal
     case detail
     case simple
 }
 
-extension CategoriesType {
+extension WallpapersType {
     public static let count: Int = {
         var i = 0
-        while CategoriesType(rawValue: i) != nil {
+        while WallpapersType(rawValue: i) != nil {
             i += 1
         }
         return i
     }()
 }
 
-extension CategoriesType {
+extension WallpapersType {
     var title: String {
         switch self {
         case .normal:

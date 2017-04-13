@@ -12,6 +12,6 @@ import UIKit.UIWindow
 final class RootRouter: RootWireframe {
     func presentArticlesScreen(in window: UIWindow) {
         window.makeKeyAndVisible()
-        window.rootViewController = CategoriesRouter.assembleModule()
+        window.rootViewController = WallpaperListRouter.assembleModule()
     }
 }

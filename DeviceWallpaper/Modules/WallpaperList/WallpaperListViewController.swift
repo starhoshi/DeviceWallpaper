@@ -1,5 +1,5 @@
 //
-//  CategoriesViewController.swift
+//  WallpaperListViewController.swift
 //  DeviceWallpaper
 //
 //  Created by Kensuke Hoshikawa on 2017/04/11.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CategoriesViewController: UIViewController {
+final class WallpaperListViewController: UIViewController {
     let tableView = UITableView(frame: .zero, style: .plain)
-    var presenter: CategoriesPresentation!
-    var wallpapers: [CategoriesType] = [] {
+    var presenter: WallpaperListPresentation!
+    var wallpapers: [WallpapersType] = [] {
         didSet {
             tableView.reloadData()
         }
@@ -24,26 +24,21 @@ class CategoriesViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
 
-extension CategoriesViewController: CategoriesView {
-    func showWallpapers(_ wallpapers: [CategoriesType]) {
+extension WallpaperListViewController: WallpaperListView {
+    func show(wallpapers: [WallpapersType]) {
         self.wallpapers = wallpapers
     }
 }
 
-extension CategoriesViewController: UITableViewDelegate {
+extension WallpaperListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         log?.debug(indexPath)
     }
 }
 
-extension CategoriesViewController: UITableViewDataSource {
+extension WallpaperListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return wallpapers.count
     }

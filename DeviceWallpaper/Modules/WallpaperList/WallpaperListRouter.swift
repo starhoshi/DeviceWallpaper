@@ -1,5 +1,5 @@
 //
-//  CategoriesRouter.swift
+//  WallpaperListRouter.swift
 //  DeviceWallpaper
 //
 //  Created by Kensuke Hoshikawa on 2017/04/11.
@@ -9,13 +9,13 @@
 import Foundation
 import UIKit.UIViewController
 
-final class CategoriesRouter: CategoriesWireframe {
+final class WallpaperListRouter: WallpaperListWireframe {
     weak var viewController: UIViewController?
     static func assembleModule() -> UIViewController {
-        let view = CategoriesViewController()
-        let presenter = CategoriesPresenter()
-        let interactor = CategoriesInteractor()
-        let router = CategoriesRouter()
+        let view = WallpaperListViewController()
+        let presenter = WallpaperListPresenter()
+        let interactor = WallpaperListInteractor()
+        let router = WallpaperListRouter()
 
         let navigation = UINavigationController(rootViewController: view)
 
