@@ -26,6 +26,13 @@ final class WallpaperListViewController: UIViewController {
         tableView.dataSource = self
         presenter.viewDidLoad()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPathForSelectedRow, animated: true)
+        }
+    }
 }
 
 extension WallpaperListViewController: WallpaperListView {
