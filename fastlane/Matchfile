@@ -1,0 +1,7 @@
+git_url "git@github.com:starhoshi/certificates.git"
+
+type "development"
+
+app_identifier ["com.DeviceWallpaper"]
+username "kensuke1751@gmail.com"
+
