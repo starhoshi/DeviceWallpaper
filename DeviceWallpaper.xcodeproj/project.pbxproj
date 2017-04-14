@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D9DCAA1E2E2AE5F41D81A74 /* Pods_DeviceWallpaper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FABC786E00D464ACCD6F16 /* Pods_DeviceWallpaper.framework */; };
 		E319E89B1E9CB3260082BFDF /* WallpaperListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E319E89A1E9CB3260082BFDF /* WallpaperListRouter.swift */; };
+		E32B1CFC1EA065AF00F9BEF8 /* NormalWallpaperInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32B1CFB1EA065AF00F9BEF8 /* NormalWallpaperInteractor.swift */; };
 		E32D05561E9CBB8B009C41D2 /* WallpaperListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D05551E9CBB8B009C41D2 /* WallpaperListPresenter.swift */; };
 		E32D05581E9CBB9C009C41D2 /* WallpaperListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D05571E9CBB9C009C41D2 /* WallpaperListInteractor.swift */; };
 		E32D055A1E9CBBD7009C41D2 /* WallpaperListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D05591E9CBBD7009C41D2 /* WallpaperListViewController.swift */; };
@@ -42,16 +43,17 @@
 		5753D11FBB18425A9E087076 /* Pods-DeviceWallpaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeviceWallpaper.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeviceWallpaper/Pods-DeviceWallpaper.release.xcconfig"; sourceTree = "<group>"; };
 		CF75D06F704A4A0FDEF4E4EF /* Pods-DeviceWallpaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeviceWallpaper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeviceWallpaper/Pods-DeviceWallpaper.debug.xcconfig"; sourceTree = "<group>"; };
 		E319E89A1E9CB3260082BFDF /* WallpaperListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperListRouter.swift; sourceTree = "<group>"; };
+		E32B1CFB1EA065AF00F9BEF8 /* NormalWallpaperInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalWallpaperInteractor.swift; sourceTree = "<group>"; };
 		E32D05551E9CBB8B009C41D2 /* WallpaperListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperListPresenter.swift; sourceTree = "<group>"; };
 		E32D05571E9CBB9C009C41D2 /* WallpaperListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperListInteractor.swift; sourceTree = "<group>"; };
 		E32D05591E9CBBD7009C41D2 /* WallpaperListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperListViewController.swift; sourceTree = "<group>"; };
 		E32D055C1E9CD017009C41D2 /* WallpaperListContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperListContract.swift; sourceTree = "<group>"; };
 		E32D055E1E9CD497009C41D2 /* RootContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootContract.swift; sourceTree = "<group>"; };
 		E32D05601E9CE499009C41D2 /* WallpapersType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpapersType.swift; sourceTree = "<group>"; };
-		E32D05621E9F469A009C41D2 /* NormalWallpaperContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NormalWallpaperContract.swift; path = NormalWallpaperContract.swift; sourceTree = "<group>"; };
-		E32D05641E9F46F7009C41D2 /* NormalWallpaperPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NormalWallpaperPresenter.swift; path = NormalWallpaperPresenter.swift; sourceTree = "<group>"; };
-		E32D05661E9F4705009C41D2 /* NormalWallpaperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NormalWallpaperViewController.swift; path = NormalWallpaperViewController.swift; sourceTree = "<group>"; };
-		E32D05681E9F48B4009C41D2 /* NormalWallpaperRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NormalWallpaperRouter.swift; path = NormalWallpaperRouter.swift; sourceTree = "<group>"; };
+		E32D05621E9F469A009C41D2 /* NormalWallpaperContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalWallpaperContract.swift; sourceTree = "<group>"; };
+		E32D05641E9F46F7009C41D2 /* NormalWallpaperPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalWallpaperPresenter.swift; sourceTree = "<group>"; };
+		E32D05661E9F4705009C41D2 /* NormalWallpaperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalWallpaperViewController.swift; sourceTree = "<group>"; };
+		E32D05681E9F48B4009C41D2 /* NormalWallpaperRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalWallpaperRouter.swift; sourceTree = "<group>"; };
 		E350A80F1E9C9C6E00CECF5E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		E350A8121E9C9F0300CECF5E /* DefaultsKeys+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DefaultsKeys+Extension.swift"; sourceTree = "<group>"; };
 		E350A8141E9C9FBD00CECF5E /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				E32D05621E9F469A009C41D2 /* NormalWallpaperContract.swift */,
 				E32D05641E9F46F7009C41D2 /* NormalWallpaperPresenter.swift */,
 				E32D05681E9F48B4009C41D2 /* NormalWallpaperRouter.swift */,
+				E32B1CFB1EA065AF00F9BEF8 /* NormalWallpaperInteractor.swift */,
 				E32D05661E9F4705009C41D2 /* NormalWallpaperViewController.swift */,
 			);
 			path = NormalWallpaper;
@@ -438,6 +441,7 @@
 				E319E89B1E9CB3260082BFDF /* WallpaperListRouter.swift in Sources */,
 				E3803A071E936CBF0024D76E /* AppDelegate.swift in Sources */,
 				E350A8101E9C9C6E00CECF5E /* Log.swift in Sources */,
+				E32B1CFC1EA065AF00F9BEF8 /* NormalWallpaperInteractor.swift in Sources */,
 				E32D05561E9CBB8B009C41D2 /* WallpaperListPresenter.swift in Sources */,
 				E32D05631E9F469A009C41D2 /* NormalWallpaperContract.swift in Sources */,
 				E32D05581E9CBB9C009C41D2 /* WallpaperListInteractor.swift in Sources */,

@@ -13,17 +13,17 @@ final class NormalWallpaperRouter: NormalWallpaperWireframe {
     weak var viewController: UIViewController?
     static func assembleModule() -> UIViewController {
         let view = NormalWallpaperViewController()
-//        let presenter = WallpaperListPresenter()
-//        let interactor = WallpaperListInteractor()
+        let presenter = NormalWallpaperPresenter()
+        let interactor = NormalWallpaperInteractor()
         let router = NormalWallpaperRouter()
 
-//        view.presenter = presenter
+        view.presenter = presenter
 
-//        presenter.view = view
-//        presenter.interactor = interactor
-//        presenter.router = router
+        presenter.view = view
+        presenter.interactor = interactor
+        presenter.router = router
 
-//        interactor.output = presenter
+        interactor.output = presenter
 
         router.viewController = view
 

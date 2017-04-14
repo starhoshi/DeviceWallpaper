@@ -9,9 +9,22 @@
 import UIKit
 
 class NormalWallpaperViewController: UIViewController {
+    var presenter: NormalWallpaperPresentation!
+    var wallpaper: String = "" {
+        didSet {
+            navigationItem.title = wallpaper
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        presenter.viewDidLoad()
+    }
+}
+
+extension NormalWallpaperViewController: NormalWallpaperView {
+    func show(wallpaper: String) {
+        self.wallpaper = wallpaper
     }
 }
