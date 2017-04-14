@@ -22,7 +22,6 @@ final class NormalWallpaperPresenter: NormalWallpaperPresentation {
     func viewDidLoad() {
         interactor.fetchWallpaper()
     }
-
 }
 
 extension NormalWallpaperPresenter: NormalWallpaperInteractorOutput {

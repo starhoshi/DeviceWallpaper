@@ -10,6 +10,7 @@
 		4D9DCAA1E2E2AE5F41D81A74 /* Pods_DeviceWallpaper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FABC786E00D464ACCD6F16 /* Pods_DeviceWallpaper.framework */; };
 		E319E89B1E9CB3260082BFDF /* WallpaperListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E319E89A1E9CB3260082BFDF /* WallpaperListRouter.swift */; };
 		E32B1CFC1EA065AF00F9BEF8 /* NormalWallpaperInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32B1CFB1EA065AF00F9BEF8 /* NormalWallpaperInteractor.swift */; };
+		E32B1D011EA0755900F9BEF8 /* SimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32B1D001EA0755900F9BEF8 /* SimpleView.swift */; };
 		E32D05561E9CBB8B009C41D2 /* WallpaperListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D05551E9CBB8B009C41D2 /* WallpaperListPresenter.swift */; };
 		E32D05581E9CBB9C009C41D2 /* WallpaperListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D05571E9CBB9C009C41D2 /* WallpaperListInteractor.swift */; };
 		E32D055A1E9CBBD7009C41D2 /* WallpaperListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D05591E9CBBD7009C41D2 /* WallpaperListViewController.swift */; };
@@ -44,6 +45,7 @@
 		CF75D06F704A4A0FDEF4E4EF /* Pods-DeviceWallpaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeviceWallpaper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeviceWallpaper/Pods-DeviceWallpaper.debug.xcconfig"; sourceTree = "<group>"; };
 		E319E89A1E9CB3260082BFDF /* WallpaperListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperListRouter.swift; sourceTree = "<group>"; };
 		E32B1CFB1EA065AF00F9BEF8 /* NormalWallpaperInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalWallpaperInteractor.swift; sourceTree = "<group>"; };
+		E32B1D001EA0755900F9BEF8 /* SimpleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleView.swift; sourceTree = "<group>"; };
 		E32D05551E9CBB8B009C41D2 /* WallpaperListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperListPresenter.swift; sourceTree = "<group>"; };
 		E32D05571E9CBB9C009C41D2 /* WallpaperListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperListInteractor.swift; sourceTree = "<group>"; };
 		E32D05591E9CBBD7009C41D2 /* WallpaperListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperListViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,15 @@
 				52FABC786E00D464ACCD6F16 /* Pods_DeviceWallpaper.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E32B1CFD1EA0753A00F9BEF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E32B1D001EA0755900F9BEF8 /* SimpleView.swift */,
+			);
+			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		E32D055B1E9CCEC9009C41D2 /* WallpaperListContract */ = {
@@ -250,6 +261,7 @@
 		E393D7151E9C8EC0001CC93D /* NormalWallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				E32B1CFD1EA0753A00F9BEF8 /* View */,
 				E32D05621E9F469A009C41D2 /* NormalWallpaperContract.swift */,
 				E32B1CFB1EA065AF00F9BEF8 /* NormalWallpaperInteractor.swift */,
 				E32D05641E9F46F7009C41D2 /* NormalWallpaperPresenter.swift */,
@@ -439,6 +451,7 @@
 				E379B4FB1E9CB07400D1CDEF /* RootRouter.swift in Sources */,
 				E32D055A1E9CBBD7009C41D2 /* WallpaperListViewController.swift in Sources */,
 				E319E89B1E9CB3260082BFDF /* WallpaperListRouter.swift in Sources */,
+				E32B1D011EA0755900F9BEF8 /* SimpleView.swift in Sources */,
 				E3803A071E936CBF0024D76E /* AppDelegate.swift in Sources */,
 				E350A8101E9C9C6E00CECF5E /* Log.swift in Sources */,
 				E32B1CFC1EA065AF00F9BEF8 /* NormalWallpaperInteractor.swift in Sources */,

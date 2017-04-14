@@ -9,14 +9,14 @@
 import Foundation
 
 enum WallpapersType: Int {
+    case simple
     case normal
     case detail
-    case simple
 }
 
 extension WallpapersType {
     public static func toArray() -> [WallpapersType] {
-        return [.normal, .detail, .simple]
+        return [.simple, .normal, .detail]
     }
 }
 
