@@ -12,17 +12,17 @@ final class NormalWallpaperPresenter: NormalWallpaperPresentation {
     weak var view: NormalWallpaperView?
     var interactor: NormalWallpaperUseCase!
     var router: NormalWallpaperWireframe!
-    
+
     var wallpaper: String = "" {
         didSet {
             view?.show(wallpaper: wallpaper)
         }
     }
-    
+
     func viewDidLoad() {
         interactor.fetchWallpaper()
     }
-    
+
 }
 
 extension NormalWallpaperPresenter: NormalWallpaperInteractorOutput {

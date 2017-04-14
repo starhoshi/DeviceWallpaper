@@ -251,9 +251,9 @@
 			isa = PBXGroup;
 			children = (
 				E32D05621E9F469A009C41D2 /* NormalWallpaperContract.swift */,
+				E32B1CFB1EA065AF00F9BEF8 /* NormalWallpaperInteractor.swift */,
 				E32D05641E9F46F7009C41D2 /* NormalWallpaperPresenter.swift */,
 				E32D05681E9F48B4009C41D2 /* NormalWallpaperRouter.swift */,
-				E32B1CFB1EA065AF00F9BEF8 /* NormalWallpaperInteractor.swift */,
 				E32D05661E9F4705009C41D2 /* NormalWallpaperViewController.swift */,
 			);
 			path = NormalWallpaper;
