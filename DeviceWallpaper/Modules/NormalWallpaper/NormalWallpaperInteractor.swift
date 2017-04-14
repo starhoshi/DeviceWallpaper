@@ -13,5 +13,6 @@ final class NormalWallpaperInteractor: NormalWallpaperUseCase {
 
     func fetchWallpaper() {
         output.wallpaperFetched("wallpaper")
+        log?.warning(Device())
     }
 }
