@@ -11,24 +11,23 @@ import UIKit
 import SnapKit
 
 final class SimpleView: UIView {
-    let osLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = .white
-        label.font = UIFont.systemFont(ofSize: 300)
-        label.adjustsFontSizeToFitWidth = true
+    let osLabel: GradientLabel = {
+        let label = GradientLabel()
+        label.font = UIFont(name: "HelveticaNeue-UltraLight", size: 300)
+        label.textAlignment = .center
+
         return label
     }()
 
     init() {
         super.init(frame: .zero)
-        backgroundColor = UIColor.darkGray
+        backgroundColor = UIColor.white
 
         addSubview(osLabel)
-        osLabel.text = "10"
+        osLabel.text = "7"
         osLabel.snp.makeConstraints { make in
             make.top.equalTo(100)
-            make.left.equalTo(20)
-            make.right.equalTo(-20)
+            make.left.right.equalTo(0)
         }
     }
 
