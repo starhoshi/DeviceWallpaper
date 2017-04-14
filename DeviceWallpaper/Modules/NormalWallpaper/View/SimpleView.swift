@@ -19,15 +19,32 @@ final class SimpleView: UIView {
         return label
     }()
 
+    let nameLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .darkGray
+        label.font = UIFont(name: "AvenirNext-UltraLight", size: 50)
+        label.textAlignment = .center
+
+        return label
+    }()
+
     init() {
         super.init(frame: .zero)
         backgroundColor = UIColor.white
 
         addSubview(osLabel)
-        osLabel.text = "7"
+        osLabel.text = "10"
         osLabel.snp.makeConstraints { make in
             make.top.equalTo(100)
             make.left.right.equalTo(0)
+        }
+
+        addSubview(nameLabel)
+        nameLabel.text = "iPhone 7"
+        nameLabel.snp.makeConstraints { make in
+            make.left.right.equalTo(0)
+            make.bottom.equalTo(-100)
+            make.height.equalTo(100)
         }
     }
 
