@@ -15,7 +15,7 @@ final class NormalWallpaperPresenter: NormalWallpaperPresentation {
 
     var wallpaper: String = "" {
         didSet {
-            view?.show(wallpaper: wallpaper)
+            view?.showSimple(wallpaper: wallpaper)
         }
     }
 

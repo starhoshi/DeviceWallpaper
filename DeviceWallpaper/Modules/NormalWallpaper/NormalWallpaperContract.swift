@@ -12,7 +12,7 @@ import UIKit.UIViewController
 protocol NormalWallpaperView: class {
     var presenter: NormalWallpaperPresentation! { get set }
 
-    func show(wallpaper: String)
+    func showSimple(wallpaper: String)
 }
 
 protocol NormalWallpaperPresentation: class {
