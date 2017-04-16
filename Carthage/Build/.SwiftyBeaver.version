@@ -1,9 +1,9 @@
 {
   "xcodeVersion" : "Xcode 8.3.1\nBuild version 8E1000a",
-  "commitish" : "1.1.4",
+  "commitish" : "1.2.0",
   "iOS" : [
     {
-      "hash" : "57f1323eb83e02ebafa9db5f032d2d152ac267a4e9924c67f97a55d46c3ba659",
+      "hash" : "007f39bb4dab724c32c9d304b86ce766e757d3d1bfa27872b207d2755ea50398",
       "name" : "SwiftyBeaver"
     }
   ]

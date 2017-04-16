@@ -1,0 +1,10 @@
+{
+  "xcodeVersion" : "Xcode 8.3.1\nBuild version 8E1000a",
+  "commitish" : "3.0.1",
+  "iOS" : [
+    {
+      "hash" : "78cf9efa78c6c1716793956defd9e41660226e03fea31d14f3e3a20d4fb72392",
+      "name" : "Device"
+    }
+  ]
+}

@@ -27,8 +27,6 @@
 		E350A81F1E9C9FBD00CECF5E /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A8141E9C9FBD00CECF5E /* APIKit.framework */; };
 		E350A8201E9C9FBD00CECF5E /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A8151E9C9FBD00CECF5E /* ObjectMapper.framework */; };
 		E350A8211E9C9FBD00CECF5E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A8161E9C9FBD00CECF5E /* Result.framework */; };
-		E350A8221E9C9FBD00CECF5E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A8171E9C9FBD00CECF5E /* RxCocoa.framework */; };
-		E350A8231E9C9FBD00CECF5E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A8181E9C9FBD00CECF5E /* RxSwift.framework */; };
 		E350A8251E9C9FBD00CECF5E /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81A1E9C9FBD00CECF5E /* SnapKit.framework */; };
 		E350A8261E9C9FBD00CECF5E /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81B1E9C9FBD00CECF5E /* SVProgressHUD.framework */; };
 		E350A8271E9C9FBD00CECF5E /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81C1E9C9FBD00CECF5E /* SwiftDate.framework */; };
@@ -39,6 +37,7 @@
 		E3803A071E936CBF0024D76E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3803A061E936CBF0024D76E /* AppDelegate.swift */; };
 		E3803A0E1E936CBF0024D76E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3803A0D1E936CBF0024D76E /* Assets.xcassets */; };
 		E3803A111E936CBF0024D76E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3803A0F1E936CBF0024D76E /* LaunchScreen.storyboard */; };
+		E3CF2C641EA3C4F00098706F /* Device.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CF2C631EA3C4F00098706F /* Device.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +78,7 @@
 		E3803A0D1E936CBF0024D76E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3803A101E936CBF0024D76E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3803A121E936CBF0024D76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3CF2C631EA3C4F00098706F /* Device.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Device.framework; path = Carthage/Build/iOS/Device.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,10 +90,9 @@
 				E350A81F1E9C9FBD00CECF5E /* APIKit.framework in Frameworks */,
 				E350A8201E9C9FBD00CECF5E /* ObjectMapper.framework in Frameworks */,
 				E350A8211E9C9FBD00CECF5E /* Result.framework in Frameworks */,
-				E350A8221E9C9FBD00CECF5E /* RxCocoa.framework in Frameworks */,
-				E350A8231E9C9FBD00CECF5E /* RxSwift.framework in Frameworks */,
 				E350A8251E9C9FBD00CECF5E /* SnapKit.framework in Frameworks */,
 				E350A8261E9C9FBD00CECF5E /* SVProgressHUD.framework in Frameworks */,
+				E3CF2C641EA3C4F00098706F /* Device.framework in Frameworks */,
 				E350A8271E9C9FBD00CECF5E /* SwiftDate.framework in Frameworks */,
 				E350A8281E9C9FBD00CECF5E /* SwiftyBeaver.framework in Frameworks */,
 				E350A8291E9C9FBD00CECF5E /* SwiftyUserDefaults.framework in Frameworks */,
@@ -106,6 +105,7 @@
 		A30695E29EC2613C1339A93F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E3CF2C631EA3C4F00098706F /* Device.framework */,
 				E350A8141E9C9FBD00CECF5E /* APIKit.framework */,
 				E350A8151E9C9FBD00CECF5E /* ObjectMapper.framework */,
 				E350A8161E9C9FBD00CECF5E /* Result.framework */,
@@ -421,9 +421,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftDate.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Device.framework",
 			);
 			name = "Run Script - Carthage";
 			outputPaths = (
