@@ -3,7 +3,7 @@
   "commitish" : "3.1.2",
   "iOS" : [
     {
-      "hash" : "7b26d8157d7131c0947a121685e4194eba7325f7aa4f8c70efb848e258eebc05",
+      "hash" : "b69b247e14a53d6cb340f14668961f2d04771472c6f2b99eefeb16df68f6b24b",
       "name" : "APIKit"
     }
   ]
