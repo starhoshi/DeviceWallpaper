@@ -13,7 +13,7 @@ import SnapKit
 final class SimpleView: UIView {
     let osLabel: GradientLabel = {
         let label = GradientLabel()
-        label.font = UIFont(name: "HelveticaNeue-UltraLight", size: 300)
+        label.font = UIFont(name: "HelveticaNeue-UltraLight", size: 200)
         label.textAlignment = .center
 
         return label
