@@ -11,7 +11,7 @@ import UIKit.UIDevice
 import Device
 
 struct DeviceModel {
-    var name: String
+    var phoneName: String
     var model: String
     var localizedModel: String
     var systemName: String
@@ -24,12 +24,12 @@ struct DeviceModel {
     var versionLevel: String
 
     init() {
-        name = UIDevice.current.name
+        phoneName = UIDevice.current.name
         model = UIDevice.current.model
         localizedModel = UIDevice.current.localizedModel
         systemName = UIDevice.current.systemName
         multiTaskEnabled = UIDevice.current.isMultitaskingSupported
-        modelName = Device.version().rawValue
+        modelName = Device.version().modelName
         systemVersion = SystemVersion()
 
         var systemInfo = utsname()
