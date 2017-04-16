@@ -8,14 +8,16 @@
 
 import Foundation
 import UIKit.UIDevice
+import Device
 
-struct Device {
+struct DeviceModel {
     var name: String
     var model: String
     var localizedModel: String
     var systemName: String
     var systemVersion: String
     var multiTaskEnabled: Bool
+    var modelName: String
     var os: String
     var hardware: String
     var releaseLevel: String
@@ -28,6 +30,7 @@ struct Device {
         systemName = UIDevice.current.systemName
         systemVersion = UIDevice.current.systemVersion
         multiTaskEnabled = UIDevice.current.isMultitaskingSupported
+        modelName = Device.version().rawValue
 
         var systemInfo = utsname()
         uname(&systemInfo)
