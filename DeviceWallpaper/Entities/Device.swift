@@ -15,10 +15,10 @@ struct DeviceModel {
     var model: String
     var localizedModel: String
     var systemName: String
-    var systemVersion: String
     var multiTaskEnabled: Bool
     var modelName: String
-    var os: String
+    var systemVersion: SystemVersion
+    var osName: String
     var hardware: String
     var releaseLevel: String
     var versionLevel: String
@@ -28,19 +28,16 @@ struct DeviceModel {
         model = UIDevice.current.model
         localizedModel = UIDevice.current.localizedModel
         systemName = UIDevice.current.systemName
-        systemVersion = UIDevice.current.systemVersion
         multiTaskEnabled = UIDevice.current.isMultitaskingSupported
         modelName = Device.version().rawValue
+        systemVersion = SystemVersion()
 
         var systemInfo = utsname()
         uname(&systemInfo)
 
-        os = String(validatingUTF8: NSString(bytes: &systemInfo.sysname, length: Int(_SYS_NAMELEN), encoding: String.Encoding.ascii.rawValue)!.utf8String!)!
-
+        osName = String(validatingUTF8: NSString(bytes: &systemInfo.sysname, length: Int(_SYS_NAMELEN), encoding: String.Encoding.ascii.rawValue)!.utf8String!)!
         releaseLevel = String(validatingUTF8: NSString(bytes: &systemInfo.release, length: Int(_SYS_NAMELEN), encoding: String.Encoding.ascii.rawValue)!.utf8String!)!
-
         versionLevel = String(validatingUTF8: NSString(bytes: &systemInfo.version, length: Int(_SYS_NAMELEN), encoding: String.Encoding.ascii.rawValue)!.utf8String!)!
-
         hardware = String(validatingUTF8: NSString(bytes: &systemInfo.machine, length: Int(_SYS_NAMELEN), encoding: String.Encoding.ascii.rawValue)!.utf8String!)!
     }
 }
