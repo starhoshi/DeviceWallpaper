@@ -12,8 +12,11 @@ import SnapKit
 
 final class SimpleView: UIView {
     let osLabel: GradientLabel = {
-        let label = GradientLabel()
-        label.font = UIFont(name: "HelveticaNeue-UltraLight", size: 200)
+        let width = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+        let osLabelWidth = width - (width * 0.3)
+
+        let label = GradientLabel(frame: CGRect(x: 0, y: 0, width: osLabelWidth, height: osLabelWidth))
+        label.font = UIFont(name: "HelveticaNeue-UltraLight", size: CGFloat(osLabelWidth))
         label.textAlignment = .center
 
         return label
@@ -35,14 +38,14 @@ final class SimpleView: UIView {
         addSubview(osLabel)
         osLabel.text = deviceModel.systemVersion.major
         osLabel.snp.makeConstraints { make in
-            make.top.equalTo(100)
-            make.left.right.equalTo(0)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-100)
         }
 
         addSubview(nameLabel)
         nameLabel.text = deviceModel.modelName
         nameLabel.snp.makeConstraints { make in
-            make.left.right.equalTo(0)
+            make.centerX.equalToSuperview()
             make.bottom.equalTo(-100)
             make.height.equalTo(100)
         }
