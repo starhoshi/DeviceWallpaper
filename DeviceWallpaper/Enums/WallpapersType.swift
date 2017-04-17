@@ -11,24 +11,25 @@ import Foundation
 enum WallpapersType: Int {
     case simple
     case normal
-    case detail
+//    case detail
 }
 
 extension WallpapersType {
     public static func toArray() -> [WallpapersType] {
-        return [.simple, .normal, .detail]
+//        return [.simple, .normal, .detail]
+        return [.simple, .normal]
     }
 }
 
 extension WallpapersType {
     var title: String {
         switch self {
-        case .normal:
-            return "Normal Wallpaper"
-        case .detail:
-            return "Detail Wallpaper"
         case .simple:
             return "Simple Wallpaper"
+        case .normal:
+            return "Normal Wallpaper"
+//        case .detail:
+//            return "Detail Wallpaper"
         }
     }
 }
