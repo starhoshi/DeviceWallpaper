@@ -18,6 +18,7 @@ struct DeviceModel {
     var multiTaskEnabled: Bool
     var modelName: String
     var systemVersion: SystemVersion
+    var type: Type
     var osName: String
     var hardware: String
     var releaseLevel: String
@@ -31,6 +32,7 @@ struct DeviceModel {
         multiTaskEnabled = UIDevice.current.isMultitaskingSupported
         modelName = Device.version().modelName
         systemVersion = SystemVersion()
+        type = Device.type()
 
         var systemInfo = utsname()
         uname(&systemInfo)

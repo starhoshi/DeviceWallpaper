@@ -26,6 +26,7 @@ final class SimpleView: UIView {
         let label = UILabel()
         label.textColor = .darkGray
         label.font = UIFont(name: "AvenirNext-UltraLight", size: 50)
+        label.numberOfLines = 0
         label.textAlignment = .center
 
         return label
@@ -45,9 +46,13 @@ final class SimpleView: UIView {
         addSubview(nameLabel)
         nameLabel.text = deviceModel.modelName
         nameLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.bottom.equalTo(-100)
-            make.height.equalTo(100)
+            make.left.right.equalTo(0)
+            switch deviceModel.type {
+            case .iPad:
+                make.bottom.equalTo(-140)
+            default:
+                make.bottom.equalTo(-90)
+            }
         }
     }
 

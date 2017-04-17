@@ -1,5 +1,5 @@
 //
-//  Device+Ex.swift
+//  DeviceVersion+Ex.swift
 //  DeviceWallpaper
 //
 //  Created by Kensuke Hoshikawa on 2017/04/17.
@@ -37,21 +37,21 @@ extension Version {
         case .iPhone7Plus:
             return "iPhone 7 Plus"
         case .iPad1:
-            return "iPad (1st Generation)"
+            return "iPad 1st Generation"
         case .iPad2:
-            return "iPad (2nd Generation)"
+            return "iPad 2nd Generation"
         case .iPad3:
-            return "iPad (3rd Generation)"
+            return "iPad 3rd Generation"
         case .iPad4:
-            return "iPad (4th Generation)"
+            return "iPad 4th Generation"
         case .iPad5:
-            return "iPad (5th Generation)"
+            return "iPad 5th Generation"
         case .iPadAir:
             return "iPad Air"
         case .iPadAir2:
             return "iPad Air 2"
         case .iPadMini:
-            return "iPad Mini (1st Generation)"
+            return "iPad Mini 1st Generation"
         case .iPadMini2:
             return "iPad Mini 2"
         case .iPadMini3:
@@ -59,21 +59,21 @@ extension Version {
         case .iPadMini4:
             return "iPad Mini 4"
         case .iPadPro9_7Inch:
-            return "iPad Pro (9.7 inch)"
+            return "iPad Pro 9.7 inch"
         case .iPadPro12_9Inch:
-            return "iPad Pro (12.9 inch)"
+            return "iPad Pro 12.9 inch"
         case .iPodTouch1Gen:
-            return "iPod Touch (1st Generation)"
+            return "iPod Touch 1st Generation"
         case .iPodTouch2Gen:
-            return "iPod Touch (2nd Generation)"
+            return "iPod Touch 2nd Generation"
         case .iPodTouch3Gen:
-            return "iPod Touch (3rd Generation)"
+            return "iPod Touch 3rd Generation"
         case .iPodTouch4Gen:
-            return "iPod Touch (4th Generation)"
+            return "iPod Touch 4th Generation"
         case .iPodTouch5Gen:
-            return "iPod Touch (5th Generation)"
+            return "iPod Touch 5th Generation"
         case .iPodTouch6Gen:
-            return "iPod Touch (6th Generation)"
+            return "iPod Touch 6th Generation"
         case .simulator:
             return "Simulator"
         case .unknown:
