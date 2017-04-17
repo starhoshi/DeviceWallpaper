@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import SnapKit
 
 final class WallpaperListViewController: UIViewController {
     let tableView = UITableView(frame: .zero, style: .plain)
     var presenter: WallpaperListPresentation!
     var wallpapers: [WallpapersType] = [] {
         didSet {
-            log?.info(wallpapers)
             tableView.reloadData()
         }
     }
@@ -21,9 +21,14 @@ final class WallpaperListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Menu"
+        if #available(iOS 9, *) {
+            tableView.cellLayoutMarginsFollowReadableWidth = false
+        }
+        tableView.updateConstraintsIfNeeded()
         view = tableView
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.description())
         presenter.viewDidLoad()
     }
 
@@ -53,7 +58,7 @@ extension WallpaperListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.description())!
         cell.accessoryType = .disclosureIndicator
         cell.textLabel?.text = wallpapers[indexPath.row].title
         return cell
