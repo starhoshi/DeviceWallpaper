@@ -59,7 +59,7 @@
 		E32D05601E9CE499009C41D2 /* WallpapersType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpapersType.swift; sourceTree = "<group>"; };
 		E32D05621E9F469A009C41D2 /* NormalWallpaperContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalWallpaperContract.swift; sourceTree = "<group>"; };
 		E32D05641E9F46F7009C41D2 /* NormalWallpaperPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalWallpaperPresenter.swift; sourceTree = "<group>"; };
-		E32D05661E9F4705009C41D2 /* NormalWallpaperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalWallpaperViewController.swift; sourceTree = "<group>"; };
+		E32D05661E9F4705009C41D2 /* NormalWallpaperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NormalWallpaperViewController.swift; path = ../NormalWallpaperViewController.swift; sourceTree = "<group>"; };
 		E32D05681E9F48B4009C41D2 /* NormalWallpaperRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalWallpaperRouter.swift; sourceTree = "<group>"; };
 		E350A80F1E9C9C6E00CECF5E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		E350A8121E9C9F0300CECF5E /* DefaultsKeys+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DefaultsKeys+Extension.swift"; sourceTree = "<group>"; };
@@ -131,6 +131,7 @@
 		E32B1CFD1EA0753A00F9BEF8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E32D05661E9F4705009C41D2 /* NormalWallpaperViewController.swift */,
 				E351D3FC1EA0DAAA000600A7 /* GradientLabel.swift */,
 				E32B1D001EA0755900F9BEF8 /* SimpleView.swift */,
 			);
@@ -278,7 +279,6 @@
 				E32B1CFB1EA065AF00F9BEF8 /* NormalWallpaperInteractor.swift */,
 				E32D05641E9F46F7009C41D2 /* NormalWallpaperPresenter.swift */,
 				E32D05681E9F48B4009C41D2 /* NormalWallpaperRouter.swift */,
-				E32D05661E9F4705009C41D2 /* NormalWallpaperViewController.swift */,
 			);
 			path = NormalWallpaper;
 			sourceTree = "<group>";

@@ -31,7 +31,7 @@ protocol NormalWallpaperPresentation: class {
 
 protocol NormalWallpaperUseCase: class {
     weak var output: NormalWallpaperInteractorOutput! { get set }
-    var datamanager: NormalWallpaperDataManagerInputProtocol? { get set }
+    var dataManager: NormalWallpaperDataManagerInputProtocol? { get set }
 
     func retrieveDeviceModel()
 }
@@ -41,7 +41,7 @@ protocol NormalWallpaperInteractorOutput: class {
 }
 
 protocol NormalWallpaperDataManagerInputProtocol: class {
-    var remoteRequestHandler: NormalWallpaperDataManagerOutputProtocol? { get set }
+    var requestHandler: NormalWallpaperDataManagerOutputProtocol? { get set }
 
     // INTERACTOR -> DATAMANAGER
     func retrieve()

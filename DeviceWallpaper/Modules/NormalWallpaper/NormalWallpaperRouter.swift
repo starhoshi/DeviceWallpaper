@@ -15,6 +15,7 @@ final class NormalWallpaperRouter: NormalWallpaperWireframe {
         let view = NormalWallpaperViewController()
         let presenter = NormalWallpaperPresenter()
         let interactor = NormalWallpaperInteractor()
+        let dataManager = NormalWallpaperDataManager()
         let router = NormalWallpaperRouter()
 
         view.presenter = presenter
@@ -23,7 +24,10 @@ final class NormalWallpaperRouter: NormalWallpaperWireframe {
         presenter.interactor = interactor
         presenter.router = router
 
+        interactor.dataManager = dataManager
         interactor.output = presenter
+        
+        dataManager.requestHandler = interactor
 
         router.viewController = view
 
