@@ -13,19 +13,13 @@ final class NormalWallpaperPresenter: NormalWallpaperPresentation {
     var interactor: NormalWallpaperUseCase!
     var router: NormalWallpaperWireframe!
 
-    var wallpaper: String = "" {
-        didSet {
-            view?.showSimple(wallpaper: wallpaper)
-        }
-    }
-
     func viewDidLoad() {
-        interactor.fetchWallpaper()
+        interactor.retrieveDeviceModel()
     }
 }
 
 extension NormalWallpaperPresenter: NormalWallpaperInteractorOutput {
-    func wallpaperFetched(_ wallpaper: String) {
-        self.wallpaper = wallpaper
+    func didRetrieve(_ deviceModel: DeviceModel) {
+        view?.showSimple(deviceModel: deviceModel)
     }
 }

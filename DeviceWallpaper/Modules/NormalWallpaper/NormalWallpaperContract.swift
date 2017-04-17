@@ -9,10 +9,16 @@
 import Foundation
 import UIKit.UIViewController
 
+protocol NormalWallpaperWireframe: class {
+    weak var viewController: UIViewController? { get set }
+
+    static func assembleModule() -> UIViewController
+}
+
 protocol NormalWallpaperView: class {
     var presenter: NormalWallpaperPresentation! { get set }
 
-    func showSimple(wallpaper: String)
+    func showSimple(deviceModel: DeviceModel)
 }
 
 protocol NormalWallpaperPresentation: class {
@@ -25,16 +31,23 @@ protocol NormalWallpaperPresentation: class {
 
 protocol NormalWallpaperUseCase: class {
     weak var output: NormalWallpaperInteractorOutput! { get set }
+    var datamanager: NormalWallpaperDataManagerInputProtocol? { get set }
 
-    func fetchWallpaper()
+    func retrieveDeviceModel()
 }
 
 protocol NormalWallpaperInteractorOutput: class {
-    func wallpaperFetched(_ wallpaper: String)
+    func didRetrieve(_ deviceModel: DeviceModel)
 }
 
-protocol NormalWallpaperWireframe: class {
-    weak var viewController: UIViewController? { get set }
+protocol NormalWallpaperDataManagerInputProtocol: class {
+    var remoteRequestHandler: NormalWallpaperDataManagerOutputProtocol? { get set }
 
-    static func assembleModule() -> UIViewController
+    // INTERACTOR -> DATAMANAGER
+    func retrieve()
+}
+
+protocol NormalWallpaperDataManagerOutputProtocol: class {
+    // DATAMANAGER -> INTERACTOR
+    func onRetrieved(_ deviceModel: DeviceModel)
 }

@@ -16,11 +16,6 @@ class NormalWallpaperViewController: UIViewController {
             navigationController?.setNavigationBarHidden(barHidden, animated: true)
         }
     }
-    var wallpaper: String = "" {
-        didSet {
-            navigationItem.title = wallpaper
-        }
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +33,8 @@ class NormalWallpaperViewController: UIViewController {
 }
 
 extension NormalWallpaperViewController: NormalWallpaperView {
-    func showSimple(wallpaper: String) {
-        self.wallpaper = wallpaper
-        let simple = SimpleView()
+    func showSimple(deviceModel: DeviceModel) {
+        let simple = SimpleView(with: deviceModel)
         let tap = UITapGestureRecognizer(target: self, action: #selector(NormalWallpaperViewController.tapGesture(_:)))
         simple.addGestureRecognizer(tap)
         view = simple

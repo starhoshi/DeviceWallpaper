@@ -10,9 +10,15 @@ import Foundation
 
 final class NormalWallpaperInteractor: NormalWallpaperUseCase {
     weak var output: NormalWallpaperInteractorOutput!
+    var datamanager: NormalWallpaperDataManagerInputProtocol?
 
-    func fetchWallpaper() {
-        output.wallpaperFetched("wallpaper")
-        log?.info(DeviceModel())
+    func retrieveDeviceModel() {
+        datamanager?.retrieve()
+    }
+}
+
+extension NormalWallpaperInteractor: NormalWallpaperDataManagerOutputProtocol {
+    func onRetrieved(_ deviceModel: DeviceModel) {
+        output.didRetrieve(deviceModel)
     }
 }

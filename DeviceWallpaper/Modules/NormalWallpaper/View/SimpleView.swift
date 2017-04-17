@@ -28,12 +28,12 @@ final class SimpleView: UIView {
         return label
     }()
 
-    init() {
+    init(with deviceModel: DeviceModel) {
         super.init(frame: .zero)
         backgroundColor = UIColor.white
 
         addSubview(osLabel)
-        osLabel.text = "D"
+        osLabel.text = deviceModel.systemVersion.major
         osLabel.snp.makeConstraints { make in
             make.top.equalTo(100)
             make.left.right.equalTo(0)
@@ -41,7 +41,7 @@ final class SimpleView: UIView {
         }
 
         addSubview(nameLabel)
-        nameLabel.text = "iPhone 7"
+        nameLabel.text = deviceModel.modelName
         nameLabel.snp.makeConstraints { make in
             make.left.right.equalTo(0)
             make.bottom.equalTo(-100)
