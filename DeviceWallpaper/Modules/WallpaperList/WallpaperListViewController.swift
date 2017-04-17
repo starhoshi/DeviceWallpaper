@@ -20,16 +20,19 @@ final class WallpaperListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUp()
+        presenter.viewDidLoad()
+    }
+    
+    private func setUp(){
         navigationItem.title = "Menu"
         if #available(iOS 9, *) {
             tableView.cellLayoutMarginsFollowReadableWidth = false
         }
-        tableView.updateConstraintsIfNeeded()
         view = tableView
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.description())
-        presenter.viewDidLoad()
     }
 
     override func viewWillAppear(_ animated: Bool) {
