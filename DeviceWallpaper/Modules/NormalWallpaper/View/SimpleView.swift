@@ -13,7 +13,7 @@ import SnapKit
 final class SimpleView: UIView {
     let osLabel: GradientLabel = {
         let label = GradientLabel()
-        label.font = UIFont(name: "HelveticaNeue-UltraLight", size: 800)
+        label.font = UIFont(name: "HelveticaNeue-UltraLight", size: 200)
         label.textAlignment = .center
 
         return label
@@ -35,18 +35,18 @@ final class SimpleView: UIView {
         addSubview(osLabel)
         osLabel.text = "D"
         osLabel.snp.makeConstraints { make in
-//            make.top.equalTo(100)
-//            make.left.right.equalTo(0)
+            make.top.equalTo(100)
+            make.left.right.equalTo(0)
             make.center.equalToSuperview()
         }
 
-//        addSubview(nameLabel)
-//        nameLabel.text = "iPhone 7"
-//        nameLabel.snp.makeConstraints { make in
-//            make.left.right.equalTo(0)
-//            make.bottom.equalTo(-100)
-//            make.height.equalTo(100)
-//        }
+        addSubview(nameLabel)
+        nameLabel.text = "iPhone 7"
+        nameLabel.snp.makeConstraints { make in
+            make.left.right.equalTo(0)
+            make.bottom.equalTo(-100)
+            make.height.equalTo(100)
+        }
     }
 
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
