@@ -16,6 +16,10 @@ final class NormalWallpaperPresenter: NormalWallpaperPresentation {
     func viewDidLoad() {
         interactor.retrieveDeviceModel()
     }
+
+    func didTapActionButton() {
+        router.presentActions()
+    }
 }
 
 extension NormalWallpaperPresenter: NormalWallpaperInteractorOutput {

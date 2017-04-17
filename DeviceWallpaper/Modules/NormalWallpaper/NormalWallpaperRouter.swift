@@ -34,8 +34,33 @@ final class NormalWallpaperRouter: NormalWallpaperWireframe {
         return view
     }
 
-    func present(for wallpaper: WallpapersType) {
-//        let detailsModuleViewController = DetailsRouter.assembleModule(article)
-        //        viewController?.navigationController?.pushViewController(detailsModuleViewController, animated: true)
+    func presentActions() {
+        let alert = UIAlertController(
+            title: nil,
+            message: nil,
+            preferredStyle: .actionSheet
+        )
+
+        alert.addAction(UIAlertAction(
+            title: "Export Wallpaper to Image",
+            style: .default,
+            handler: nil
+        ))
+
+        alert.addAction(UIAlertAction(
+            title: "Share This Wallpaper",
+            style: .default,
+            handler: nil
+        ))
+
+        alert.addAction(UIAlertAction(
+            title: "Cancel",
+            style: .cancel,
+            handler: nil
+        ))
+
+        alert.popoverPresentationController?.sourceView = viewController?.view
+        alert.popoverPresentationController?.barButtonItem = viewController?.navigationItem.rightBarButtonItem
+        viewController?.present(alert, animated: true, completion: nil)
     }
 }

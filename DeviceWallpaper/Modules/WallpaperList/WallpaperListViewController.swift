@@ -23,8 +23,8 @@ final class WallpaperListViewController: UIViewController {
         setUp()
         presenter.viewDidLoad()
     }
-    
-    private func setUp(){
+
+    private func setUp() {
         navigationItem.title = "Menu"
         if #available(iOS 9, *) {
             tableView.cellLayoutMarginsFollowReadableWidth = false

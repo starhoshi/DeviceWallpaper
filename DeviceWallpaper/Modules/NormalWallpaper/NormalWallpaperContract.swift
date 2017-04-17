@@ -12,6 +12,7 @@ import UIKit.UIViewController
 protocol NormalWallpaperWireframe: class {
     weak var viewController: UIViewController? { get set }
 
+    func presentActions()
     static func assembleModule() -> UIViewController
 }
 
@@ -27,6 +28,7 @@ protocol NormalWallpaperPresentation: class {
     var router: NormalWallpaperWireframe! { get set }
 
     func viewDidLoad()
+    func didTapActionButton()
 }
 
 protocol NormalWallpaperUseCase: class {
