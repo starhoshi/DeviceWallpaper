@@ -13,7 +13,7 @@ struct SystemVersion {
     var fullName: String
     var major: String
     var minor: String
-    var patch: String
+    var patch: String?
 
     init() {
         fullName = UIDevice.current.systemVersion
@@ -21,6 +21,6 @@ struct SystemVersion {
         let splittedName = fullName.components(separatedBy: ".")
         major = splittedName[0]
         minor = splittedName[1]
-        patch = splittedName[2]
+        patch = splittedName.count == 3 ? splittedName[2] : nil
     }
 }

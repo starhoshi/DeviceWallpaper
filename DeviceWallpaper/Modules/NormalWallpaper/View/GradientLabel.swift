@@ -43,7 +43,7 @@ final class GradientLabel: UILabel {
 
         // define your colors and locations
         let colors = [UIColor.blue.cgColor, UIColor.cyan.cgColor, UIColor.green.cgColor]
-        let locs: [CGFloat] = [0.3, 0.5, 0.7]
+        let locs: [CGFloat] = [0.2, 0.5, 0.8]
 
         // create your gradient
         let grad = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: colors as CFArray, locations: locs)
