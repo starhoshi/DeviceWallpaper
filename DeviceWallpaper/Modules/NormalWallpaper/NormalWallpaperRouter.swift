@@ -26,7 +26,7 @@ final class NormalWallpaperRouter: NormalWallpaperWireframe {
 
         interactor.dataManager = dataManager
         interactor.output = presenter
-        
+
         dataManager.requestHandler = interactor
 
         router.viewController = view

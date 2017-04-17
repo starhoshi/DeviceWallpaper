@@ -37,7 +37,6 @@ final class SimpleView: UIView {
         osLabel.snp.makeConstraints { make in
             make.top.equalTo(100)
             make.left.right.equalTo(0)
-            make.center.equalToSuperview()
         }
 
         addSubview(nameLabel)

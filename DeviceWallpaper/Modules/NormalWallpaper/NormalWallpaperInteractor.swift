@@ -19,6 +19,7 @@ final class NormalWallpaperInteractor: NormalWallpaperUseCase {
 
 extension NormalWallpaperInteractor: NormalWallpaperDataManagerOutputProtocol {
     func onRetrieved(_ deviceModel: DeviceModel) {
+        log?.debug(deviceModel)
         output.didRetrieve(deviceModel)
     }
 }

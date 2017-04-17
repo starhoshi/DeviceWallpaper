@@ -12,7 +12,7 @@ import UIKit.UIDevice
 struct SystemVersion {
     var fullName: String
     var major: String
-    var minor: String
+    var minor: String?
     var patch: String?
 
     init() {
@@ -20,7 +20,7 @@ struct SystemVersion {
 
         let splittedName = fullName.components(separatedBy: ".")
         major = splittedName[0]
-        minor = splittedName[1]
+        minor = splittedName.count == 2 ? splittedName[1] : nil
         patch = splittedName.count == 3 ? splittedName[2] : nil
     }
 }
