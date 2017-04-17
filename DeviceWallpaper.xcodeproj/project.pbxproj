@@ -232,10 +232,8 @@
 		E393D7111E9C8AE1001CC93D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E393D7161E9C8ECC001CC93D /* DetailWallpaper */,
 				E393D7151E9C8EC0001CC93D /* NormalWallpaper */,
 				E379B4F91E9CB03A00D1CDEF /* Root */,
-				E393D7171E9C8ED4001CC93D /* SimpleWallpaper */,
 				E393D7141E9C8D57001CC93D /* WallpaperList */,
 			);
 			path = Modules;
@@ -280,20 +278,6 @@
 				E32D05661E9F4705009C41D2 /* NormalWallpaperViewController.swift */,
 			);
 			path = NormalWallpaper;
-			sourceTree = "<group>";
-		};
-		E393D7161E9C8ECC001CC93D /* DetailWallpaper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DetailWallpaper;
-			sourceTree = "<group>";
-		};
-		E393D7171E9C8ED4001CC93D /* SimpleWallpaper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SimpleWallpaper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
