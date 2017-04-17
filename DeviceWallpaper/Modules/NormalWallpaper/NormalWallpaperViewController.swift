@@ -37,6 +37,7 @@ extension NormalWallpaperViewController: NormalWallpaperView {
         let simple = SimpleView(with: deviceModel)
         let tap = UITapGestureRecognizer(target: self, action: #selector(NormalWallpaperViewController.tapGesture(_:)))
         simple.addGestureRecognizer(tap)
+        navigationItem.title = WallpapersType.simple.title
         view = simple
     }
 
