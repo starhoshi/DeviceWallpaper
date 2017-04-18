@@ -34,7 +34,7 @@ final class NormalWallpaperRouter: NormalWallpaperWireframe {
         return view
     }
 
-    func presentActions() {
+    func presentActions(completion: @escaping () -> Void) {
         let alert = UIAlertController(
             title: nil,
             message: nil,
@@ -44,13 +44,9 @@ final class NormalWallpaperRouter: NormalWallpaperWireframe {
         alert.addAction(UIAlertAction(
             title: "Export as Image",
             style: .default,
-            handler: nil
-        ))
-
-        alert.addAction(UIAlertAction(
-            title: "Share This Wallpaper",
-            style: .default,
-            handler: nil
+            handler: { _ in
+                completion()
+            }
         ))
 
         alert.addAction(UIAlertAction(

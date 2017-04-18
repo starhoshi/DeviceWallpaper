@@ -18,7 +18,9 @@ final class NormalWallpaperPresenter: NormalWallpaperPresentation {
     }
 
     func didTapActionButton() {
-        router.presentActions()
+        router.presentActions {
+            print("call")
+        }
     }
 }
 

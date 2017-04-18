@@ -1,5 +1,5 @@
 //
-//  DefaultsKeys+Extension.swift
+//  DefaultsKeys+Ex.swift
 //  DeviceWallpaper
 //
 //  Created by Kensuke Hoshikawa on 2017/04/11.

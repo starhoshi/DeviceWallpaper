@@ -12,7 +12,7 @@ import UIKit.UIViewController
 protocol NormalWallpaperWireframe: class {
     weak var viewController: UIViewController? { get set }
 
-    func presentActions()
+    func presentActions(completion: @escaping () -> Void)
     static func assembleModule() -> UIViewController
 }
 
