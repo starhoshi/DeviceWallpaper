@@ -42,7 +42,7 @@ final class NormalWallpaperRouter: NormalWallpaperWireframe {
         )
 
         alert.addAction(UIAlertAction(
-            title: "Export Wallpaper to Image",
+            title: "Export as Image",
             style: .default,
             handler: nil
         ))
