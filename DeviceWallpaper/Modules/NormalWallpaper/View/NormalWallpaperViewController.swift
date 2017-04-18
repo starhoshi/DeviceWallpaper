@@ -46,7 +46,11 @@ extension NormalWallpaperViewController: NormalWallpaperView {
         view = simple
     }
 
-    @objc func tapGesture(_ sender: UITapGestureRecognizer) {
+    @objc private func tapGesture(_ sender: UITapGestureRecognizer) {
         barHidden = !barHidden
+    }
+
+    func toUIImage() -> UIImage {
+        return view.snapshot()
     }
 }

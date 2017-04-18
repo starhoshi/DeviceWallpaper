@@ -18,8 +18,10 @@ final class NormalWallpaperPresenter: NormalWallpaperPresentation {
     }
 
     func didTapActionButton() {
-        router.presentActions {
-            print("call")
+        router.presentActions { [weak self] _ in
+            if let view = self?.view {
+                self?.interactor.savePhotoAlbum(image: view.toUIImage())
+            }
         }
     }
 }
@@ -27,5 +29,13 @@ final class NormalWallpaperPresenter: NormalWallpaperPresentation {
 extension NormalWallpaperPresenter: NormalWallpaperInteractorOutput {
     func didRetrieve(_ deviceModel: DeviceModel) {
         view?.showSimple(deviceModel: deviceModel)
+    }
+
+    func didSaveImageFail() {
+        log?.debug("saved image failed")
+    }
+
+    func didSaveImage() {
+        log?.debug("saved image")
     }
 }

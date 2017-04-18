@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit.UIViewController
+import UIKit.UIImage
 
 protocol NormalWallpaperWireframe: class {
     weak var viewController: UIViewController? { get set }
@@ -20,6 +21,7 @@ protocol NormalWallpaperView: class {
     var presenter: NormalWallpaperPresentation! { get set }
 
     func showSimple(deviceModel: DeviceModel)
+    func toUIImage() -> UIImage
 }
 
 protocol NormalWallpaperPresentation: class {
@@ -36,10 +38,13 @@ protocol NormalWallpaperUseCase: class {
     var dataManager: NormalWallpaperDataManagerInputProtocol? { get set }
 
     func retrieveDeviceModel()
+    func savePhotoAlbum(image: UIImage)
 }
 
 protocol NormalWallpaperInteractorOutput: class {
     func didRetrieve(_ deviceModel: DeviceModel)
+    func didSaveImage()
+    func didSaveImageFail()
 }
 
 protocol NormalWallpaperDataManagerInputProtocol: class {

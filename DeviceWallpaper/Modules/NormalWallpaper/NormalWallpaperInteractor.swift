@@ -7,13 +7,26 @@
 //
 
 import Foundation
+import UIKit.UIImage
 
-final class NormalWallpaperInteractor: NormalWallpaperUseCase {
+final class NormalWallpaperInteractor: NSObject, NormalWallpaperUseCase {
     weak var output: NormalWallpaperInteractorOutput!
     var dataManager: NormalWallpaperDataManagerInputProtocol?
 
     func retrieveDeviceModel() {
         dataManager?.retrieve()
+    }
+
+    func savePhotoAlbum(image: UIImage) {
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(saved(_: didFinishSavingWithError: contextInfo:)), nil)
+//        UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
+    }
+
+    @objc private func saved(_ image: UIImage, didFinishSavingWithError error: NSError!, contextInfo: UnsafeMutableRawPointer) {
+        if error != nil {
+            output.didSaveImageFail()
+        }
+        output.didSaveImage()
     }
 }
 
