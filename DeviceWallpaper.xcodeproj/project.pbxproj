@@ -138,18 +138,19 @@
 			isa = PBXGroup;
 			children = (
 				E330469C1EA71D7300D6B995 /* NormalView.swift */,
-				E32D05661E9F4705009C41D2 /* WallpaperViewController.swift */,
 				E32B1D001EA0755900F9BEF8 /* SimpleView.swift */,
+				E32D05661E9F4705009C41D2 /* WallpaperViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		E32D055B1E9CCEC9009C41D2 /* WallpaperListContract */ = {
+		E32D055B1E9CCEC9009C41D2 /* Contract */ = {
 			isa = PBXGroup;
 			children = (
 				E32D055C1E9CD017009C41D2 /* WallpaperListContract.swift */,
 			);
-			path = WallpaperListContract;
+			name = Contract;
+			path = Contract;
 			sourceTree = "<group>";
 		};
 		E330469A1EA71D2100D6B995 /* Common */ = {
@@ -228,6 +229,87 @@
 			path = DeviceWallpaper;
 			sourceTree = "<group>";
 		};
+		E38AF1C11EA7C41200A14EB0 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E319E89A1E9CB3260082BFDF /* WallpaperListRouter.swift */,
+			);
+			name = Router;
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E38AF1C21EA7C41A00A14EB0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E32D05571E9CBB9C009C41D2 /* WallpaperListInteractor.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E38AF1C31EA7C43900A14EB0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E32D05551E9CBB8B009C41D2 /* WallpaperListPresenter.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E38AF1C41EA7C44200A14EB0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E32D05591E9CBBD7009C41D2 /* WallpaperListViewController.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		E38AF1C51EA7C44F00A14EB0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E32D05641E9F46F7009C41D2 /* WallpaperPresenter.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E38AF1C61EA7C45B00A14EB0 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E32D05681E9F48B4009C41D2 /* WallpaperRouter.swift */,
+			);
+			name = Router;
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E38AF1C71EA7C46400A14EB0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E32B1CFB1EA065AF00F9BEF8 /* WallpaperInteractor.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E38AF1C81EA7C47100A14EB0 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				E39C8C6D1EA486C3008F5F8B /* WallpaperDataManager.swift */,
+			);
+			name = DataManager;
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		E38AF1C91EA7C47A00A14EB0 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				E32D05621E9F469A009C41D2 /* WallpaperContract.swift */,
+			);
+			name = Contract;
+			path = Contract;
+			sourceTree = "<group>";
+		};
 		E393D70E1E9C8971001CC93D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,8 +342,8 @@
 		E393D7111E9C8AE1001CC93D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E393D7151E9C8EC0001CC93D /* Wallpaper */,
 				E379B4F91E9CB03A00D1CDEF /* Root */,
+				E393D7151E9C8EC0001CC93D /* Wallpaper */,
 				E393D7141E9C8D57001CC93D /* WallpaperList */,
 			);
 			path = Modules;
@@ -286,11 +368,11 @@
 		E393D7141E9C8D57001CC93D /* WallpaperList */ = {
 			isa = PBXGroup;
 			children = (
-				E32D055B1E9CCEC9009C41D2 /* WallpaperListContract */,
-				E32D05571E9CBB9C009C41D2 /* WallpaperListInteractor.swift */,
-				E32D05551E9CBB8B009C41D2 /* WallpaperListPresenter.swift */,
-				E319E89A1E9CB3260082BFDF /* WallpaperListRouter.swift */,
-				E32D05591E9CBBD7009C41D2 /* WallpaperListViewController.swift */,
+				E32D055B1E9CCEC9009C41D2 /* Contract */,
+				E38AF1C21EA7C41A00A14EB0 /* Interactor */,
+				E38AF1C31EA7C43900A14EB0 /* Presenter */,
+				E38AF1C11EA7C41200A14EB0 /* Router */,
+				E38AF1C41EA7C44200A14EB0 /* View */,
 			);
 			path = WallpaperList;
 			sourceTree = "<group>";
@@ -298,15 +380,15 @@
 		E393D7151E9C8EC0001CC93D /* Wallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				E38AF1C91EA7C47A00A14EB0 /* Contract */,
+				E38AF1C81EA7C47100A14EB0 /* DataManager */,
+				E38AF1C71EA7C46400A14EB0 /* Interactor */,
+				E38AF1C51EA7C44F00A14EB0 /* Presenter */,
+				E38AF1C61EA7C45B00A14EB0 /* Router */,
 				E32B1CFD1EA0753A00F9BEF8 /* View */,
-				E32D05621E9F469A009C41D2 /* WallpaperContract.swift */,
-				E39C8C6D1EA486C3008F5F8B /* WallpaperDataManager.swift */,
-				E32B1CFB1EA065AF00F9BEF8 /* WallpaperInteractor.swift */,
-				E32D05641E9F46F7009C41D2 /* WallpaperPresenter.swift */,
-				E32D05681E9F48B4009C41D2 /* WallpaperRouter.swift */,
 			);
 			name = Wallpaper;
-			path = NormalWallpaper;
+			path = Wallpaper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
