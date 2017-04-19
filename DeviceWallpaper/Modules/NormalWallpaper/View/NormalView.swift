@@ -41,8 +41,7 @@ final class NormalView: UIView {
         label.textColor = .darkGray
         label.font = UIFont(name: "AvenirNext-Medium", size: 20)
         label.textAlignment = .center
-        label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.1
+        label.numberOfLines = 0
 
         return label
     }()
@@ -52,8 +51,7 @@ final class NormalView: UIView {
         label.textColor = .darkGray
         label.font = UIFont(name: "AvenirNext-Medium", size: 20)
         label.textAlignment = .center
-        label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.1
+        label.numberOfLines = 0
 
         return label
     }()
@@ -87,9 +85,9 @@ final class NormalView: UIView {
             make.height.equalTo(24)
             switch deviceModel.type {
             case .iPad:
-                make.bottom.equalTo(-140)
+                make.bottom.equalTo(-160)
             default:
-                make.bottom.equalTo(-100)
+                make.bottom.equalTo(-120)
             }
         }
 
