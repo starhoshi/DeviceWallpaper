@@ -12,9 +12,13 @@ import UIKit
 extension UIView {
     func snapshot() -> UIImage {
         UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0.0)
-        layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()!
+        let context = UIGraphicsGetCurrentContext()!
+        context.setShouldAntialias(false)
+        layer.render(in: context)
+        let jpgImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-        return image
+        let png = UIImagePNGRepresentation(jpgImage)!
+        let pngImage = UIImage.init(data: png)!
+        return pngImage
     }
 }

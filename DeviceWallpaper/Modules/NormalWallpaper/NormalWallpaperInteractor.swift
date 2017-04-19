@@ -19,7 +19,6 @@ final class NormalWallpaperInteractor: NSObject, NormalWallpaperUseCase {
 
     func savePhotoAlbum(image: UIImage) {
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(saved(_: didFinishSavingWithError: contextInfo:)), nil)
-//        UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
     }
 
     @objc private func saved(_ image: UIImage, didFinishSavingWithError error: NSError!, contextInfo: UnsafeMutableRawPointer) {
