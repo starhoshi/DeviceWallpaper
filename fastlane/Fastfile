@@ -51,7 +51,7 @@ platform :ios do
     match(type: "appstore")
     increment_build_number(build_number: Time.now.strftime("%Y%m%d%H%M"))
 
-    gym
+    gym(scheme: 'DeviceWallpaper')
     deliver
 
     sh("git tag -d v#{get_version_number} || echo")
