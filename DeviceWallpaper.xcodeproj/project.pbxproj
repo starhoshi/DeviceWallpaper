@@ -77,7 +77,7 @@
 		E350A81C1E9C9FBD00CECF5E /* SwiftDate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDate.framework; path = Carthage/Build/iOS/SwiftDate.framework; sourceTree = "<group>"; };
 		E350A81D1E9C9FBD00CECF5E /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		E350A81E1E9C9FBD00CECF5E /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
-		E351D3FC1EA0DAAA000600A7 /* GradientLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientLabel.swift; path = Modules/NormalWallpaper/View/GradientLabel.swift; sourceTree = "<group>"; };
+		E351D3FC1EA0DAAA000600A7 /* GradientLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientLabel.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
 		E379B4FA1E9CB07400D1CDEF /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		E3803A031E936CBF0024D76E /* DeviceWallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceWallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3803A061E936CBF0024D76E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,9 +135,9 @@
 		E32B1CFD1EA0753A00F9BEF8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E330469C1EA71D7300D6B995 /* NormalView.swift */,
 				E32D05661E9F4705009C41D2 /* NormalWallpaperViewController.swift */,
 				E32B1D001EA0755900F9BEF8 /* SimpleView.swift */,
-				E330469C1EA71D7300D6B995 /* NormalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,6 +156,7 @@
 				E330469B1EA71D5C00D6B995 /* Views */,
 			);
 			name = Common;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		E330469B1EA71D5C00D6B995 /* Views */ = {
@@ -164,6 +165,7 @@
 				E351D3FC1EA0DAAA000600A7 /* GradientLabel.swift */,
 			);
 			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E350A80E1E9C9C6200CECF5E /* Utils */ = {
