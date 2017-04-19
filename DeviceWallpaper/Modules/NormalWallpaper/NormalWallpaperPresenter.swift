@@ -12,6 +12,11 @@ final class NormalWallpaperPresenter: NormalWallpaperPresentation {
     weak var view: NormalWallpaperView?
     var interactor: NormalWallpaperUseCase!
     var router: NormalWallpaperWireframe!
+    let wallpaper: WallpapersType
+
+    init(wallpaper: WallpapersType) {
+        self.wallpaper = wallpaper
+    }
 
     func viewDidLoad() {
         interactor.retrieveDeviceModel()
@@ -28,7 +33,12 @@ final class NormalWallpaperPresenter: NormalWallpaperPresentation {
 
 extension NormalWallpaperPresenter: NormalWallpaperInteractorOutput {
     func didRetrieve(_ deviceModel: DeviceModel) {
-        view?.showSimple(deviceModel: deviceModel)
+        switch wallpaper {
+        case .simple:
+            view?.showSimple(deviceModel: deviceModel)
+        case .normal:
+            view?.showNormal(deviceModel: deviceModel)
+        }
     }
 
     func notAuthorizedPhotoLibrary() {

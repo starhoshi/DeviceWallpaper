@@ -22,6 +22,7 @@
 		E32D05651E9F46F7009C41D2 /* NormalWallpaperPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D05641E9F46F7009C41D2 /* NormalWallpaperPresenter.swift */; };
 		E32D05671E9F4705009C41D2 /* NormalWallpaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D05661E9F4705009C41D2 /* NormalWallpaperViewController.swift */; };
 		E32D05691E9F48B4009C41D2 /* NormalWallpaperRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D05681E9F48B4009C41D2 /* NormalWallpaperRouter.swift */; };
+		E330469D1EA71D7300D6B995 /* NormalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E330469C1EA71D7300D6B995 /* NormalView.swift */; };
 		E350A8101E9C9C6E00CECF5E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E350A80F1E9C9C6E00CECF5E /* Log.swift */; };
 		E350A8131E9C9F0300CECF5E /* DefaultsKeys+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E350A8121E9C9F0300CECF5E /* DefaultsKeys+Ex.swift */; };
 		E350A81F1E9C9FBD00CECF5E /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A8141E9C9FBD00CECF5E /* APIKit.framework */; };
@@ -62,6 +63,7 @@
 		E32D05641E9F46F7009C41D2 /* NormalWallpaperPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalWallpaperPresenter.swift; sourceTree = "<group>"; };
 		E32D05661E9F4705009C41D2 /* NormalWallpaperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalWallpaperViewController.swift; sourceTree = "<group>"; };
 		E32D05681E9F48B4009C41D2 /* NormalWallpaperRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalWallpaperRouter.swift; sourceTree = "<group>"; };
+		E330469C1EA71D7300D6B995 /* NormalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalView.swift; sourceTree = "<group>"; };
 		E350A80F1E9C9C6E00CECF5E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		E350A8121E9C9F0300CECF5E /* DefaultsKeys+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DefaultsKeys+Ex.swift"; sourceTree = "<group>"; };
 		E350A8141E9C9FBD00CECF5E /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
@@ -75,7 +77,7 @@
 		E350A81C1E9C9FBD00CECF5E /* SwiftDate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDate.framework; path = Carthage/Build/iOS/SwiftDate.framework; sourceTree = "<group>"; };
 		E350A81D1E9C9FBD00CECF5E /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		E350A81E1E9C9FBD00CECF5E /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
-		E351D3FC1EA0DAAA000600A7 /* GradientLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
+		E351D3FC1EA0DAAA000600A7 /* GradientLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientLabel.swift; path = Modules/NormalWallpaper/View/GradientLabel.swift; sourceTree = "<group>"; };
 		E379B4FA1E9CB07400D1CDEF /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		E3803A031E936CBF0024D76E /* DeviceWallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceWallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3803A061E936CBF0024D76E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,9 +135,9 @@
 		E32B1CFD1EA0753A00F9BEF8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E351D3FC1EA0DAAA000600A7 /* GradientLabel.swift */,
 				E32D05661E9F4705009C41D2 /* NormalWallpaperViewController.swift */,
 				E32B1D001EA0755900F9BEF8 /* SimpleView.swift */,
+				E330469C1EA71D7300D6B995 /* NormalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,6 +148,22 @@
 				E32D055C1E9CD017009C41D2 /* WallpaperListContract.swift */,
 			);
 			path = WallpaperListContract;
+			sourceTree = "<group>";
+		};
+		E330469A1EA71D2100D6B995 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E330469B1EA71D5C00D6B995 /* Views */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		E330469B1EA71D5C00D6B995 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E351D3FC1EA0DAAA000600A7 /* GradientLabel.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		E350A80E1E9C9C6200CECF5E /* Utils */ = {
@@ -195,6 +213,7 @@
 		E3803A051E936CBF0024D76E /* DeviceWallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				E330469A1EA71D2100D6B995 /* Common */,
 				E393D7121E9C8AEE001CC93D /* Entities */,
 				E393D70F1E9C8ACD001CC93D /* Enums */,
 				E393D7101E9C8AD4001CC93D /* Extensions */,
@@ -448,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E330469D1EA71D7300D6B995 /* NormalView.swift in Sources */,
 				E32D05691E9F48B4009C41D2 /* NormalWallpaperRouter.swift in Sources */,
 				E3CF2C681EA3D5E00098706F /* DeviceVersion+Ex.swift in Sources */,
 				E39C8C6E1EA486C3008F5F8B /* NormalWallpaperDataManager.swift in Sources */,

@@ -21,10 +21,16 @@ class NormalWallpaperViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(didClickActionButton))
         presenter.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapGesture(_:)))
+        view.addGestureRecognizer(tap)
     }
 
-    @objc fileprivate func didClickActionButton(_ sender: Any?) {
+    @objc private func didClickActionButton(_ sender: Any?) {
         presenter.didTapActionButton()
+    }
+
+    @objc private func tapGesture(_ sender: UITapGestureRecognizer) {
+        barHidden = !barHidden
     }
 
     override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
@@ -34,20 +40,19 @@ class NormalWallpaperViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return barHidden
     }
-
 }
 
 extension NormalWallpaperViewController: NormalWallpaperView {
     func showSimple(deviceModel: DeviceModel) {
         let simple = SimpleView(with: deviceModel)
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapGesture(_:)))
-        simple.addGestureRecognizer(tap)
         navigationItem.title = WallpapersType.simple.title
         view = simple
     }
 
-    @objc private func tapGesture(_ sender: UITapGestureRecognizer) {
-        barHidden = !barHidden
+    func showNormal(deviceModel: DeviceModel) {
+        let normal = NormalView(with: deviceModel)
+        navigationItem.title = WallpapersType.normal.title
+        view = normal
     }
 
     func toUIImage() -> UIImage {

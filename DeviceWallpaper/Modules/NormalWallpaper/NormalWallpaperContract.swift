@@ -17,13 +17,14 @@ protocol NormalWallpaperWireframe: class {
     func presentAuthorizationDialog()
     func presentSavedSuccessDialog()
     func presentSavedFailureDialog(with message: String)
-    static func assembleModule() -> UIViewController
+    static func assembleModule(wallpaper: WallpapersType) -> UIViewController
 }
 
 protocol NormalWallpaperView: class {
     var presenter: NormalWallpaperPresentation! { get set }
 
     func showSimple(deviceModel: DeviceModel)
+    func showNormal(deviceModel: DeviceModel)
     func toUIImage() -> UIImage
 }
 
@@ -31,6 +32,8 @@ protocol NormalWallpaperPresentation: class {
     weak var view: NormalWallpaperView? { get set }
     var interactor: NormalWallpaperUseCase! { get set }
     var router: NormalWallpaperWireframe! { get set }
+
+    init(wallpaper: WallpapersType)
 
     func viewDidLoad()
     func didTapActionButton()

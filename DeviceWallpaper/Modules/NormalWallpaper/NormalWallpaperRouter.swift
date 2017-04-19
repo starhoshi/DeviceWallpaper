@@ -11,9 +11,9 @@ import UIKit.UIViewController
 
 final class NormalWallpaperRouter: NormalWallpaperWireframe {
     weak var viewController: UIViewController?
-    static func assembleModule() -> UIViewController {
+    static func assembleModule(wallpaper: WallpapersType) -> UIViewController {
         let view = NormalWallpaperViewController()
-        let presenter = NormalWallpaperPresenter()
+        let presenter = NormalWallpaperPresenter(wallpaper: wallpaper)
         let interactor = NormalWallpaperInteractor()
         let dataManager = NormalWallpaperDataManager()
         let router = NormalWallpaperRouter()
