@@ -77,7 +77,7 @@
 		E350A81C1E9C9FBD00CECF5E /* SwiftDate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDate.framework; path = Carthage/Build/iOS/SwiftDate.framework; sourceTree = "<group>"; };
 		E350A81D1E9C9FBD00CECF5E /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		E350A81E1E9C9FBD00CECF5E /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
-		E351D3FC1EA0DAAA000600A7 /* GradientLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientLabel.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
+		E351D3FC1EA0DAAA000600A7 /* GradientLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
 		E379B4FA1E9CB07400D1CDEF /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		E3803A031E936CBF0024D76E /* DeviceWallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceWallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3803A061E936CBF0024D76E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,7 +155,6 @@
 			children = (
 				E330469B1EA71D5C00D6B995 /* Views */,
 			);
-			name = Common;
 			path = Common;
 			sourceTree = "<group>";
 		};
@@ -164,7 +163,6 @@
 			children = (
 				E351D3FC1EA0DAAA000600A7 /* GradientLabel.swift */,
 			);
-			name = Views;
 			path = Views;
 			sourceTree = "<group>";
 		};
@@ -609,6 +607,7 @@
 			baseConfigurationReference = CF75D06F704A4A0FDEF4E4EF /* Pods-DeviceWallpaper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5J5Q4ZGXZR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -623,6 +622,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.DeviceWallpaper";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -632,6 +632,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5J5Q4ZGXZR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -646,6 +647,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.DeviceWallpaper";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
