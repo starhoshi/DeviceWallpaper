@@ -3,7 +3,7 @@
   "commitish" : "3.2.0",
   "iOS" : [
     {
-      "hash" : "9fa5bd0b88aaef4eca5e713fc0b218414b36ae46e2b9c48b8ccc5f58a3d530a1",
+      "hash" : "84569a73ccdc79cbd510c4dc6dd00b76a3a17ab1bc10e60297cf82d5152a35a9",
       "name" : "SnapKit"
     }
   ]

@@ -3,7 +3,7 @@
   "commitish" : "3.0.1",
   "iOS" : [
     {
-      "hash" : "ea07c0d75d01d347fd7ebc5afdbf6ef72d4ea2bea6004f73b40b9d527e3e940d",
+      "hash" : "b54438f02c579dc659a0b03932f7901beed556cd9319bd38f4f87cbe0c623b5b",
       "name" : "SwiftyUserDefaults"
     }
   ]

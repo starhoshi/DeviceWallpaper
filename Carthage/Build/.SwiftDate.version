@@ -3,7 +3,7 @@
   "commitish" : "4.1.1",
   "iOS" : [
     {
-      "hash" : "c1f8caa5c9bd7e7d6c1231313515f53939ffb2746ed64c7829bd1b31319abba8",
+      "hash" : "1f5d461b95577df3665595d9da1a251d2f71673743180f241e5ba68c8d41651c",
       "name" : "SwiftDate"
     }
   ]
