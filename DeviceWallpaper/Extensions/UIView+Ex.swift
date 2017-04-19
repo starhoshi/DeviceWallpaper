@@ -15,9 +15,9 @@ extension UIView {
         let context = UIGraphicsGetCurrentContext()!
         context.setShouldAntialias(false)
         layer.render(in: context)
-        let jpgImage = UIGraphicsGetImageFromCurrentImageContext()!
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-        let png = UIImagePNGRepresentation(jpgImage)!
+        let png = UIImagePNGRepresentation(image)!
         let pngImage = UIImage.init(data: png)!
         return pngImage
     }

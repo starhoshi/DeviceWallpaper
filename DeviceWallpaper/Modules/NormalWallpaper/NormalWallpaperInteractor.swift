@@ -24,8 +24,9 @@ final class NormalWallpaperInteractor: NSObject, NormalWallpaperUseCase {
     @objc private func saved(_ image: UIImage, didFinishSavingWithError error: NSError!, contextInfo: UnsafeMutableRawPointer) {
         if error != nil {
             output.didSaveImageFail()
+        } else {
+            output.didSaveImage()
         }
-        output.didSaveImage()
     }
 }
 
