@@ -1,0 +1,16 @@
+###################### More Options ######################
+# If you want to have even more control, check out the documentation
+# https://github.com/fastlane/fastlane/blob/master/deliver/Deliverfile.md
+
+
+###################### Automatically generated ######################
+# Feel free to remove the following line if you use fastlane (which you should)
+
+app_identifier "com.DeviceWallpaper"
+username "kensuke1751@gmail.com"
+force false
+skip_screenshots true
+skip_metadata true
+skip_binary_update false
+automatic_release true
+
