@@ -219,21 +219,22 @@
 				E393D7101E9C8AD4001CC93D /* Extensions */,
 				E393D7111E9C8AE1001CC93D /* Modules */,
 				E393D7131E9C8AF6001CC93D /* Networks */,
-				E393D70E1E9C8971001CC93D /* Rosources */,
+				E393D70E1E9C8971001CC93D /* Resources */,
 				E350A80E1E9C9C6200CECF5E /* Utils */,
 				E3803A061E936CBF0024D76E /* AppDelegate.swift */,
 			);
 			path = DeviceWallpaper;
 			sourceTree = "<group>";
 		};
-		E393D70E1E9C8971001CC93D /* Rosources */ = {
+		E393D70E1E9C8971001CC93D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				E3803A0D1E936CBF0024D76E /* Assets.xcassets */,
 				E3803A121E936CBF0024D76E /* Info.plist */,
 				E3803A0F1E936CBF0024D76E /* LaunchScreen.storyboard */,
 			);
-			path = Rosources;
+			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		E393D70F1E9C8ACD001CC93D /* Enums */ = {
@@ -613,7 +614,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = DeviceWallpaper/Rosources/Info.plist;
+				INFOPLIST_FILE = DeviceWallpaper/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DeviceWallpaper;
@@ -638,7 +639,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = DeviceWallpaper/Rosources/Info.plist;
+				INFOPLIST_FILE = DeviceWallpaper/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DeviceWallpaper;
