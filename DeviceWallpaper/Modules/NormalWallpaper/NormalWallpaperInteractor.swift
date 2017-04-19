@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit.UIImage
+import Photos
 
 final class NormalWallpaperInteractor: NSObject, NormalWallpaperUseCase {
     weak var output: NormalWallpaperInteractorOutput!
@@ -17,13 +18,20 @@ final class NormalWallpaperInteractor: NSObject, NormalWallpaperUseCase {
         dataManager?.retrieve()
     }
 
-    func savePhotoAlbum(image: UIImage) {
-        UIImageWriteToSavedPhotosAlbum(image, self, #selector(saved(_: didFinishSavingWithError: contextInfo:)), nil)
+    func save(image: UIImage) {
+        PHPhotoLibrary.requestAuthorization { [weak self] status in
+            switch status {
+            case .authorized, .notDetermined:
+                UIImageWriteToSavedPhotosAlbum(image, self, #selector(self?.saved(_: didFinishSavingWithError: contextInfo:)), nil)
+            case .denied, .restricted:
+                self?.output.notAuthorizedPhotoLibrary()
+            }
+        }
     }
 
     @objc private func saved(_ image: UIImage, didFinishSavingWithError error: NSError!, contextInfo: UnsafeMutableRawPointer) {
         if error != nil {
-            output.didSaveImageFail()
+            output.didSaveImageFail(with: error.localizedDescription)
         } else {
             output.didSaveImage()
         }

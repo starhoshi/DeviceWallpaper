@@ -14,6 +14,9 @@ protocol NormalWallpaperWireframe: class {
     weak var viewController: UIViewController? { get set }
 
     func presentActions(completion: @escaping () -> Void)
+    func presentAuthorizationDialog()
+    func presentSavedSuccessDialog()
+    func presentSavedFailureDialog(with message: String)
     static func assembleModule() -> UIViewController
 }
 
@@ -38,13 +41,14 @@ protocol NormalWallpaperUseCase: class {
     var dataManager: NormalWallpaperDataManagerInputProtocol? { get set }
 
     func retrieveDeviceModel()
-    func savePhotoAlbum(image: UIImage)
+    func save(image: UIImage)
 }
 
 protocol NormalWallpaperInteractorOutput: class {
     func didRetrieve(_ deviceModel: DeviceModel)
+    func notAuthorizedPhotoLibrary()
     func didSaveImage()
-    func didSaveImageFail()
+    func didSaveImageFail(with message: String)
 }
 
 protocol NormalWallpaperDataManagerInputProtocol: class {

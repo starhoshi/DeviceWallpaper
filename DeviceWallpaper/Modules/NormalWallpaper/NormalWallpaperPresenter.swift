@@ -20,7 +20,7 @@ final class NormalWallpaperPresenter: NormalWallpaperPresentation {
     func didTapActionButton() {
         router.presentActions { [weak self] _ in
             if let view = self?.view {
-                self?.interactor.savePhotoAlbum(image: view.toUIImage())
+                self?.interactor.save(image: view.toUIImage())
             }
         }
     }
@@ -31,11 +31,16 @@ extension NormalWallpaperPresenter: NormalWallpaperInteractorOutput {
         view?.showSimple(deviceModel: deviceModel)
     }
 
-    func didSaveImageFail() {
-        log?.debug("saved image failed")
+    func notAuthorizedPhotoLibrary() {
+        router.presentAuthorizationDialog()
+
     }
 
     func didSaveImage() {
-        log?.debug("saved image")
+        router.presentSavedSuccessDialog()
+    }
+
+    func didSaveImageFail(with message: String) {
+        router.presentSavedFailureDialog(with: message)
     }
 }
