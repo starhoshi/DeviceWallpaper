@@ -1,5 +1,5 @@
 //
-//  NormalWallpaperViewController.swift
+//  WallpaperViewController.swift
 //  DeviceWallpaper
 //
 //  Created by Kensuke Hoshikawa on 2017/04/13.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class NormalWallpaperViewController: UIViewController {
-    var presenter: NormalWallpaperPresentation!
+class WallpaperViewController: UIViewController {
+    var presenter: WallpaperPresentation!
     var barHidden: Bool = false {
         didSet {
             setNeedsStatusBarAppearanceUpdate()
@@ -42,7 +42,7 @@ class NormalWallpaperViewController: UIViewController {
     }
 }
 
-extension NormalWallpaperViewController: NormalWallpaperView {
+extension WallpaperViewController: WallpaperView {
     func showSimple(deviceModel: DeviceModel) {
         let simple = SimpleView(with: deviceModel)
         navigationItem.title = WallpapersType.simple.title

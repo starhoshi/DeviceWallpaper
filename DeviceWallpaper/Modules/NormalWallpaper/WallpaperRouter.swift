@@ -1,5 +1,5 @@
 //
-//  NormalWallpaperRouter.swift
+//  WallpaperRouter.swift
 //  DeviceWallpaper
 //
 //  Created by Kensuke Hoshikawa on 2017/04/13.
@@ -9,14 +9,14 @@
 import Foundation
 import UIKit.UIViewController
 
-final class NormalWallpaperRouter: NormalWallpaperWireframe {
+final class WallpaperRouter: WallpaperWireframe {
     weak var viewController: UIViewController?
     static func assembleModule(wallpaper: WallpapersType) -> UIViewController {
-        let view = NormalWallpaperViewController()
-        let presenter = NormalWallpaperPresenter(wallpaper: wallpaper)
-        let interactor = NormalWallpaperInteractor()
-        let dataManager = NormalWallpaperDataManager()
-        let router = NormalWallpaperRouter()
+        let view = WallpaperViewController()
+        let presenter = WallpaperPresenter(wallpaper: wallpaper)
+        let interactor = WallpaperInteractor()
+        let dataManager = WallpaperDataManager()
+        let router = WallpaperRouter()
 
         view.presenter = presenter
 

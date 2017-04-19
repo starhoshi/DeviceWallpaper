@@ -1,5 +1,5 @@
 //
-//  NormalWallpaperContract.swift
+//  WallpaperContract.swift
 //  DeviceWallpaper
 //
 //  Created by Kensuke Hoshikawa on 2017/04/13.
@@ -10,7 +10,7 @@ import Foundation
 import UIKit.UIViewController
 import UIKit.UIImage
 
-protocol NormalWallpaperWireframe: class {
+protocol WallpaperWireframe: class {
     weak var viewController: UIViewController? { get set }
 
     func presentActions(completion: @escaping () -> Void)
@@ -20,18 +20,18 @@ protocol NormalWallpaperWireframe: class {
     static func assembleModule(wallpaper: WallpapersType) -> UIViewController
 }
 
-protocol NormalWallpaperView: class {
-    var presenter: NormalWallpaperPresentation! { get set }
+protocol WallpaperView: class {
+    var presenter: WallpaperPresentation! { get set }
 
     func showSimple(deviceModel: DeviceModel)
     func showNormal(deviceModel: DeviceModel)
     func toUIImage() -> UIImage
 }
 
-protocol NormalWallpaperPresentation: class {
-    weak var view: NormalWallpaperView? { get set }
-    var interactor: NormalWallpaperUseCase! { get set }
-    var router: NormalWallpaperWireframe! { get set }
+protocol WallpaperPresentation: class {
+    weak var view: WallpaperView? { get set }
+    var interactor: WallpaperUseCase! { get set }
+    var router: WallpaperWireframe! { get set }
 
     init(wallpaper: WallpapersType)
 
@@ -39,29 +39,29 @@ protocol NormalWallpaperPresentation: class {
     func didTapActionButton()
 }
 
-protocol NormalWallpaperUseCase: class {
-    weak var output: NormalWallpaperInteractorOutput! { get set }
-    var dataManager: NormalWallpaperDataManagerInputProtocol? { get set }
+protocol WallpaperUseCase: class {
+    weak var output: WallpaperInteractorOutput! { get set }
+    var dataManager: WallpaperDataManagerInputProtocol? { get set }
 
     func retrieveDeviceModel()
     func save(image: UIImage)
 }
 
-protocol NormalWallpaperInteractorOutput: class {
+protocol WallpaperInteractorOutput: class {
     func didRetrieve(_ deviceModel: DeviceModel)
     func notAuthorizedPhotoLibrary()
     func didSaveImage()
     func didSaveImageFail(with message: String)
 }
 
-protocol NormalWallpaperDataManagerInputProtocol: class {
-    var requestHandler: NormalWallpaperDataManagerOutputProtocol? { get set }
+protocol WallpaperDataManagerInputProtocol: class {
+    var requestHandler: WallpaperDataManagerOutputProtocol? { get set }
 
     // INTERACTOR -> DATAMANAGER
     func retrieve()
 }
 
-protocol NormalWallpaperDataManagerOutputProtocol: class {
+protocol WallpaperDataManagerOutputProtocol: class {
     // DATAMANAGER -> INTERACTOR
     func onRetrieved(_ deviceModel: DeviceModel)
 }

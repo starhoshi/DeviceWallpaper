@@ -1,5 +1,5 @@
 //
-//  NormalWallpaperDataManager.swift
+//  WallpaperDataManager.swift
 //  DeviceWallpaper
 //
 //  Created by Kensuke Hoshikawa on 2017/04/17.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-class NormalWallpaperDataManager: NormalWallpaperDataManagerInputProtocol {
-    var requestHandler: NormalWallpaperDataManagerOutputProtocol?
+class WallpaperDataManager: WallpaperDataManagerInputProtocol {
+    var requestHandler: WallpaperDataManagerOutputProtocol?
 
     func retrieve() {
         requestHandler?.onRetrieved(DeviceModel())

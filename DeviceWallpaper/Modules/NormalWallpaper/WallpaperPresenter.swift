@@ -1,5 +1,5 @@
 //
-//  NormalWallpaperPresenter.swift
+//  WallpaperPresenter.swift
 //  DeviceWallpaper
 //
 //  Created by Kensuke Hoshikawa on 2017/04/13.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-final class NormalWallpaperPresenter: NormalWallpaperPresentation {
-    weak var view: NormalWallpaperView?
-    var interactor: NormalWallpaperUseCase!
-    var router: NormalWallpaperWireframe!
+final class WallpaperPresenter: WallpaperPresentation {
+    weak var view: WallpaperView?
+    var interactor: WallpaperUseCase!
+    var router: WallpaperWireframe!
     let wallpaper: WallpapersType
 
     init(wallpaper: WallpapersType) {
@@ -31,7 +31,7 @@ final class NormalWallpaperPresenter: NormalWallpaperPresentation {
     }
 }
 
-extension NormalWallpaperPresenter: NormalWallpaperInteractorOutput {
+extension WallpaperPresenter: WallpaperInteractorOutput {
     func didRetrieve(_ deviceModel: DeviceModel) {
         switch wallpaper {
         case .simple:

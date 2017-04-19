@@ -10,9 +10,9 @@ import Foundation
 import UIKit.UIImage
 import Photos
 
-final class NormalWallpaperInteractor: NSObject, NormalWallpaperUseCase {
-    weak var output: NormalWallpaperInteractorOutput!
-    var dataManager: NormalWallpaperDataManagerInputProtocol?
+final class WallpaperInteractor: NSObject, WallpaperUseCase {
+    weak var output: WallpaperInteractorOutput!
+    var dataManager: WallpaperDataManagerInputProtocol?
 
     func retrieveDeviceModel() {
         dataManager?.retrieve()
@@ -38,7 +38,7 @@ final class NormalWallpaperInteractor: NSObject, NormalWallpaperUseCase {
     }
 }
 
-extension NormalWallpaperInteractor: NormalWallpaperDataManagerOutputProtocol {
+extension WallpaperInteractor: WallpaperDataManagerOutputProtocol {
     func onRetrieved(_ deviceModel: DeviceModel) {
         log?.debug(deviceModel)
         output.didRetrieve(deviceModel)
