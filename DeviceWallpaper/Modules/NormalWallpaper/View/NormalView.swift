@@ -11,12 +11,16 @@ import UIKit
 import SnapKit
 
 final class NormalView: UIView {
-    let osLabel: GradientLabel = {
+    let osLabelContainer: UIView = {
         let width = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
-        let osLabelWidth = width - (width * 0.3)
+        let margin = width * 0.1
+        let osLabelWidth = width - (margin + margin)
+        let view = UIView(frame: CGRect(x: 0, y: margin, width: osLabelWidth, height: osLabelWidth))
+        return view
+    }()
 
-        let label = GradientLabel(frame: CGRect(x: 0, y: 0, width: osLabelWidth, height: osLabelWidth))
-        label.font = UIFont(name: "HelveticaNeue-UltraLight", size: CGFloat(osLabelWidth))
+    let osLabel: GradientLabel = {
+        let label = GradientLabel()
         label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.1
@@ -38,11 +42,19 @@ final class NormalView: UIView {
         super.init(frame: .zero)
         backgroundColor = UIColor.white
 
-        addSubview(osLabel)
-        osLabel.text = deviceModel.systemVersion.fullName
-        osLabel.snp.makeConstraints { make in
+        addSubview(osLabelContainer)
+        osLabelContainer.snp.makeConstraints { make in
+            make.top.equalTo(0)
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().offset(-100)
+            make.width.equalTo(osLabelContainer.frame.width)
+            make.height.equalTo(osLabelContainer.frame.width * 0.75)
+        }
+
+        osLabelContainer.addSubview(osLabel)
+        osLabel.text = deviceModel.systemVersion.fullName
+        osLabel.font = UIFont(name: "HelveticaNeue-Light", size: CGFloat(osLabelContainer.frame.width * 0.75))
+        osLabel.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
         }
 
         addSubview(nameLabel)
