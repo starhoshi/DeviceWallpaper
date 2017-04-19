@@ -11,6 +11,6 @@ username "kensuke1751@gmail.com"
 force false
 skip_screenshots true
 skip_metadata true
-skip_binary_update false
+skip_binary_upload false
 automatic_release true
 
