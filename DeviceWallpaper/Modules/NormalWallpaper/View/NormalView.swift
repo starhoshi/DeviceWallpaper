@@ -11,16 +11,13 @@ import UIKit
 import SnapKit
 
 final class NormalView: UIView {
-    let osLabelContainer: UIView = {
+    let osLabel: GradientLabel = {
         let width = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
         let margin = width * 0.1
         let osLabelWidth = width - (margin + margin)
-        let view = UIView(frame: CGRect(x: 0, y: margin, width: osLabelWidth, height: osLabelWidth))
-        return view
-    }()
 
-    let osLabel: GradientLabel = {
-        let label = GradientLabel()
+        let label = GradientLabel(frame: CGRect(x: 0, y: margin, width: osLabelWidth, height: osLabelWidth))
+        label.font = UIFont(name: "HelveticaNeue-UltraLight", size: CGFloat(osLabelWidth * 0.75))
         label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.1
@@ -31,9 +28,32 @@ final class NormalView: UIView {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .darkGray
-        label.font = UIFont(name: "AvenirNext-UltraLight", size: 50)
-        label.numberOfLines = 0
+        label.font = UIFont(name: "AvenirNext-Medium", size: 45)
         label.textAlignment = .center
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.1
+
+        return label
+    }()
+
+    let phoneLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .darkGray
+        label.font = UIFont(name: "AvenirNext-Medium", size: 20)
+        label.textAlignment = .center
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.1
+
+        return label
+    }()
+
+    let hardwareLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .darkGray
+        label.font = UIFont(name: "AvenirNext-Medium", size: 20)
+        label.textAlignment = .center
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.1
 
         return label
     }()
@@ -42,31 +62,44 @@ final class NormalView: UIView {
         super.init(frame: .zero)
         backgroundColor = UIColor.white
 
-        addSubview(osLabelContainer)
-        osLabelContainer.snp.makeConstraints { make in
-            make.top.equalTo(0)
-            make.centerX.equalToSuperview()
-            make.width.equalTo(osLabelContainer.frame.width)
-            make.height.equalTo(osLabelContainer.frame.width * 0.75)
-        }
-
-        osLabelContainer.addSubview(osLabel)
+        addSubview(osLabel)
         osLabel.text = deviceModel.systemVersion.fullName
-        osLabel.font = UIFont(name: "HelveticaNeue-Light", size: CGFloat(osLabelContainer.frame.width * 0.75))
         osLabel.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.left.equalTo(8)
+            make.right.equalTo(-8)
+            make.height.equalTo(osLabel.frame.width * 0.75)
         }
 
         addSubview(nameLabel)
         nameLabel.text = deviceModel.modelName
         nameLabel.snp.makeConstraints { make in
-            make.left.right.equalTo(0)
+            make.left.equalTo(8)
+            make.right.equalTo(-8)
+            make.height.equalTo(75)
+            make.top.equalTo(osLabel.snp.bottom).offset(8)
+        }
+
+        addSubview(hardwareLabel)
+        hardwareLabel.text = "Model: " + deviceModel.hardware
+        hardwareLabel.snp.makeConstraints { make in
+            make.left.equalTo(8)
+            make.right.equalTo(-8)
+            make.height.equalTo(24)
             switch deviceModel.type {
             case .iPad:
                 make.bottom.equalTo(-140)
             default:
                 make.bottom.equalTo(-100)
             }
+        }
+
+        addSubview(phoneLabel)
+        phoneLabel.text = "Name: " + deviceModel.phoneName
+        phoneLabel.snp.makeConstraints { make in
+            make.left.equalTo(8)
+            make.right.equalTo(-8)
+            make.height.equalTo(24)
+            make.bottom.equalTo(hardwareLabel.snp.top).offset(-16)
         }
     }
 

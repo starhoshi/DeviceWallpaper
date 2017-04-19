@@ -25,7 +25,7 @@ final class SimpleView: UIView {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .darkGray
-        label.font = UIFont(name: "AvenirNext-UltraLight", size: 50)
+        label.font = UIFont(name: "AvenirNext-Medium", size: 50)
         label.numberOfLines = 0
         label.textAlignment = .center
 
