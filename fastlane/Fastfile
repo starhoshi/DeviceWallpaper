@@ -59,7 +59,7 @@ platform :ios do
 
     add_git_tag(
       tag: "v#{get_version_number}",
-      message: "build_number: #{get_build_number} by fastlane\n\n#{changelog}",
+      message: "build_number: #{get_build_number} by fastlane\n\n#{diff}",
       force: true
     )
     push_git_tags(force: true)
