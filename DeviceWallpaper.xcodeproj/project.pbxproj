@@ -235,8 +235,8 @@
 		E379B4F91E9CB03A00D1CDEF /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				E32D055E1E9CD497009C41D2 /* RootContract.swift */,
-				E379B4FA1E9CB07400D1CDEF /* RootRouter.swift */,
+				E38AF1E61EA84C5F00A14EB0 /* Contract */,
+				E38AF1E71EA84C6600A14EB0 /* Router */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -356,6 +356,24 @@
 				E38AF1D21EA8416300A14EB0 /* Info.plist */,
 			);
 			path = DeviceWallpaperTests;
+			sourceTree = "<group>";
+		};
+		E38AF1E61EA84C5F00A14EB0 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				E32D055E1E9CD497009C41D2 /* RootContract.swift */,
+			);
+			name = Contract;
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		E38AF1E71EA84C6600A14EB0 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E379B4FA1E9CB07400D1CDEF /* RootRouter.swift */,
+			);
+			name = Router;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		E393D70E1E9C8971001CC93D /* Resources */ = {
