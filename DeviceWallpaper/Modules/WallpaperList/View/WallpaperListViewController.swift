@@ -11,12 +11,19 @@ import SnapKit
 
 final class WallpaperListViewController: UIViewController {
     let tableView = UITableView(frame: .zero, style: .plain)
-    var presenter: WallpaperListPresentation!
+    let presenter: WallpaperListPresentation
     var wallpapers: [WallpapersType] = [] {
         didSet {
             tableView.reloadData()
         }
     }
+
+    init(presenter: WallpaperListPresentation) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     override func viewDidLoad() {
         super.viewDidLoad()

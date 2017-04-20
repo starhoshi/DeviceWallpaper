@@ -11,19 +11,16 @@ import UIKit.UIViewController
 
 final class WallpaperListRouter: WallpaperListWireframe {
     weak var viewController: UIViewController?
+
     static func assembleModule() -> UIViewController {
-        let view = WallpaperListViewController()
-        let presenter = WallpaperListPresenter()
         let interactor = WallpaperListInteractor()
         let router = WallpaperListRouter()
+        let presenter = WallpaperListPresenter(interactor: interactor, router: router)
+        let view = WallpaperListViewController(presenter: presenter)
 
         let navigation = UINavigationController(rootViewController: view)
 
-        view.presenter = presenter
-
         presenter.view = view
-        presenter.interactor = interactor
-        presenter.router = router
 
         interactor.output = presenter
 

@@ -9,9 +9,9 @@
 import Foundation
 
 final class WallpaperListInteractor: WallpaperListUseCase {
-    weak var output: WallpaperListInteractorOutput!
+    weak var output: WallpaperListInteractorOutput?
 
     func fetchWallpapers() {
-        output.wallpapersFetched(WallpapersType.toArray())
+        output?.wallpapersFetched(WallpapersType.toArray())
     }
 }

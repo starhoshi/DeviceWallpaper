@@ -10,22 +10,24 @@ import Foundation
 import UIKit.UIViewController
 
 protocol WallpaperListView: class {
-    var presenter: WallpaperListPresentation! { get set }
+    var presenter: WallpaperListPresentation { get }
 
+    init(presenter: WallpaperListPresentation)
     func show(wallpapers: [WallpapersType])
 }
 
 protocol WallpaperListPresentation: class {
     weak var view: WallpaperListView? { get set }
-    var interactor: WallpaperListUseCase! { get set }
-    var router: WallpaperListWireframe! { get set }
+    var interactor: WallpaperListUseCase { get }
+    var router: WallpaperListWireframe { get }
 
+    init(interactor: WallpaperListUseCase, router: WallpaperListWireframe)
     func viewDidLoad()
     func didSelect(wallpaper: WallpapersType)
 }
 
 protocol WallpaperListUseCase: class {
-    weak var output: WallpaperListInteractorOutput! { get set }
+    weak var output: WallpaperListInteractorOutput? { get set }
 
     func fetchWallpapers()
 }

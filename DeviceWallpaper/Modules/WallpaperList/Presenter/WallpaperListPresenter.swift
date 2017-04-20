@@ -10,14 +10,19 @@ import Foundation
 
 final class WallpaperListPresenter: WallpaperListPresentation {
     weak var view: WallpaperListView?
-    var interactor: WallpaperListUseCase!
-    var router: WallpaperListWireframe!
+    let interactor: WallpaperListUseCase
+    let router: WallpaperListWireframe
 
     var wallpapers: [WallpapersType] = [] {
         didSet {
             log?.info(wallpapers)
             view?.show(wallpapers: wallpapers)
         }
+    }
+
+    init(interactor: WallpaperListUseCase, router: WallpaperListWireframe) {
+        self.interactor = interactor
+        self.router = router
     }
 
     func viewDidLoad() {
