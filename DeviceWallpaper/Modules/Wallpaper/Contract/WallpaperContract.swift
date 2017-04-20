@@ -21,8 +21,9 @@ protocol WallpaperWireframe: class {
 }
 
 protocol WallpaperView: class {
-    var presenter: WallpaperPresentation! { get set }
+    var presenter: WallpaperPresentation { get }
 
+    init(presenter: WallpaperPresentation)
     func showSimple(deviceModel: DeviceModel)
     func showNormal(deviceModel: DeviceModel)
     func toUIImage() -> UIImage
@@ -30,17 +31,17 @@ protocol WallpaperView: class {
 
 protocol WallpaperPresentation: class {
     weak var view: WallpaperView? { get set }
-    var interactor: WallpaperUseCase! { get set }
-    var router: WallpaperWireframe! { get set }
+    var interactor: WallpaperUseCase { get }
+    var router: WallpaperWireframe { get }
 
-    init(wallpaper: WallpapersType)
+    init(interactor: WallpaperUseCase, router: WallpaperWireframe, wallpaper: WallpapersType)
 
     func viewDidLoad()
     func didTapActionButton()
 }
 
 protocol WallpaperUseCase: class {
-    weak var output: WallpaperInteractorOutput! { get set }
+    weak var output: WallpaperInteractorOutput? { get set }
     var dataManager: WallpaperDataManagerInputProtocol? { get set }
 
     func retrieveDeviceModel()

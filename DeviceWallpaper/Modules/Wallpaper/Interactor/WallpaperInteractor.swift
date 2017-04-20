@@ -11,7 +11,7 @@ import UIKit.UIImage
 import Photos
 
 final class WallpaperInteractor: NSObject, WallpaperUseCase {
-    weak var output: WallpaperInteractorOutput!
+    weak var output: WallpaperInteractorOutput?
     var dataManager: WallpaperDataManagerInputProtocol?
 
     func retrieveDeviceModel() {
@@ -24,16 +24,16 @@ final class WallpaperInteractor: NSObject, WallpaperUseCase {
             case .authorized, .notDetermined:
                 UIImageWriteToSavedPhotosAlbum(image, self, #selector(self?.saved(_: didFinishSavingWithError: contextInfo:)), nil)
             case .denied, .restricted:
-                self?.output.notAuthorizedPhotoLibrary()
+                self?.output?.notAuthorizedPhotoLibrary()
             }
         }
     }
 
     @objc private func saved(_ image: UIImage, didFinishSavingWithError error: NSError!, contextInfo: UnsafeMutableRawPointer) {
         if error != nil {
-            output.didSaveImageFail(with: error.localizedDescription)
+            output?.didSaveImageFail(with: error.localizedDescription)
         } else {
-            output.didSaveImage()
+            output?.didSaveImage()
         }
     }
 }
@@ -41,6 +41,6 @@ final class WallpaperInteractor: NSObject, WallpaperUseCase {
 extension WallpaperInteractor: WallpaperDataManagerOutputProtocol {
     func onRetrieved(_ deviceModel: DeviceModel) {
         log?.debug(deviceModel)
-        output.didRetrieve(deviceModel)
+        output?.didRetrieve(deviceModel)
     }
 }

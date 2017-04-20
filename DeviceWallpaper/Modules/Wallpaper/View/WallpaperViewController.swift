@@ -8,14 +8,21 @@
 
 import UIKit
 
-class WallpaperViewController: UIViewController {
-    var presenter: WallpaperPresentation!
+final class WallpaperViewController: UIViewController {
+    let presenter: WallpaperPresentation
     var barHidden: Bool = false {
         didSet {
             setNeedsStatusBarAppearanceUpdate()
             navigationController?.setNavigationBarHidden(barHidden, animated: true)
         }
     }
+
+    init(presenter: WallpaperPresentation) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     override func viewDidLoad() {
         super.viewDidLoad()

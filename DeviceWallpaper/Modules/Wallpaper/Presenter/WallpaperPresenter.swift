@@ -10,11 +10,13 @@ import Foundation
 
 final class WallpaperPresenter: WallpaperPresentation {
     weak var view: WallpaperView?
-    var interactor: WallpaperUseCase!
-    var router: WallpaperWireframe!
+    let interactor: WallpaperUseCase
+    let router: WallpaperWireframe
     let wallpaper: WallpapersType
 
-    init(wallpaper: WallpapersType) {
+    init(interactor: WallpaperUseCase, router: WallpaperWireframe, wallpaper: WallpapersType) {
+        self.interactor = interactor
+        self.router = router
         self.wallpaper = wallpaper
     }
 

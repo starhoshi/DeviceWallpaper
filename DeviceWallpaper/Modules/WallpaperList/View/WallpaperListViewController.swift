@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SnapKit
 
 final class WallpaperListViewController: UIViewController {
     let tableView = UITableView(frame: .zero, style: .plain)
