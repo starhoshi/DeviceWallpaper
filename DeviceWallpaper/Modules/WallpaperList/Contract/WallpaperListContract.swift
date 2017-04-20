@@ -9,6 +9,14 @@
 import Foundation
 import UIKit.UIViewController
 
+protocol WallpaperListWireframe: class {
+    weak var viewController: UIViewController? { get set }
+
+    func present(for wallpaper: WallpapersType)
+
+    static func assembleModule() -> UIViewController
+}
+
 protocol WallpaperListView: class {
     var presenter: WallpaperListPresentation { get }
 
@@ -34,12 +42,4 @@ protocol WallpaperListUseCase: class {
 
 protocol WallpaperListInteractorOutput: class {
     func wallpapersFetched(_ wallpapers: [WallpapersType])
-}
-
-protocol WallpaperListWireframe: class {
-    weak var viewController: UIViewController? { get set }
-
-    func present(for wallpaper: WallpapersType)
-
-    static func assembleModule() -> UIViewController
 }

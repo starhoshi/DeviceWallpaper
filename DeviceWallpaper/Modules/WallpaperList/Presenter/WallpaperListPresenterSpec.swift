@@ -51,37 +51,3 @@ class WallpaperListPresenterSpec: QuickSpec {
         }
     }
 }
-
-final class MockWallpaperListView: WallpaperListView {
-    var presenter: WallpaperListPresentation
-    var showWallpapersWasCalled = false
-
-    init(presenter: WallpaperListPresentation) {
-        self.presenter = presenter
-    }
-    func show(wallpapers: [WallpapersType]) {
-        showWallpapersWasCalled = true
-    }
-}
-
-final class MockWallpaperListUseCase: WallpaperListUseCase {
-    weak var output: WallpaperListInteractorOutput?
-    var fetchWallpapersWasCalled = false
-
-    func fetchWallpapers() {
-        fetchWallpapersWasCalled = true
-    }
-}
-
-final class MockWallpaperListWireframe: WallpaperListWireframe {
-    weak var viewController: UIViewController?
-    var presentWasCalled = false
-
-    func present(for wallpaper: WallpapersType) {
-        presentWasCalled = true
-    }
-
-    static func assembleModule() -> UIViewController {
-        return UIViewController()
-    }
-}

@@ -27,11 +27,3 @@ class WallpaperListInteractorSpec: QuickSpec {
         }
     }
 }
-
-class MockWallpaperListInteractorOutput: WallpaperListInteractorOutput {
-    var wallpapers: [WallpapersType]?
-
-    func wallpapersFetched(_ wallpapers: [WallpapersType]) {
-        self.wallpapers = wallpapers
-    }
-}
