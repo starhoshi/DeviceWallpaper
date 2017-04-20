@@ -20,7 +20,7 @@ struct SystemVersion {
 
         let splittedName = fullName.components(separatedBy: ".")
         major = splittedName[0]
-        minor = splittedName.count > 1 ? splittedName[1] : nil
-        patch = splittedName.count > 2 ? splittedName[2] : nil
+        minor = splittedName.count > 1 ? splittedName[1]: nil
+        patch = splittedName.count > 2 ? splittedName[2]: nil
     }
 }

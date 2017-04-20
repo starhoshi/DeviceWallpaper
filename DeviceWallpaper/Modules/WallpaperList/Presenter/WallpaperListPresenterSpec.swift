@@ -12,18 +12,76 @@ import Nimble
 
 class WallpaperListPresenterSpec: QuickSpec {
     override func spec() {
+        let interactor = MockWallpaperListUseCase()
+        let router = MockWallpaperListWireframe()
+        let presenter = WallpaperListPresenter(interactor: interactor, router: router)
+        let view = MockWallpaperListView(presenter: presenter)
+        beforeEach {
+            presenter.view = view
+        }
 
+        describe("viewDidLoad") {
+            beforeEach {
+                interactor.fetchWallpapersWasCalled = false
+                presenter.viewDidLoad()
+            }
+            it("interactor.fetchWallpapers() is colled") {
+                expect(interactor.fetchWallpapersWasCalled).to(beTrue())
+            }
+        }
+
+        describe("didSelect(wallpaper: WallpapersType)") {
+            beforeEach {
+                router.presentWasCalled = false
+                presenter.didSelect(wallpaper: .normal)
+            }
+            it("present(for wallpaper: WallpapersType) is called") {
+                expect(router.presentWasCalled).to(beTrue())
+            }
+        }
+
+        describe("wallpapersFetched(_ wallpapers: [WallpapersType])") {
+            beforeEach {
+                view.showWallpapersWasCalled = false
+                presenter.wallpapersFetched(WallpapersType.toArray())
+            }
+            it("view.show(wallpapers: wallpapers) is called") {
+                expect(view.showWallpapersWasCalled).to(beTrue())
+            }
+        }
     }
 }
 
-class MockWallpaperListView: WallpaperListView {
-    
+final class MockWallpaperListView: WallpaperListView {
+    var presenter: WallpaperListPresentation
+    var showWallpapersWasCalled = false
+
+    init(presenter: WallpaperListPresentation) {
+        self.presenter = presenter
+    }
+    func show(wallpapers: [WallpapersType]) {
+        showWallpapersWasCalled = true
+    }
 }
 
-class MockWallpaperListUseCase: WallpaperListUseCase {
-    
+final class MockWallpaperListUseCase: WallpaperListUseCase {
+    weak var output: WallpaperListInteractorOutput?
+    var fetchWallpapersWasCalled = false
+
+    func fetchWallpapers() {
+        fetchWallpapersWasCalled = true
+    }
 }
 
-class MockWallpaperListWireframe: WallpaperListWireframe {
-    
+final class MockWallpaperListWireframe: WallpaperListWireframe {
+    weak var viewController: UIViewController?
+    var presentWasCalled = false
+
+    func present(for wallpaper: WallpapersType) {
+        presentWasCalled = true
+    }
+
+    static func assembleModule() -> UIViewController {
+        return UIViewController()
+    }
 }
