@@ -38,7 +38,6 @@
 		E3803A071E936CBF0024D76E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3803A061E936CBF0024D76E /* AppDelegate.swift */; };
 		E3803A0E1E936CBF0024D76E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3803A0D1E936CBF0024D76E /* Assets.xcassets */; };
 		E3803A111E936CBF0024D76E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3803A0F1E936CBF0024D76E /* LaunchScreen.storyboard */; };
-		E38AF1D11EA8416300A14EB0 /* DeviceWallpaperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38AF1D01EA8416300A14EB0 /* DeviceWallpaperTests.swift */; };
 		E38AF1D91EA841EC00A14EB0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38AF1D81EA841EC00A14EB0 /* Quick.framework */; };
 		E38AF1DB1EA8420300A14EB0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38AF1DA1EA8420300A14EB0 /* Nimble.framework */; };
 		E38AF1DC1EA8455100A14EB0 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A8141E9C9FBD00CECF5E /* APIKit.framework */; };
@@ -53,6 +52,7 @@
 		E38AF24A1EA7714500A23DAD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E38AF2491EA7714500A23DAD /* Settings.bundle */; };
 		E39C8C6E1EA486C3008F5F8B /* WallpaperDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C8C6D1EA486C3008F5F8B /* WallpaperDataManager.swift */; };
 		E39C8C721EA61593008F5F8B /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C8C711EA61593008F5F8B /* UIView+Ex.swift */; };
+		E3B8CE2E1EA8877E00FDB599 /* WallpaperListInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B8CE2D1EA8877E00FDB599 /* WallpaperListInteractorSpec.swift */; };
 		E3CF2C641EA3C4F00098706F /* Device.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CF2C631EA3C4F00098706F /* Device.framework */; };
 		E3CF2C661EA3CF840098706F /* SystemVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF2C651EA3CF840098706F /* SystemVersion.swift */; };
 		E3CF2C681EA3D5E00098706F /* DeviceVersion+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF2C671EA3D5E00098706F /* DeviceVersion+Ex.swift */; };
@@ -108,13 +108,13 @@
 		E3803A101E936CBF0024D76E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3803A121E936CBF0024D76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E38AF1CE1EA8416200A14EB0 /* DeviceWallpaperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceWallpaperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E38AF1D01EA8416300A14EB0 /* DeviceWallpaperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceWallpaperTests.swift; sourceTree = "<group>"; };
 		E38AF1D21EA8416300A14EB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E38AF1D81EA841EC00A14EB0 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		E38AF1DA1EA8420300A14EB0 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		E38AF2491EA7714500A23DAD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E39C8C6D1EA486C3008F5F8B /* WallpaperDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperDataManager.swift; sourceTree = "<group>"; };
 		E39C8C711EA61593008F5F8B /* UIView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
+		E3B8CE2D1EA8877E00FDB599 /* WallpaperListInteractorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperListInteractorSpec.swift; sourceTree = "<group>"; };
 		E3CF2C631EA3C4F00098706F /* Device.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Device.framework; path = Carthage/Build/iOS/Device.framework; sourceTree = "<group>"; };
 		E3CF2C651EA3CF840098706F /* SystemVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemVersion.swift; sourceTree = "<group>"; };
 		E3CF2C671EA3D5E00098706F /* DeviceVersion+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DeviceVersion+Ex.swift"; sourceTree = "<group>"; };
@@ -289,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				E32D05571E9CBB9C009C41D2 /* WallpaperListInteractor.swift */,
+				E3B8CE2D1EA8877E00FDB599 /* WallpaperListInteractorSpec.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -352,7 +353,6 @@
 		E38AF1CF1EA8416300A14EB0 /* DeviceWallpaperTests */ = {
 			isa = PBXGroup;
 			children = (
-				E38AF1D01EA8416300A14EB0 /* DeviceWallpaperTests.swift */,
 				E38AF1D21EA8416300A14EB0 /* Info.plist */,
 			);
 			path = DeviceWallpaperTests;
@@ -363,7 +363,6 @@
 			children = (
 				E32D055E1E9CD497009C41D2 /* RootContract.swift */,
 			);
-			name = Contract;
 			path = Contract;
 			sourceTree = "<group>";
 		};
@@ -372,7 +371,6 @@
 			children = (
 				E379B4FA1E9CB07400D1CDEF /* RootRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -723,7 +721,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E38AF1D11EA8416300A14EB0 /* DeviceWallpaperTests.swift in Sources */,
+				E3B8CE2E1EA8877E00FDB599 /* WallpaperListInteractorSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -958,6 +956,7 @@
 				E38AF1D61EA8416300A14EB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

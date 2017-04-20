@@ -5,6 +5,36 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E38AF1CD1EA8416200A14EB0"
+               BuildableName = "DeviceWallpaperTests.xctest"
+               BlueprintName = "DeviceWallpaperTests"
+               ReferencedContainer = "container:DeviceWallpaper.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E3803A021E936CBF0024D76E"
+               BuildableName = "DeviceWallpaper.app"
+               BlueprintName = "DeviceWallpaper"
+               ReferencedContainer = "container:DeviceWallpaper.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -23,6 +53,15 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E38AF1CD1EA8416200A14EB0"
+            BuildableName = "DeviceWallpaperTests.xctest"
+            BlueprintName = "DeviceWallpaperTests"
+            ReferencedContainer = "container:DeviceWallpaper.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
