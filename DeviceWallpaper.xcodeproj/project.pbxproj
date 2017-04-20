@@ -200,8 +200,8 @@
 		E32D055B1E9CCEC9009C41D2 /* Contract */ = {
 			isa = PBXGroup;
 			children = (
-				E32D055C1E9CD017009C41D2 /* WallpaperListContract.swift */,
 				E34FC5061EA8FFF700D9313F /* MockWallpaperList.swift */,
+				E32D055C1E9CD017009C41D2 /* WallpaperListContract.swift */,
 			);
 			path = Contract;
 			sourceTree = "<group>";
