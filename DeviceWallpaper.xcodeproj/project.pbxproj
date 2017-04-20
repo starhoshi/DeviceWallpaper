@@ -56,6 +56,7 @@
 		E3CF2C641EA3C4F00098706F /* Device.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CF2C631EA3C4F00098706F /* Device.framework */; };
 		E3CF2C661EA3CF840098706F /* SystemVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF2C651EA3CF840098706F /* SystemVersion.swift */; };
 		E3CF2C681EA3D5E00098706F /* DeviceVersion+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF2C671EA3D5E00098706F /* DeviceVersion+Ex.swift */; };
+		E3DE48A21EA89263001A5E6A /* WallpaperListPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE48A11EA89263001A5E6A /* WallpaperListPresenterSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		E3CF2C631EA3C4F00098706F /* Device.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Device.framework; path = Carthage/Build/iOS/Device.framework; sourceTree = "<group>"; };
 		E3CF2C651EA3CF840098706F /* SystemVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemVersion.swift; sourceTree = "<group>"; };
 		E3CF2C671EA3D5E00098706F /* DeviceVersion+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DeviceVersion+Ex.swift"; sourceTree = "<group>"; };
+		E3DE48A11EA89263001A5E6A /* WallpaperListPresenterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperListPresenterSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				E32D05551E9CBB8B009C41D2 /* WallpaperListPresenter.swift */,
+				E3DE48A11EA89263001A5E6A /* WallpaperListPresenterSpec.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -721,6 +724,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3DE48A21EA89263001A5E6A /* WallpaperListPresenterSpec.swift in Sources */,
 				E3B8CE2E1EA8877E00FDB599 /* WallpaperListInteractorSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
