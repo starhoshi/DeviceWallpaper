@@ -16,7 +16,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E32D058A1E9F59F5009C41D2"
+               BlueprintIdentifier = "E38AF1CD1EA8416200A14EB0"
                BuildableName = "DeviceWallpaperTests.xctest"
                BlueprintName = "DeviceWallpaperTests"
                ReferencedContainer = "container:DeviceWallpaper.xcodeproj">

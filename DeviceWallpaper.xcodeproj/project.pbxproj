@@ -38,6 +38,18 @@
 		E3803A071E936CBF0024D76E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3803A061E936CBF0024D76E /* AppDelegate.swift */; };
 		E3803A0E1E936CBF0024D76E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3803A0D1E936CBF0024D76E /* Assets.xcassets */; };
 		E3803A111E936CBF0024D76E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3803A0F1E936CBF0024D76E /* LaunchScreen.storyboard */; };
+		E38AF1D11EA8416300A14EB0 /* DeviceWallpaperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38AF1D01EA8416300A14EB0 /* DeviceWallpaperTests.swift */; };
+		E38AF1D91EA841EC00A14EB0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38AF1D81EA841EC00A14EB0 /* Quick.framework */; };
+		E38AF1DB1EA8420300A14EB0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38AF1DA1EA8420300A14EB0 /* Nimble.framework */; };
+		E38AF1DC1EA8455100A14EB0 /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A8141E9C9FBD00CECF5E /* APIKit.framework */; };
+		E38AF1DD1EA8455100A14EB0 /* Device.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CF2C631EA3C4F00098706F /* Device.framework */; };
+		E38AF1DE1EA8455100A14EB0 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A8151E9C9FBD00CECF5E /* ObjectMapper.framework */; };
+		E38AF1DF1EA8455100A14EB0 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A8161E9C9FBD00CECF5E /* Result.framework */; };
+		E38AF1E01EA8455100A14EB0 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81A1E9C9FBD00CECF5E /* SnapKit.framework */; };
+		E38AF1E11EA8455100A14EB0 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81B1E9C9FBD00CECF5E /* SVProgressHUD.framework */; };
+		E38AF1E21EA8455100A14EB0 /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81C1E9C9FBD00CECF5E /* SwiftDate.framework */; };
+		E38AF1E31EA8455100A14EB0 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81D1E9C9FBD00CECF5E /* SwiftyBeaver.framework */; };
+		E38AF1E41EA8455100A14EB0 /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81E1E9C9FBD00CECF5E /* SwiftyUserDefaults.framework */; };
 		E38AF24A1EA7714500A23DAD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E38AF2491EA7714500A23DAD /* Settings.bundle */; };
 		E39C8C6E1EA486C3008F5F8B /* WallpaperDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C8C6D1EA486C3008F5F8B /* WallpaperDataManager.swift */; };
 		E39C8C721EA61593008F5F8B /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39C8C711EA61593008F5F8B /* UIView+Ex.swift */; };
@@ -45,6 +57,16 @@
 		E3CF2C661EA3CF840098706F /* SystemVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF2C651EA3CF840098706F /* SystemVersion.swift */; };
 		E3CF2C681EA3D5E00098706F /* DeviceVersion+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF2C671EA3D5E00098706F /* DeviceVersion+Ex.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E38AF1D31EA8416300A14EB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E38039FB1E936CBF0024D76E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3803A021E936CBF0024D76E;
+			remoteInfo = DeviceWallpaper;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		52FABC786E00D464ACCD6F16 /* Pods_DeviceWallpaper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeviceWallpaper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +107,11 @@
 		E3803A0D1E936CBF0024D76E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3803A101E936CBF0024D76E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3803A121E936CBF0024D76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E38AF1CE1EA8416200A14EB0 /* DeviceWallpaperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceWallpaperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E38AF1D01EA8416300A14EB0 /* DeviceWallpaperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceWallpaperTests.swift; sourceTree = "<group>"; };
+		E38AF1D21EA8416300A14EB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E38AF1D81EA841EC00A14EB0 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		E38AF1DA1EA8420300A14EB0 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		E38AF2491EA7714500A23DAD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E39C8C6D1EA486C3008F5F8B /* WallpaperDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperDataManager.swift; sourceTree = "<group>"; };
 		E39C8C711EA61593008F5F8B /* UIView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
@@ -111,12 +138,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E38AF1CB1EA8416200A14EB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E38AF1DC1EA8455100A14EB0 /* APIKit.framework in Frameworks */,
+				E38AF1DD1EA8455100A14EB0 /* Device.framework in Frameworks */,
+				E38AF1DB1EA8420300A14EB0 /* Nimble.framework in Frameworks */,
+				E38AF1DE1EA8455100A14EB0 /* ObjectMapper.framework in Frameworks */,
+				E38AF1D91EA841EC00A14EB0 /* Quick.framework in Frameworks */,
+				E38AF1DF1EA8455100A14EB0 /* Result.framework in Frameworks */,
+				E38AF1E01EA8455100A14EB0 /* SnapKit.framework in Frameworks */,
+				E38AF1E11EA8455100A14EB0 /* SVProgressHUD.framework in Frameworks */,
+				E38AF1E21EA8455100A14EB0 /* SwiftDate.framework in Frameworks */,
+				E38AF1E31EA8455100A14EB0 /* SwiftyBeaver.framework in Frameworks */,
+				E38AF1E41EA8455100A14EB0 /* SwiftyUserDefaults.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		A30695E29EC2613C1339A93F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E38AF1DA1EA8420300A14EB0 /* Nimble.framework */,
+				E38AF1D81EA841EC00A14EB0 /* Quick.framework */,
 				E3CF2C631EA3C4F00098706F /* Device.framework */,
 				E350A8141E9C9FBD00CECF5E /* APIKit.framework */,
 				E350A8151E9C9FBD00CECF5E /* ObjectMapper.framework */,
@@ -149,7 +196,6 @@
 			children = (
 				E32D055C1E9CD017009C41D2 /* WallpaperListContract.swift */,
 			);
-			name = Contract;
 			path = Contract;
 			sourceTree = "<group>";
 		};
@@ -199,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				E3803A051E936CBF0024D76E /* DeviceWallpaper */,
+				E38AF1CF1EA8416300A14EB0 /* DeviceWallpaperTests */,
 				A30695E29EC2613C1339A93F /* Frameworks */,
 				E363D9B233921FF76428FD7C /* Pods */,
 				E3803A041E936CBF0024D76E /* Products */,
@@ -209,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				E3803A031E936CBF0024D76E /* DeviceWallpaper.app */,
+				E38AF1CE1EA8416200A14EB0 /* DeviceWallpaperTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,7 +282,6 @@
 			children = (
 				E319E89A1E9CB3260082BFDF /* WallpaperListRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -243,7 +290,6 @@
 			children = (
 				E32D05571E9CBB9C009C41D2 /* WallpaperListInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -252,7 +298,6 @@
 			children = (
 				E32D05551E9CBB8B009C41D2 /* WallpaperListPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -261,7 +306,6 @@
 			children = (
 				E32D05591E9CBBD7009C41D2 /* WallpaperListViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -270,7 +314,6 @@
 			children = (
 				E32D05641E9F46F7009C41D2 /* WallpaperPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -279,7 +322,6 @@
 			children = (
 				E32D05681E9F48B4009C41D2 /* WallpaperRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -288,7 +330,6 @@
 			children = (
 				E32B1CFB1EA065AF00F9BEF8 /* WallpaperInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -297,7 +338,6 @@
 			children = (
 				E39C8C6D1EA486C3008F5F8B /* WallpaperDataManager.swift */,
 			);
-			name = DataManager;
 			path = DataManager;
 			sourceTree = "<group>";
 		};
@@ -306,8 +346,16 @@
 			children = (
 				E32D05621E9F469A009C41D2 /* WallpaperContract.swift */,
 			);
-			name = Contract;
 			path = Contract;
+			sourceTree = "<group>";
+		};
+		E38AF1CF1EA8416300A14EB0 /* DeviceWallpaperTests */ = {
+			isa = PBXGroup;
+			children = (
+				E38AF1D01EA8416300A14EB0 /* DeviceWallpaperTests.swift */,
+				E38AF1D21EA8416300A14EB0 /* Info.plist */,
+			);
+			path = DeviceWallpaperTests;
 			sourceTree = "<group>";
 		};
 		E393D70E1E9C8971001CC93D /* Resources */ = {
@@ -387,7 +435,6 @@
 				E38AF1C61EA7C45B00A14EB0 /* Router */,
 				E32B1CFD1EA0753A00F9BEF8 /* View */,
 			);
-			name = Wallpaper;
 			path = Wallpaper;
 			sourceTree = "<group>";
 		};
@@ -417,6 +464,25 @@
 			productReference = E3803A031E936CBF0024D76E /* DeviceWallpaper.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E38AF1CD1EA8416200A14EB0 /* DeviceWallpaperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E38AF1D71EA8416300A14EB0 /* Build configuration list for PBXNativeTarget "DeviceWallpaperTests" */;
+			buildPhases = (
+				E38AF1CA1EA8416200A14EB0 /* Sources */,
+				E38AF1CB1EA8416200A14EB0 /* Frameworks */,
+				E38AF1CC1EA8416200A14EB0 /* Resources */,
+				E38AF1E51EA8457A00A14EB0 /* Run Script - Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E38AF1D41EA8416300A14EB0 /* PBXTargetDependency */,
+			);
+			name = DeviceWallpaperTests;
+			productName = DeviceWallpaperTests;
+			productReference = E38AF1CE1EA8416200A14EB0 /* DeviceWallpaperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -431,6 +497,12 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 5J5Q4ZGXZR;
 						ProvisioningStyle = Manual;
+					};
+					E38AF1CD1EA8416200A14EB0 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 2BEQ57LQ8R;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E3803A021E936CBF0024D76E;
 					};
 				};
 			};
@@ -448,6 +520,7 @@
 			projectRoot = "";
 			targets = (
 				E3803A021E936CBF0024D76E /* DeviceWallpaper */,
+				E38AF1CD1EA8416200A14EB0 /* DeviceWallpaperTests */,
 			);
 		};
 /* End PBXProject section */
@@ -460,6 +533,13 @@
 				E3803A111E936CBF0024D76E /* LaunchScreen.storyboard in Resources */,
 				E38AF24A1EA7714500A23DAD /* Settings.bundle in Resources */,
 				E3803A0E1E936CBF0024D76E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E38AF1CC1EA8416200A14EB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +628,31 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
+		E38AF1E51EA8457A00A14EB0 /* Run Script - Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftDate.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Device.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+			);
+			name = "Run Script - Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		E3E3910D1EA78A94005914C1 /* Run Script - Settings.bundle */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -596,7 +701,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E38AF1CA1EA8416200A14EB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E38AF1D11EA8416300A14EB0 /* DeviceWallpaperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E38AF1D41EA8416300A14EB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3803A021E936CBF0024D76E /* DeviceWallpaper */;
+			targetProxy = E38AF1D31EA8416300A14EB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E3803A0F1E936CBF0024D76E /* LaunchScreen.storyboard */ = {
@@ -753,6 +874,44 @@
 			};
 			name = Release;
 		};
+		E38AF1D51EA8416300A14EB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2BEQ57LQ8R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = DeviceWallpaperTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.starhoshi.DeviceWallpaperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeviceWallpaper.app/DeviceWallpaper";
+			};
+			name = Debug;
+		};
+		E38AF1D61EA8416300A14EB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2BEQ57LQ8R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = DeviceWallpaperTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.starhoshi.DeviceWallpaperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeviceWallpaper.app/DeviceWallpaper";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -773,6 +932,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E38AF1D71EA8416300A14EB0 /* Build configuration list for PBXNativeTarget "DeviceWallpaperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E38AF1D51EA8416300A14EB0 /* Debug */,
+				E38AF1D61EA8416300A14EB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
