@@ -13,22 +13,23 @@ import Nimble
 class WallpaperListRouterSpec: QuickSpec {
     override func spec() {
         let router = WallpaperListRouter()
-        let vc = UIViewController()
+        let view = UIViewController()
+        let nav = MockNavigationController(rootViewController: view)
         beforeEach {
-            router.viewController = vc
+            router.viewController = view
+        }
+
+        describe("assembleModule()") {
+
         }
 
         describe("present(for wallpaper: WallpapersType)") {
             beforeEach {
                 router.present(for: .normal)
             }
-            it("show WallpaperViewController") {
-                let wallpaperModuleViewController = WallpaperRouter.assembleModule(wallpaper: .normal)
-                print(router.viewController)
-                expect(router.viewController?.navigationController?.topViewController).to(equal(wallpaperModuleViewController))
+            it("pushed WallpaperViewController") {
+                expect(nav.pushedViewController).to(beAnInstanceOf(WallpaperViewController.self))
             }
-
         }
-
     }
 }

@@ -23,6 +23,7 @@
 		E32D05671E9F4705009C41D2 /* WallpaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D05661E9F4705009C41D2 /* WallpaperViewController.swift */; };
 		E32D05691E9F48B4009C41D2 /* WallpaperRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D05681E9F48B4009C41D2 /* WallpaperRouter.swift */; };
 		E330469D1EA71D7300D6B995 /* NormalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E330469C1EA71D7300D6B995 /* NormalView.swift */; };
+		E338DC281EAA24AA00536908 /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E338DC271EAA24AA00536908 /* MockNavigationController.swift */; };
 		E34FC5031EA8FD9100D9313F /* WallpaperListRouterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC5021EA8FD9100D9313F /* WallpaperListRouterSpec.swift */; };
 		E34FC5071EA8FFF700D9313F /* MockWallpaperList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC5061EA8FFF700D9313F /* MockWallpaperList.swift */; };
 		E350A8101E9C9C6E00CECF5E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E350A80F1E9C9C6E00CECF5E /* Log.swift */; };
@@ -90,6 +91,7 @@
 		E32D05661E9F4705009C41D2 /* WallpaperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperViewController.swift; sourceTree = "<group>"; };
 		E32D05681E9F48B4009C41D2 /* WallpaperRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperRouter.swift; sourceTree = "<group>"; };
 		E330469C1EA71D7300D6B995 /* NormalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalView.swift; sourceTree = "<group>"; };
+		E338DC271EAA24AA00536908 /* MockNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
 		E34FC5021EA8FD9100D9313F /* WallpaperListRouterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperListRouterSpec.swift; sourceTree = "<group>"; };
 		E34FC5061EA8FFF700D9313F /* MockWallpaperList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockWallpaperList.swift; sourceTree = "<group>"; };
 		E350A80F1E9C9C6E00CECF5E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -220,6 +222,14 @@
 				E351D3FC1EA0DAAA000600A7 /* GradientLabel.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E338DC261EAA249900536908 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E338DC271EAA24AA00536908 /* MockNavigationController.swift */,
+			);
+			name = Mocks;
 			sourceTree = "<group>";
 		};
 		E350A80E1E9C9C6200CECF5E /* Utils */ = {
@@ -362,6 +372,7 @@
 		E38AF1CF1EA8416300A14EB0 /* DeviceWallpaperTests */ = {
 			isa = PBXGroup;
 			children = (
+				E338DC261EAA249900536908 /* Mocks */,
 				E38AF1D21EA8416300A14EB0 /* Info.plist */,
 			);
 			path = DeviceWallpaperTests;
@@ -731,6 +742,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E34FC5071EA8FFF700D9313F /* MockWallpaperList.swift in Sources */,
+				E338DC281EAA24AA00536908 /* MockNavigationController.swift in Sources */,
 				E34FC5031EA8FD9100D9313F /* WallpaperListRouterSpec.swift in Sources */,
 				E3DE48A21EA89263001A5E6A /* WallpaperListPresenterSpec.swift in Sources */,
 				E3B8CE2E1EA8877E00FDB599 /* WallpaperListInteractorSpec.swift in Sources */,
