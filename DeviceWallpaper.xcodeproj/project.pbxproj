@@ -230,6 +230,7 @@
 				E338DC271EAA24AA00536908 /* MockNavigationController.swift */,
 			);
 			name = Mocks;
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		E350A80E1E9C9C6200CECF5E /* Utils */ = {
