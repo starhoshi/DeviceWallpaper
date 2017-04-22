@@ -31,6 +31,10 @@ final class WallpaperListPresenter: WallpaperListPresentation {
     func didSelect(wallpaper: WallpapersType) {
         router.present(for: wallpaper)
     }
+
+    func didTapDeviceInfo() {
+        router.presentDeviceInfo()
+    }
 }
 
 extension WallpaperListPresenter: WallpaperListInteractorOutput {

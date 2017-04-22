@@ -26,6 +26,12 @@
 		E338DC281EAA24AA00536908 /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E338DC271EAA24AA00536908 /* MockNavigationController.swift */; };
 		E34FC5031EA8FD9100D9313F /* WallpaperListRouterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC5021EA8FD9100D9313F /* WallpaperListRouterSpec.swift */; };
 		E34FC5071EA8FFF700D9313F /* MockWallpaperList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC5061EA8FFF700D9313F /* MockWallpaperList.swift */; };
+		E34FC51B1EAB3E7700D9313F /* DeviceInfoContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC51A1EAB3E7700D9313F /* DeviceInfoContract.swift */; };
+		E34FC5241EAB3FC100D9313F /* DeviceInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC5231EAB3FC100D9313F /* DeviceInfoRouter.swift */; };
+		E34FC5261EAB3FCB00D9313F /* DeviceInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC5251EAB3FCB00D9313F /* DeviceInfoInteractor.swift */; };
+		E34FC52A1EAB3FE800D9313F /* DeviceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC5291EAB3FE800D9313F /* DeviceInfoViewController.swift */; };
+		E34FC52D1EAB401800D9313F /* DeviceInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC52C1EAB401800D9313F /* DeviceInfoPresenter.swift */; };
+		E34FC52F1EAB402200D9313F /* DeviceInfoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC52E1EAB402200D9313F /* DeviceInfoDataManager.swift */; };
 		E350A8101E9C9C6E00CECF5E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E350A80F1E9C9C6E00CECF5E /* Log.swift */; };
 		E350A8131E9C9F0300CECF5E /* DefaultsKeys+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E350A8121E9C9F0300CECF5E /* DefaultsKeys+Ex.swift */; };
 		E350A81F1E9C9FBD00CECF5E /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A8141E9C9FBD00CECF5E /* APIKit.framework */; };
@@ -94,6 +100,12 @@
 		E338DC271EAA24AA00536908 /* MockNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
 		E34FC5021EA8FD9100D9313F /* WallpaperListRouterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperListRouterSpec.swift; sourceTree = "<group>"; };
 		E34FC5061EA8FFF700D9313F /* MockWallpaperList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockWallpaperList.swift; sourceTree = "<group>"; };
+		E34FC51A1EAB3E7700D9313F /* DeviceInfoContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfoContract.swift; sourceTree = "<group>"; };
+		E34FC5231EAB3FC100D9313F /* DeviceInfoRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfoRouter.swift; sourceTree = "<group>"; };
+		E34FC5251EAB3FCB00D9313F /* DeviceInfoInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfoInteractor.swift; sourceTree = "<group>"; };
+		E34FC5291EAB3FE800D9313F /* DeviceInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfoViewController.swift; sourceTree = "<group>"; };
+		E34FC52C1EAB401800D9313F /* DeviceInfoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfoPresenter.swift; sourceTree = "<group>"; };
+		E34FC52E1EAB402200D9313F /* DeviceInfoDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfoDataManager.swift; sourceTree = "<group>"; };
 		E350A80F1E9C9C6E00CECF5E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		E350A8121E9C9F0300CECF5E /* DefaultsKeys+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DefaultsKeys+Ex.swift"; sourceTree = "<group>"; };
 		E350A8141E9C9FBD00CECF5E /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
@@ -229,8 +241,75 @@
 			children = (
 				E338DC271EAA24AA00536908 /* MockNavigationController.swift */,
 			);
-			name = Mocks;
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E34FC50B1EAB3A5E00D9313F /* DeviceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E34FC51E1EAB3E9300D9313F /* Contract */,
+				E34FC5221EAB3EBF00D9313F /* DataManager */,
+				E34FC5201EAB3EAB00D9313F /* Interactor */,
+				E34FC52B1EAB400B00D9313F /* Presenter */,
+				E34FC51F1EAB3E9D00D9313F /* Router */,
+				E34FC5211EAB3EB500D9313F /* View */,
+			);
+			name = DeviceInfo;
+			path = DeviceInfo;
+			sourceTree = "<group>";
+		};
+		E34FC51E1EAB3E9300D9313F /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				E34FC51A1EAB3E7700D9313F /* DeviceInfoContract.swift */,
+			);
+			name = Contract;
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		E34FC51F1EAB3E9D00D9313F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E34FC5231EAB3FC100D9313F /* DeviceInfoRouter.swift */,
+			);
+			name = Router;
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E34FC5201EAB3EAB00D9313F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E34FC5251EAB3FCB00D9313F /* DeviceInfoInteractor.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E34FC5211EAB3EB500D9313F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E34FC5291EAB3FE800D9313F /* DeviceInfoViewController.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		E34FC5221EAB3EBF00D9313F /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				E34FC52E1EAB402200D9313F /* DeviceInfoDataManager.swift */,
+			);
+			name = DataManager;
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		E34FC52B1EAB400B00D9313F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E34FC52C1EAB401800D9313F /* DeviceInfoPresenter.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		E350A80E1E9C9C6200CECF5E /* Utils */ = {
@@ -427,6 +506,7 @@
 		E393D7111E9C8AE1001CC93D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E34FC50B1EAB3A5E00D9313F /* DeviceInfo */,
 				E379B4F91E9CB03A00D1CDEF /* Root */,
 				E393D7151E9C8EC0001CC93D /* Wallpaper */,
 				E393D7141E9C8D57001CC93D /* WallpaperList */,
@@ -717,21 +797,27 @@
 				E39C8C6E1EA486C3008F5F8B /* WallpaperDataManager.swift in Sources */,
 				E379B4FB1E9CB07400D1CDEF /* RootRouter.swift in Sources */,
 				E32D055A1E9CBBD7009C41D2 /* WallpaperListViewController.swift in Sources */,
+				E34FC5241EAB3FC100D9313F /* DeviceInfoRouter.swift in Sources */,
 				E39C8C721EA61593008F5F8B /* UIView+Ex.swift in Sources */,
 				E319E89B1E9CB3260082BFDF /* WallpaperListRouter.swift in Sources */,
 				E32B1D011EA0755900F9BEF8 /* SimpleView.swift in Sources */,
 				E3803A071E936CBF0024D76E /* AppDelegate.swift in Sources */,
+				E34FC52F1EAB402200D9313F /* DeviceInfoDataManager.swift in Sources */,
 				E350A8101E9C9C6E00CECF5E /* Log.swift in Sources */,
 				E32B1CFC1EA065AF00F9BEF8 /* WallpaperInteractor.swift in Sources */,
 				E32D05561E9CBB8B009C41D2 /* WallpaperListPresenter.swift in Sources */,
+				E34FC5261EAB3FCB00D9313F /* DeviceInfoInteractor.swift in Sources */,
 				E32D05631E9F469A009C41D2 /* WallpaperContract.swift in Sources */,
 				E351D3FD1EA0DAAA000600A7 /* GradientLabel.swift in Sources */,
 				E32D05581E9CBB9C009C41D2 /* WallpaperListInteractor.swift in Sources */,
+				E34FC51B1EAB3E7700D9313F /* DeviceInfoContract.swift in Sources */,
 				E32D05651E9F46F7009C41D2 /* WallpaperPresenter.swift in Sources */,
 				E3CF2C661EA3CF840098706F /* SystemVersion.swift in Sources */,
 				E324C5211EA0E7A200654BC5 /* Device.swift in Sources */,
+				E34FC52D1EAB401800D9313F /* DeviceInfoPresenter.swift in Sources */,
 				E350A8131E9C9F0300CECF5E /* DefaultsKeys+Ex.swift in Sources */,
 				E32D05611E9CE499009C41D2 /* WallpapersType.swift in Sources */,
+				E34FC52A1EAB3FE800D9313F /* DeviceInfoViewController.swift in Sources */,
 				E32D055D1E9CD017009C41D2 /* WallpaperListContract.swift in Sources */,
 				E32D05671E9F4705009C41D2 /* WallpaperViewController.swift in Sources */,
 				E32D055F1E9CD497009C41D2 /* RootContract.swift in Sources */,

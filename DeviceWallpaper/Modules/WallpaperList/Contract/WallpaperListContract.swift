@@ -13,6 +13,7 @@ protocol WallpaperListWireframe: class {
     weak var viewController: UIViewController? { get set }
 
     func present(for wallpaper: WallpapersType)
+    func presentDeviceInfo()
 
     static func assembleModule() -> UIViewController
 }
@@ -32,6 +33,7 @@ protocol WallpaperListPresentation: class {
     init(interactor: WallpaperListUseCase, router: WallpaperListWireframe)
     func viewDidLoad()
     func didSelect(wallpaper: WallpapersType)
+    func didTapDeviceInfo()
 }
 
 protocol WallpaperListUseCase: class {

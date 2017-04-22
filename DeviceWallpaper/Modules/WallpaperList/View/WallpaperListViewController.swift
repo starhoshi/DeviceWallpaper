@@ -32,6 +32,7 @@ final class WallpaperListViewController: UIViewController {
 
     private func setUp() {
         navigationItem.title = "Menu"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Device Info", style: .plain, target: self, action: #selector(didTapDeviceInfoButton))
         if #available(iOS 9, *) {
             tableView.cellLayoutMarginsFollowReadableWidth = false
         }
@@ -46,6 +47,10 @@ final class WallpaperListViewController: UIViewController {
         if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
             tableView.deselectRow(at: indexPathForSelectedRow, animated: true)
         }
+    }
+
+    @objc private func didTapDeviceInfoButton(_ sender: Any?) {
+        presenter.didTapDeviceInfo()
     }
 }
 
