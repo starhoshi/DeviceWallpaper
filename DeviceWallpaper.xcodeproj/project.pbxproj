@@ -290,8 +290,8 @@
 		E34FC5211EAB3EB500D9313F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E34FC5291EAB3FE800D9313F /* DeviceInfoViewController.swift */,
 				E34FC5301EAB40DB00D9313F /* DeviceInfoViewController.storyboard */,
+				E34FC5291EAB3FE800D9313F /* DeviceInfoViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -498,9 +498,9 @@
 			children = (
 				E350A8121E9C9F0300CECF5E /* DefaultsKeys+Ex.swift */,
 				E3CF2C671EA3D5E00098706F /* DeviceVersion+Ex.swift */,
-				E39C8C711EA61593008F5F8B /* UIView+Ex.swift */,
 				E34FC5321EAB436300D9313F /* NSObjectProtocol+Ex.swift */,
 				E34FC5341EAB43C600D9313F /* Storyboardable.swift */,
+				E39C8C711EA61593008F5F8B /* UIView+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
