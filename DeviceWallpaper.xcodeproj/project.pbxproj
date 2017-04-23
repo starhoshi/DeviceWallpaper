@@ -120,8 +120,8 @@
 		E34FC5341EAB43C600D9313F /* Storyboardable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		E34FC53B1EAB51CE00D9313F /* UserAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAgent.swift; sourceTree = "<group>"; };
 		E34FC53D1EAB538F00D9313F /* UIWebView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+Ex.swift"; sourceTree = "<group>"; };
-		E34FC53F1EAC751000D9313F /* AppleDeviceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppleDeviceRequest.swift; path = DeviceWallpaper/Extensions/AppleDeviceRequest.swift; sourceTree = SOURCE_ROOT; };
-		E34FC5411EAC767300D9313F /* AppleDeviceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppleDeviceAPI.swift; path = DeviceWallpaper/Extensions/AppleDeviceAPI.swift; sourceTree = SOURCE_ROOT; };
+		E34FC53F1EAC751000D9313F /* AppleDeviceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppleDeviceRequest.swift; path = AppleDeviceRequest.swift; sourceTree = "<group>"; };
+		E34FC5411EAC767300D9313F /* AppleDeviceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppleDeviceAPI.swift; path = AppleDeviceAPI.swift; sourceTree = "<group>"; };
 		E34FC5451EAC79B300D9313F /* TargetDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDevice.swift; sourceTree = "<group>"; };
 		E34FC5471EAC823F00D9313F /* DeviceType+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DeviceType+Ex.swift"; sourceTree = "<group>"; };
 		E350A80F1E9C9C6E00CECF5E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -509,8 +509,8 @@
 			isa = PBXGroup;
 			children = (
 				E350A8121E9C9F0300CECF5E /* DefaultsKeys+Ex.swift */,
-				E3CF2C671EA3D5E00098706F /* DeviceVersion+Ex.swift */,
 				E34FC5471EAC823F00D9313F /* DeviceType+Ex.swift */,
+				E3CF2C671EA3D5E00098706F /* DeviceVersion+Ex.swift */,
 				E34FC5321EAB436300D9313F /* NSObjectProtocol+Ex.swift */,
 				E34FC5341EAB43C600D9313F /* Storyboardable.swift */,
 				E39C8C711EA61593008F5F8B /* UIView+Ex.swift */,
@@ -535,8 +535,8 @@
 			children = (
 				E324C5201EA0E7A200654BC5 /* Device.swift */,
 				E3CF2C651EA3CF840098706F /* SystemVersion.swift */,
-				E34FC53B1EAB51CE00D9313F /* UserAgent.swift */,
 				E34FC5451EAC79B300D9313F /* TargetDevice.swift */,
+				E34FC53B1EAB51CE00D9313F /* UserAgent.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -544,8 +544,8 @@
 		E393D7131E9C8AF6001CC93D /* Networks */ = {
 			isa = PBXGroup;
 			children = (
-				E34FC53F1EAC751000D9313F /* AppleDeviceRequest.swift */,
 				E34FC5411EAC767300D9313F /* AppleDeviceAPI.swift */,
+				E34FC53F1EAC751000D9313F /* AppleDeviceRequest.swift */,
 			);
 			path = Networks;
 			sourceTree = "<group>";
