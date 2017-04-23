@@ -73,4 +73,12 @@ final class DeviceInfoViewController: UITableViewController, Storyboardable {
         ram.text = "Error"
         simCard.text = "Error"
     }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44
+    }
 }
