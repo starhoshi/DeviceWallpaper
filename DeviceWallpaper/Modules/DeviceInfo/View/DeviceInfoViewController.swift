@@ -16,6 +16,9 @@ final class DeviceInfoViewController: UITableViewController, Storyboardable {
     @IBOutlet weak var phoneName: UILabel!
     @IBOutlet weak var oSNumber: UILabel!
     @IBOutlet weak var model: UILabel!
+    @IBOutlet weak var releaseDate: UILabel!
+    @IBOutlet weak var ram: UILabel!
+    @IBOutlet weak var simCard: UILabel!
 
     // Extra Information
     @IBOutlet weak var userAgent: UILabel!
@@ -47,14 +50,26 @@ final class DeviceInfoViewController: UITableViewController, Storyboardable {
     func loadAppleDevice(model: DeviceModel) {
         SVProgressHUD.show()
         let targetDeviceRequest = AppleDeviceAPI.TargetDeviceRequest(type: model.type, target: model.version)
-        Session.shared.send(targetDeviceRequest) { result in
+        Session.shared.send(targetDeviceRequest) { [weak self] result in
             SVProgressHUD.dismiss()
             switch result {
             case .success(let targetDevice):
-                log?.info(targetDevice)
-            case .failure(let targetDevice):
-                log?.error(targetDevice)
+                self?.setInfo(targetDevice: targetDevice)
+            case .failure(_):
+                self?.setError()
             }
         }
+    }
+
+    func setInfo(targetDevice: TargetDevice) {
+        releaseDate.text = targetDevice.releaseDate
+        ram.text = targetDevice.ram ?? "No Data"
+        simCard.text = targetDevice.simCard ?? "No Data"
+    }
+
+    func setError() {
+        releaseDate.text = "Error"
+        ram.text = "Error"
+        simCard.text = "Error"
     }
 }

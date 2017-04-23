@@ -20,17 +20,8 @@ extension AppleDeviceRequest {
 }
 
 extension AppleDeviceRequest where Response: ImmutableMappable {
-    func mapping(from object: Any) throws -> Response {
-        guard let json = object as? [String: Any],
-            let response: Response = Mapper<Response>().map(JSON: json) else {
-                throw ResponseError.unexpectedObject(object)
-        }
-        log?.info("ObjectMapper response: \(response.toJSON())")
-        return response
-    }
-
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
-        return try mapping(from: object)
+        return try Response(JSONObject: object)
     }
 }
 
