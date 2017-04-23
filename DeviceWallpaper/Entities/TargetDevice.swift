@@ -14,7 +14,7 @@ final class TargetDevice: ImmutableMappable {
     let image: URL
     let display: String?
     let size: String?
-    let color: [String]
+    let color: [String]?
     let battery: String?
     let weight: String?
     let ram: String?
@@ -31,7 +31,7 @@ final class TargetDevice: ImmutableMappable {
         image = try map.value("image", using: URLTransform())
         display = try? map.value("display")
         size = try? map.value("size")
-        color = try map.value("color")
+        color = try? map.value("color")
         battery = try? map.value("battery")
         weight = try? map.value("weight")
         ram = try? map.value("ram")

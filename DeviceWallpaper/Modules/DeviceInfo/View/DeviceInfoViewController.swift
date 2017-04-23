@@ -55,7 +55,8 @@ final class DeviceInfoViewController: UITableViewController, Storyboardable {
             switch result {
             case .success(let targetDevice):
                 self?.setInfo(targetDevice: targetDevice)
-            case .failure(_):
+            case .failure(let e):
+                log?.warning(e)
                 self?.setError()
             }
         }
