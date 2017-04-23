@@ -19,6 +19,7 @@ struct DeviceModel {
     var modelName: String
     var systemVersion: SystemVersion
     var type: Type
+    var version: Version
     var userAgent: UserAgent
     var osName: String
     var hardware: String
@@ -34,6 +35,7 @@ struct DeviceModel {
         modelName = Device.version().modelName
         systemVersion = SystemVersion()
         type = Device.type()
+        version = Device.version()
         userAgent = UserAgent()
 
         var systemInfo = utsname()

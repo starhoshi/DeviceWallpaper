@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SVProgressHUD
+import APIKit
 
 final class DeviceInfoViewController: UITableViewController, Storyboardable {
 
@@ -27,6 +29,7 @@ final class DeviceInfoViewController: UITableViewController, Storyboardable {
     override func viewDidLoad() {
         super.viewDidLoad()
         let deviceModel = DeviceModel()
+        loadAppleDevice(model: deviceModel)
 
         phoneName.text = deviceModel.phoneName
         oSNumber.text = deviceModel.systemVersion.fullName
@@ -41,8 +44,17 @@ final class DeviceInfoViewController: UITableViewController, Storyboardable {
         type.text = deviceModel.type.rawValue
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func loadAppleDevice(model: DeviceModel) {
+        SVProgressHUD.show()
+        let targetDeviceRequest = AppleDeviceAPI.TargetDeviceRequest(type: model.type, target: model.version)
+        Session.shared.send(targetDeviceRequest) { result in
+            SVProgressHUD.dismiss()
+            switch result {
+            case .success(let targetDevice):
+                log?.info(targetDevice)
+            case .failure(let targetDevice):
+                log?.error(targetDevice)
+            }
+        }
     }
 }
