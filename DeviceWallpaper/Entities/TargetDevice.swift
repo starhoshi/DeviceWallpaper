@@ -44,14 +44,3 @@ final class TargetDevice: ImmutableMappable {
         releaseDate = try map.value("release_date")
     }
 }
-
-//battery:
-//weight:
-//ram:
-//voice_assistant:
-//rear_camera:
-//front_camera:
-//sim_card:
-//connector:
-//name:
-//release_date:
