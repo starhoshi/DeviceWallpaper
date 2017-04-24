@@ -220,8 +220,8 @@
 		E32B1CFD1EA0753A00F9BEF8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E330469C1EA71D7300D6B995 /* NormalView.swift */,
 				E3B9D0AB1EADE7E100312F28 /* DetailView.swift */,
+				E330469C1EA71D7300D6B995 /* NormalView.swift */,
 				E32B1D001EA0755900F9BEF8 /* SimpleView.swift */,
 				E32D05661E9F4705009C41D2 /* WallpaperViewController.swift */,
 			);
