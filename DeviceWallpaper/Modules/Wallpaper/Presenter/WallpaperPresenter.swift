@@ -40,6 +40,8 @@ extension WallpaperPresenter: WallpaperInteractorOutput {
             view?.showSimple(deviceModel: deviceModel, colorTheme: theme)
         case .normal(let theme):
             view?.showNormal(deviceModel: deviceModel, colorTheme: theme)
+        case .detail(let theme):
+            view?.showDetail(deviceModel: deviceModel, colorTheme: theme)
         }
     }
 

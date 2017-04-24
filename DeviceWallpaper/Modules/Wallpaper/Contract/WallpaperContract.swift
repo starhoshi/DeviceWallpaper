@@ -26,6 +26,7 @@ protocol WallpaperView: class {
     init(presenter: WallpaperPresentation)
     func showSimple(deviceModel: DeviceModel, colorTheme: ColorTheme)
     func showNormal(deviceModel: DeviceModel, colorTheme: ColorTheme)
+    func showDetail(deviceModel: DeviceModel, colorTheme: ColorTheme)
     func toUIImage() -> UIImage
 }
 

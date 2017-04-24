@@ -12,13 +12,19 @@ import UIKit.UIColor
 enum WallpapersType {
     case simple(ColorTheme)
     case normal(ColorTheme)
-//    case detail
+    case detail(ColorTheme)
 }
 
 extension WallpapersType {
     public static func toArray() -> [WallpapersType] {
-//        return [.simple, .normal, .detail]
-        return [.simple(.white), .simple(.black), .normal(.white), .normal(.black)]
+        return [
+            .simple(.white),
+            .simple(.black),
+            .normal(.white),
+            .normal(.black),
+            .detail(.white),
+            .detail(.black)
+        ]
     }
 }
 
@@ -29,8 +35,8 @@ extension WallpapersType {
             return "Simple Wallpaper (\(colorTheme.title))"
         case .normal(let colorTheme):
             return "Normal Wallpaper (\(colorTheme.title))"
-//        case .detail:
-//            return "Detail Wallpaper"
+        case .detail(let colorTheme):
+            return "Detail Wallpaper (\(colorTheme.title))"
         }
     }
 }

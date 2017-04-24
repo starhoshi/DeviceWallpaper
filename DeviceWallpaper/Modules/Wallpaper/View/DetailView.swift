@@ -1,8 +1,8 @@
 //
-//  NormalView.swift
+//  DetailView.swift
 //  DeviceWallpaper
 //
-//  Created by Kensuke Hoshikawa on 2017/04/19.
+//  Created by Kensuke Hoshikawa on 2017/04/24.
 //  Copyright © 2017年 star__hoshi. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-final class NormalView: UIView {
+final class DetailView: UIView {
     let osLabel: GradientLabel = {
         let height = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height) / 2
 
@@ -30,6 +30,26 @@ final class NormalView: UIView {
         label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.1
+
+        return label
+    }()
+
+    let releaseLevelLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .darkGray
+        label.font = UIFont(name: "AvenirNext-Medium", size: 20)
+        label.textAlignment = .center
+        label.numberOfLines = 0
+
+        return label
+    }()
+
+    let versionLevelLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .darkGray
+        label.font = UIFont(name: "AvenirNext-Medium", size: 20)
+        label.textAlignment = .center
+        label.numberOfLines = 0
 
         return label
     }()
@@ -62,7 +82,12 @@ final class NormalView: UIView {
         osLabel.text = deviceModel.systemVersion.fullName
         addSubview(osLabel)
         osLabel.snp.makeConstraints { make in
-            make.top.equalTo(0)
+            switch deviceModel.type {
+            case .iPad:
+                make.top.equalTo(0)
+            default:
+                make.top.equalTo(30)
+            }
             make.left.equalTo(8)
             make.right.equalTo(-8)
         }
@@ -74,7 +99,7 @@ final class NormalView: UIView {
             make.left.equalTo(8)
             make.right.equalTo(-8)
             make.height.equalTo(75)
-            make.top.equalTo(osLabel.snp.bottom).offset(8)
+            make.top.equalTo(osLabel.snp.bottom).offset(2)
         }
 
         addSubview(hardwareLabel)
@@ -100,6 +125,25 @@ final class NormalView: UIView {
             make.right.equalTo(-8)
             make.height.equalTo(24)
             make.bottom.equalTo(hardwareLabel.snp.top).offset(-16)
+        }
+
+        addSubview(releaseLevelLabel)
+        releaseLevelLabel.text = "Release Level: " + deviceModel.releaseLevel
+        releaseLevelLabel.textColor = colorTheme.fontColor
+        releaseLevelLabel.snp.makeConstraints { make in
+            make.left.equalTo(8)
+            make.right.equalTo(-8)
+            make.height.equalTo(24)
+            make.bottom.equalTo(phoneLabel.snp.top).offset(-16)
+        }
+
+        addSubview(versionLevelLabel)
+        versionLevelLabel.text = "Version Level: \n" + deviceModel.versionLevel
+        versionLevelLabel.textColor = colorTheme.fontColor
+        versionLevelLabel.snp.makeConstraints { make in
+            make.left.equalTo(8)
+            make.right.equalTo(-8)
+            make.bottom.equalTo(releaseLevelLabel.snp.top).offset(-16)
         }
     }
 
