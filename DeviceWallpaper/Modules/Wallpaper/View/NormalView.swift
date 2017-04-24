@@ -58,8 +58,8 @@ final class NormalView: UIView {
 
     init(with deviceModel: DeviceModel, colorTheme: ColorTheme) {
         super.init(frame: .zero)
-        backgroundColor = UIColor.white
-
+        backgroundColor = colorTheme.backgroundColor
+        
         osLabel.colors = colorTheme.gradiation
         osLabel.text = deviceModel.systemVersion.fullName
         addSubview(osLabel)

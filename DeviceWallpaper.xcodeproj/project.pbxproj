@@ -978,7 +978,7 @@
 			baseConfigurationReference = CF75D06F704A4A0FDEF4E4EF /* Pods-DeviceWallpaper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 201704241544;
 				DEVELOPMENT_TEAM = 5J5Q4ZGXZR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1003,7 +1003,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 201704241544;
 				DEVELOPMENT_TEAM = 5J5Q4ZGXZR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
