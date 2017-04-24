@@ -35,8 +35,6 @@
 		E34FC5311EAB40DB00D9313F /* DeviceInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34FC5301EAB40DB00D9313F /* DeviceInfoViewController.storyboard */; };
 		E34FC5331EAB436300D9313F /* NSObjectProtocol+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC5321EAB436300D9313F /* NSObjectProtocol+Ex.swift */; };
 		E34FC5351EAB43C600D9313F /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC5341EAB43C600D9313F /* Storyboardable.swift */; };
-		E34FC53C1EAB51CE00D9313F /* UserAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC53B1EAB51CE00D9313F /* UserAgent.swift */; };
-		E34FC53E1EAB538F00D9313F /* UIWebView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC53D1EAB538F00D9313F /* UIWebView+Ex.swift */; };
 		E34FC5401EAC751000D9313F /* AppleDeviceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC53F1EAC751000D9313F /* AppleDeviceRequest.swift */; };
 		E34FC5421EAC767300D9313F /* AppleDeviceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC5411EAC767300D9313F /* AppleDeviceAPI.swift */; };
 		E34FC5461EAC79B300D9313F /* TargetDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC5451EAC79B300D9313F /* TargetDevice.swift */; };
@@ -118,8 +116,6 @@
 		E34FC5301EAB40DB00D9313F /* DeviceInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DeviceInfoViewController.storyboard; sourceTree = "<group>"; };
 		E34FC5321EAB436300D9313F /* NSObjectProtocol+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObjectProtocol+Ex.swift"; sourceTree = "<group>"; };
 		E34FC5341EAB43C600D9313F /* Storyboardable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
-		E34FC53B1EAB51CE00D9313F /* UserAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAgent.swift; sourceTree = "<group>"; };
-		E34FC53D1EAB538F00D9313F /* UIWebView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+Ex.swift"; sourceTree = "<group>"; };
 		E34FC53F1EAC751000D9313F /* AppleDeviceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleDeviceRequest.swift; sourceTree = "<group>"; };
 		E34FC5411EAC767300D9313F /* AppleDeviceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleDeviceAPI.swift; sourceTree = "<group>"; };
 		E34FC5451EAC79B300D9313F /* TargetDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDevice.swift; sourceTree = "<group>"; };
@@ -514,7 +510,6 @@
 				E34FC5321EAB436300D9313F /* NSObjectProtocol+Ex.swift */,
 				E34FC5341EAB43C600D9313F /* Storyboardable.swift */,
 				E39C8C711EA61593008F5F8B /* UIView+Ex.swift */,
-				E34FC53D1EAB538F00D9313F /* UIWebView+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -536,7 +531,6 @@
 				E324C5201EA0E7A200654BC5 /* Device.swift */,
 				E3CF2C651EA3CF840098706F /* SystemVersion.swift */,
 				E34FC5451EAC79B300D9313F /* TargetDevice.swift */,
-				E34FC53B1EAB51CE00D9313F /* UserAgent.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -829,7 +823,6 @@
 				E350A8101E9C9C6E00CECF5E /* Log.swift in Sources */,
 				E32B1CFC1EA065AF00F9BEF8 /* WallpaperInteractor.swift in Sources */,
 				E32D05561E9CBB8B009C41D2 /* WallpaperListPresenter.swift in Sources */,
-				E34FC53C1EAB51CE00D9313F /* UserAgent.swift in Sources */,
 				E34FC5261EAB3FCB00D9313F /* DeviceInfoInteractor.swift in Sources */,
 				E32D05631E9F469A009C41D2 /* WallpaperContract.swift in Sources */,
 				E34FC5401EAC751000D9313F /* AppleDeviceRequest.swift in Sources */,
@@ -848,7 +841,6 @@
 				E32D055D1E9CD017009C41D2 /* WallpaperListContract.swift in Sources */,
 				E32D05671E9F4705009C41D2 /* WallpaperViewController.swift in Sources */,
 				E34FC5461EAC79B300D9313F /* TargetDevice.swift in Sources */,
-				E34FC53E1EAB538F00D9313F /* UIWebView+Ex.swift in Sources */,
 				E32D055F1E9CD497009C41D2 /* RootContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

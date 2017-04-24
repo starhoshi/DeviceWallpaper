@@ -32,19 +32,21 @@ final class SimpleView: UIView {
         return label
     }()
 
-    init(with deviceModel: DeviceModel) {
+    init(with deviceModel: DeviceModel, colorTheme: ColorTheme) {
         super.init(frame: .zero)
-        backgroundColor = UIColor.white
+        backgroundColor = colorTheme.backgroundColor
 
-        addSubview(osLabel)
+        osLabel.colors = colorTheme.gradiation
         osLabel.text = deviceModel.systemVersion.major
+        addSubview(osLabel)
         osLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().offset(-100)
         }
 
-        addSubview(nameLabel)
         nameLabel.text = deviceModel.modelName
+        nameLabel.textColor = colorTheme.fontColor
+        addSubview(nameLabel)
         nameLabel.snp.makeConstraints { make in
             make.left.right.equalTo(0)
             switch deviceModel.type {

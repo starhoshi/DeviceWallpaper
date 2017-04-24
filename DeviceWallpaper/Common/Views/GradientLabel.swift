@@ -15,6 +15,12 @@ final class GradientLabel: UILabel {
         backgroundColor = .clear
     }
 
+    var colors: [CGColor] = ColorTheme.white.gradiation {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+
     override func draw(_ rect: CGRect) {
 
         // begin new image context to let the superclass draw the text in (so we can use it as a mask)
@@ -42,7 +48,6 @@ final class GradientLabel: UILabel {
         ctx!.clip(to: bounds, mask: img!.cgImage!)
 
         // define your colors and locations
-        let colors = [UIColor.blue.cgColor, UIColor.cyan.cgColor, UIColor.green.cgColor]
         let locs: [CGFloat] = [0.2, 0.5, 0.8]
 
         // create your gradient

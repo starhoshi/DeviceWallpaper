@@ -36,10 +36,10 @@ final class WallpaperPresenter: WallpaperPresentation {
 extension WallpaperPresenter: WallpaperInteractorOutput {
     func didRetrieve(_ deviceModel: DeviceModel) {
         switch wallpaper {
-        case .simple:
-            view?.showSimple(deviceModel: deviceModel)
-        case .normal:
-            view?.showNormal(deviceModel: deviceModel)
+        case .simple(let theme):
+            view?.showSimple(deviceModel: deviceModel, colorTheme: theme)
+        case .normal(let theme):
+            view?.showNormal(deviceModel: deviceModel, colorTheme: theme)
         }
     }
 

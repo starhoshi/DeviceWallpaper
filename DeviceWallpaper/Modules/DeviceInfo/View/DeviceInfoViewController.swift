@@ -21,7 +21,6 @@ final class DeviceInfoViewController: UITableViewController, Storyboardable {
     @IBOutlet weak var simCard: UILabel!
 
     // Extra Information
-    @IBOutlet weak var userAgent: UILabel!
     @IBOutlet weak var hardware: UILabel!
     @IBOutlet weak var releaseLevel: UILabel!
     @IBOutlet weak var versionLevel: UILabel!
@@ -37,7 +36,6 @@ final class DeviceInfoViewController: UITableViewController, Storyboardable {
         phoneName.text = deviceModel.phoneName
         oSNumber.text = deviceModel.systemVersion.fullName
         model.text = deviceModel.modelName
-        userAgent.text = deviceModel.userAgent.value
 
         hardware.text = deviceModel.hardware
         releaseLevel.text = deviceModel.releaseLevel

@@ -7,29 +7,73 @@
 //
 
 import Foundation
+import UIKit.UIColor
 
-enum WallpapersType: Int {
-    case simple
-    case normal
+enum WallpapersType {
+    case simple(ColorTheme)
+    case normal(ColorTheme)
 //    case detail
 }
 
 extension WallpapersType {
     public static func toArray() -> [WallpapersType] {
 //        return [.simple, .normal, .detail]
-        return [.simple, .normal]
+        return [.simple(.white), .simple(.black), .normal(.white), .normal(.black)]
     }
 }
 
 extension WallpapersType {
     var title: String {
         switch self {
-        case .simple:
-            return "Simple Wallpaper"
-        case .normal:
-            return "Normal Wallpaper"
+        case .simple(let colorTheme):
+            return "Simple Wallpaper (\(colorTheme.title))"
+        case .normal(let colorTheme):
+            return "Normal Wallpaper (\(colorTheme.title))"
 //        case .detail:
 //            return "Detail Wallpaper"
+        }
+    }
+}
+
+enum ColorTheme {
+    case black
+    case white
+}
+
+extension ColorTheme {
+    var title: String {
+        switch self {
+        case .black:
+            return "Dark"
+        case .white:
+            return "Light"
+        }
+    }
+
+    var gradiation: [CGColor] {
+        switch self {
+        case .black:
+            return [UIColor.white.cgColor, UIColor.white.cgColor, UIColor.white.cgColor]
+        case .white:
+            return [UIColor.blue.cgColor, UIColor.cyan.cgColor, UIColor.green.cgColor]
+        }
+    }
+
+    var fontColor: UIColor {
+        switch self {
+        case .black:
+            return .white
+        case .white:
+            return .darkGray
+        }
+    }
+
+    var backgroundColor: UIColor {
+        switch self {
+        case .black:
+            return .darkGray
+        case .white:
+            return .white
         }
     }
 }

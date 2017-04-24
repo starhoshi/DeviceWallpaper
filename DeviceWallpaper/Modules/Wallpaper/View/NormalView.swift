@@ -56,12 +56,13 @@ final class NormalView: UIView {
         return label
     }()
 
-    init(with deviceModel: DeviceModel) {
+    init(with deviceModel: DeviceModel, colorTheme: ColorTheme) {
         super.init(frame: .zero)
         backgroundColor = UIColor.white
 
-        addSubview(osLabel)
+        osLabel.colors = colorTheme.gradiation
         osLabel.text = deviceModel.systemVersion.fullName
+        addSubview(osLabel)
         osLabel.snp.makeConstraints { make in
             make.left.equalTo(8)
             make.right.equalTo(-8)
@@ -70,6 +71,7 @@ final class NormalView: UIView {
 
         addSubview(nameLabel)
         nameLabel.text = deviceModel.modelName
+        nameLabel.textColor = colorTheme.fontColor
         nameLabel.snp.makeConstraints { make in
             make.left.equalTo(8)
             make.right.equalTo(-8)
@@ -79,6 +81,7 @@ final class NormalView: UIView {
 
         addSubview(hardwareLabel)
         hardwareLabel.text = "Model: " + deviceModel.hardware
+        hardwareLabel.textColor = colorTheme.fontColor
         hardwareLabel.snp.makeConstraints { make in
             make.left.equalTo(8)
             make.right.equalTo(-8)
@@ -93,6 +96,7 @@ final class NormalView: UIView {
 
         addSubview(phoneLabel)
         phoneLabel.text = "Name: " + deviceModel.phoneName
+        phoneLabel.textColor = colorTheme.fontColor
         phoneLabel.snp.makeConstraints { make in
             make.left.equalTo(8)
             make.right.equalTo(-8)
