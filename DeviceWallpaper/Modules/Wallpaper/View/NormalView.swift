@@ -62,7 +62,12 @@ final class NormalView: UIView {
         osLabel.text = deviceModel.systemVersion.fullName
         addSubview(osLabel)
         osLabel.snp.makeConstraints { make in
-            make.top.equalTo(0)
+            switch deviceModel.type {
+            case .iPad:
+                make.top.equalTo(0)
+            default:
+                make.top.equalTo(30)
+            }
             make.left.equalTo(8)
             make.right.equalTo(-8)
         }
