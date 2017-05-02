@@ -32,7 +32,7 @@ extension Size {
         }
     }
 
-    var screenSize: (width: Int, height: Int) {
+    var contentSize: (width: Int, height: Int) {
         switch self {
         case .screen3_5Inch:
             return (width: 320, height: 480)
@@ -41,13 +41,13 @@ extension Size {
         case .screen4_7Inch:
             return (width: 375, height: 667)
         case .screen5_5Inch:
-            return (width: 414, height: 736)
+            return (width: 414, height: 414)
         case .screen7_9Inch:
-            return (width: 768, height: 1024)
+            return (width: 768, height: 768)
         case .screen9_7Inch:
-            return (width: 768, height: 1024)
+            return (width: 768, height: 768)
         case .screen12_9Inch:
-            return (width: 1024, height: 1366)
+            return (width: 1024, height: 1024)
         case .unknownSize:
             return (width: 800, height: 800)
         }
