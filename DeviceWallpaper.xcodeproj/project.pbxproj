@@ -73,6 +73,7 @@
 		E3CF2C641EA3C4F00098706F /* Device.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CF2C631EA3C4F00098706F /* Device.framework */; };
 		E3CF2C661EA3CF840098706F /* SystemVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF2C651EA3CF840098706F /* SystemVersion.swift */; };
 		E3CF2C681EA3D5E00098706F /* DeviceVersion+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF2C671EA3D5E00098706F /* DeviceVersion+Ex.swift */; };
+		E3CFA44D1EB8481600CACBF9 /* DeviceSize+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CFA44C1EB8481600CACBF9 /* DeviceSize+Ex.swift */; };
 		E3DE48A21EA89263001A5E6A /* WallpaperListPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE48A11EA89263001A5E6A /* WallpaperListPresenterSpec.swift */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,7 @@
 		E3CF2C631EA3C4F00098706F /* Device.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Device.framework; path = Carthage/Build/iOS/Device.framework; sourceTree = "<group>"; };
 		E3CF2C651EA3CF840098706F /* SystemVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemVersion.swift; sourceTree = "<group>"; };
 		E3CF2C671EA3D5E00098706F /* DeviceVersion+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DeviceVersion+Ex.swift"; sourceTree = "<group>"; };
+		E3CFA44C1EB8481600CACBF9 /* DeviceSize+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DeviceSize+Ex.swift"; sourceTree = "<group>"; };
 		E3DE48A11EA89263001A5E6A /* WallpaperListPresenterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperListPresenterSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -509,6 +511,7 @@
 			children = (
 				E350A8121E9C9F0300CECF5E /* DefaultsKeys+Ex.swift */,
 				E34FC5471EAC823F00D9313F /* DeviceType+Ex.swift */,
+				E3CFA44C1EB8481600CACBF9 /* DeviceSize+Ex.swift */,
 				E3CF2C671EA3D5E00098706F /* DeviceVersion+Ex.swift */,
 				E34FC5321EAB436300D9313F /* NSObjectProtocol+Ex.swift */,
 				E34FC5341EAB43C600D9313F /* Storyboardable.swift */,
@@ -814,6 +817,7 @@
 				E34FC5481EAC823F00D9313F /* DeviceType+Ex.swift in Sources */,
 				E3CF2C681EA3D5E00098706F /* DeviceVersion+Ex.swift in Sources */,
 				E39C8C6E1EA486C3008F5F8B /* WallpaperDataManager.swift in Sources */,
+				E3CFA44D1EB8481600CACBF9 /* DeviceSize+Ex.swift in Sources */,
 				E379B4FB1E9CB07400D1CDEF /* RootRouter.swift in Sources */,
 				E32D055A1E9CBBD7009C41D2 /* WallpaperListViewController.swift in Sources */,
 				E34FC5241EAB3FC100D9313F /* DeviceInfoRouter.swift in Sources */,
