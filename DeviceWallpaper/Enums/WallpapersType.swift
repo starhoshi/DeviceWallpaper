@@ -18,12 +18,12 @@ enum WallpapersType {
 extension WallpapersType {
     public static func toArray() -> [WallpapersType] {
         return [
-            .simple(.white),
-            .simple(.black),
-            .normal(.white),
-            .normal(.black),
-            .detail(.white),
-            .detail(.black)
+                .simple(.white),
+                .simple(.black),
+                .normal(.white),
+                .normal(.black),
+                .detail(.white),
+                .detail(.black)
         ]
     }
 }
