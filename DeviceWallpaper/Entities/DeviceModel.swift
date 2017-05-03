@@ -20,6 +20,7 @@ struct DeviceModel {
     var systemVersion: SystemVersion
     var type: Type
     var version: Version
+    var size: Size
     var osName: String
     var hardware: String
     var releaseLevel: String
@@ -35,6 +36,7 @@ struct DeviceModel {
         systemVersion = SystemVersion()
         type = Device.type()
         version = Device.version()
+        size = Device.size()
 
         var systemInfo = utsname()
         uname(&systemInfo)
