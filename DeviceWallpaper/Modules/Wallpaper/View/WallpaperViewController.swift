@@ -16,12 +16,6 @@ final class WallpaperViewController: UIViewController {
             navigationController?.setNavigationBarHidden(barHidden, animated: true)
         }
     }
-    var wallpaper: WallpaperDrawUpView! {
-        didSet {
-            view = wallpaper
-        }
-    }
-
     init(presenter: WallpaperPresentation) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -58,23 +52,22 @@ extension WallpaperViewController: WallpaperView {
     func showSimple(deviceModel: DeviceModel, colorTheme: ColorTheme) {
         let simple = SimpleView(with: deviceModel, colorTheme: colorTheme)
         navigationItem.title = WallpapersType.simple(colorTheme).title
-//        wallpaper = simple
+        view = simple
     }
 
     func showNormal(deviceModel: DeviceModel, colorTheme: ColorTheme) {
         let normal = NormalView(with: deviceModel, colorTheme: colorTheme)
         navigationItem.title = WallpapersType.normal(colorTheme).title
-        wallpaper = normal
+        view = normal
     }
 
     func showDetail(deviceModel: DeviceModel, colorTheme: ColorTheme) {
         let detail = DetailView(with: deviceModel, colorTheme: colorTheme)
         navigationItem.title = WallpapersType.normal(colorTheme).title
-//        wallpaper = detail
+        view = detail
     }
 
     func toUIImage() -> UIImage {
-//        return view.snapshot()
-        return wallpaper.snapshot()
+        return view.snapshot()
     }
 }

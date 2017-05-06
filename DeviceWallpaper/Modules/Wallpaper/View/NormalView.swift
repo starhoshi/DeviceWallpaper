@@ -10,8 +10,12 @@ import Foundation
 import UIKit
 import SnapKit
 
-//final class NormalView: UIView {
-final class NormalView: WallpaperDrawUpView {
+final class NormalView: UIView {
+    let contentView: UIView = {
+        let view = UIView()
+        return view
+    }()
+
     let osLabel: GradientLabel = {
         let height = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height) / 2
 
@@ -56,8 +60,15 @@ final class NormalView: WallpaperDrawUpView {
     }()
 
     init(with deviceModel: DeviceModel, colorTheme: ColorTheme) {
-        super.init(size: deviceModel.size)
+        super.init(frame: .zero)
         backgroundColor = colorTheme.backgroundColor
+
+        addSubview(contentView)
+        contentView.snp.makeConstraints { make in
+            make.width.equalTo(deviceModel.size.contentSize.width)
+            make.height.equalTo(deviceModel.size.contentSize.height)
+            make.center.equalToSuperview()
+        }
 
         osLabel.colors = colorTheme.gradiation
         osLabel.text = deviceModel.systemVersion.fullName
