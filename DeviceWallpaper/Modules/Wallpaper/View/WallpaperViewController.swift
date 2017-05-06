@@ -55,6 +55,7 @@ extension WallpaperViewController: WallpaperView {
         let simple = SimpleView(with: deviceModel, colorTheme: colorTheme)
         navigationItem.title = WallpapersType.simple(colorTheme).title
         view = simple
+        wallpaper = simple
     }
 
     func showNormal(deviceModel: DeviceModel, colorTheme: ColorTheme) {

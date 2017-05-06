@@ -10,7 +10,17 @@ import Foundation
 import UIKit
 import SnapKit
 
-final class SimpleView: UIView {
+final class SimpleView: UIView, Wallpaperable {
+    let wallpaper: UIView = {
+        let view = UIView()
+        return view
+    }()
+
+    let contentView: UIView = {
+        let view = UIView()
+        return view
+    }()
+
     let osLabel: GradientLabel = {
         let width = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
         let osLabelWidth = width - (width * 0.3)
@@ -34,11 +44,26 @@ final class SimpleView: UIView {
 
     init(with deviceModel: DeviceModel, colorTheme: ColorTheme) {
         super.init(frame: .zero)
-        backgroundColor = colorTheme.backgroundColor
+
+        addSubview(wallpaper)
+        wallpaper.backgroundColor = colorTheme.backgroundColor
+        wallpaper.snp.makeConstraints { make in
+            make.width.equalTo(deviceModel.size.wallpaperSize.width)
+            make.height.equalTo(deviceModel.size.wallpaperSize.height)
+            make.center.equalToSuperview()
+        }
+
+        wallpaper.addSubview(contentView)
+        contentView.backgroundColor = colorTheme.backgroundColor
+        contentView.snp.makeConstraints { make in
+            make.width.equalTo(deviceModel.size.contentSize.width)
+            make.height.equalTo(deviceModel.size.contentSize.height)
+            make.center.equalToSuperview()
+        }
 
         osLabel.colors = colorTheme.gradiation
         osLabel.text = deviceModel.systemVersion.major
-        addSubview(osLabel)
+        contentView.addSubview(osLabel)
         osLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().offset(-100)
@@ -46,7 +71,7 @@ final class SimpleView: UIView {
 
         nameLabel.text = deviceModel.modelName
         nameLabel.textColor = colorTheme.fontColor
-        addSubview(nameLabel)
+        contentView.addSubview(nameLabel)
         nameLabel.snp.makeConstraints { make in
             make.left.right.equalTo(0)
             switch deviceModel.type {
