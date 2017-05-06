@@ -10,7 +10,17 @@ import Foundation
 import UIKit
 import SnapKit
 
-final class DetailView: UIView {
+final class DetailView: UIView, Wallpaperable {
+    let wallpaper: UIView = {
+        let view = UIView()
+        return view
+    }()
+
+    let contentView: UIView = {
+        let view = UIView()
+        return view
+    }()
+
     let osLabel: GradientLabel = {
         let height = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height) / 2
 
@@ -76,11 +86,26 @@ final class DetailView: UIView {
 
     init(with deviceModel: DeviceModel, colorTheme: ColorTheme) {
         super.init(frame: .zero)
-        backgroundColor = colorTheme.backgroundColor
+
+        addSubview(wallpaper)
+        wallpaper.backgroundColor = colorTheme.backgroundColor
+        wallpaper.snp.makeConstraints { make in
+            make.width.equalTo(deviceModel.size.wallpaperSize.width)
+            make.height.equalTo(deviceModel.size.wallpaperSize.height)
+            make.center.equalToSuperview()
+        }
+
+        wallpaper.addSubview(contentView)
+        contentView.backgroundColor = colorTheme.backgroundColor
+        contentView.snp.makeConstraints { make in
+            make.width.equalTo(deviceModel.size.contentSize.width)
+            make.height.equalTo(deviceModel.size.contentSize.height)
+            make.center.equalToSuperview()
+        }
 
         osLabel.colors = colorTheme.gradiation
         osLabel.text = deviceModel.systemVersion.fullName
-        addSubview(osLabel)
+        contentView.addSubview(osLabel)
         osLabel.snp.makeConstraints { make in
             switch deviceModel.type {
             case .iPad:
@@ -92,7 +117,7 @@ final class DetailView: UIView {
             make.right.equalTo(-8)
         }
 
-        addSubview(nameLabel)
+        contentView.addSubview(nameLabel)
         nameLabel.text = deviceModel.modelName
         nameLabel.textColor = colorTheme.fontColor
         nameLabel.snp.makeConstraints { make in
@@ -102,7 +127,7 @@ final class DetailView: UIView {
             make.top.equalTo(osLabel.snp.bottom).offset(2)
         }
 
-        addSubview(hardwareLabel)
+        contentView.addSubview(hardwareLabel)
         hardwareLabel.text = "Model: " + deviceModel.hardware
         hardwareLabel.textColor = colorTheme.fontColor
         hardwareLabel.snp.makeConstraints { make in
@@ -117,7 +142,7 @@ final class DetailView: UIView {
             }
         }
 
-        addSubview(phoneLabel)
+        contentView.addSubview(phoneLabel)
         phoneLabel.text = "Name: " + deviceModel.phoneName
         phoneLabel.textColor = colorTheme.fontColor
         phoneLabel.snp.makeConstraints { make in
@@ -127,7 +152,7 @@ final class DetailView: UIView {
             make.bottom.equalTo(hardwareLabel.snp.top).offset(-16)
         }
 
-        addSubview(releaseLevelLabel)
+        contentView.addSubview(releaseLevelLabel)
         releaseLevelLabel.text = "Release Level: " + deviceModel.releaseLevel
         releaseLevelLabel.textColor = colorTheme.fontColor
         releaseLevelLabel.snp.makeConstraints { make in
@@ -137,7 +162,7 @@ final class DetailView: UIView {
             make.bottom.equalTo(phoneLabel.snp.top).offset(-16)
         }
 
-        addSubview(versionLevelLabel)
+        contentView.addSubview(versionLevelLabel)
         versionLevelLabel.text = "Version Level: \n" + deviceModel.versionLevel
         versionLevelLabel.textColor = colorTheme.fontColor
         versionLevelLabel.snp.makeConstraints { make in

@@ -10,10 +10,6 @@ import Foundation
 import UIKit
 import SnapKit
 
-protocol Wallpaperable {
-    var wallpaper: UIView { get }
-}
-
 final class NormalView: UIView, Wallpaperable {
     let wallpaper: UIView = {
         let view = UIView()
@@ -70,8 +66,6 @@ final class NormalView: UIView, Wallpaperable {
 
     init(with deviceModel: DeviceModel, colorTheme: ColorTheme) {
         super.init(frame: .zero)
-
-        log?.warning(UIScreen.main.bounds)
 
         addSubview(wallpaper)
         wallpaper.backgroundColor = colorTheme.backgroundColor

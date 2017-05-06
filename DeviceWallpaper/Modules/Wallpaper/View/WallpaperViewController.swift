@@ -68,6 +68,7 @@ extension WallpaperViewController: WallpaperView {
         let detail = DetailView(with: deviceModel, colorTheme: colorTheme)
         navigationItem.title = WallpapersType.normal(colorTheme).title
         view = detail
+        wallpaper = detail
     }
 
     func toUIImage() -> UIImage {

@@ -50,7 +50,7 @@
 		E350A8281E9C9FBD00CECF5E /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81D1E9C9FBD00CECF5E /* SwiftyBeaver.framework */; };
 		E350A8291E9C9FBD00CECF5E /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81E1E9C9FBD00CECF5E /* SwiftyUserDefaults.framework */; };
 		E351D3FD1EA0DAAA000600A7 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351D3FC1EA0DAAA000600A7 /* GradientLabel.swift */; };
-		E36844291EB86CD900CBB3F3 /* WallpaperDrawUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36844281EB86CD900CBB3F3 /* WallpaperDrawUpView.swift */; };
+		E368442C1EBDAB4A00CBB3F3 /* Wallpaperable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368442B1EBDAB4A00CBB3F3 /* Wallpaperable.swift */; };
 		E379B4FB1E9CB07400D1CDEF /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E379B4FA1E9CB07400D1CDEF /* RootRouter.swift */; };
 		E3803A071E936CBF0024D76E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3803A061E936CBF0024D76E /* AppDelegate.swift */; };
 		E3803A0E1E936CBF0024D76E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3803A0D1E936CBF0024D76E /* Assets.xcassets */; };
@@ -137,7 +137,7 @@
 		E350A81D1E9C9FBD00CECF5E /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		E350A81E1E9C9FBD00CECF5E /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 		E351D3FC1EA0DAAA000600A7 /* GradientLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
-		E36844281EB86CD900CBB3F3 /* WallpaperDrawUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperDrawUpView.swift; sourceTree = "<group>"; };
+		E368442B1EBDAB4A00CBB3F3 /* Wallpaperable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wallpaperable.swift; sourceTree = "<group>"; };
 		E379B4FA1E9CB07400D1CDEF /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		E3803A031E936CBF0024D76E /* DeviceWallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceWallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3803A061E936CBF0024D76E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -244,6 +244,7 @@
 		E330469A1EA71D2100D6B995 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E368442A1EBDAB3F00CBB3F3 /* Protocols */,
 				E330469B1EA71D5C00D6B995 /* Views */,
 			);
 			path = Common;
@@ -253,7 +254,6 @@
 			isa = PBXGroup;
 			children = (
 				E351D3FC1EA0DAAA000600A7 /* GradientLabel.swift */,
-				E36844281EB86CD900CBB3F3 /* WallpaperDrawUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -343,6 +343,14 @@
 				5753D11FBB18425A9E087076 /* Pods-DeviceWallpaper.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E368442A1EBDAB3F00CBB3F3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E368442B1EBDAB4A00CBB3F3 /* Wallpaperable.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		E379B4F91E9CB03A00D1CDEF /* Root */ = {
@@ -828,7 +836,6 @@
 				E319E89B1E9CB3260082BFDF /* WallpaperListRouter.swift in Sources */,
 				E32B1D011EA0755900F9BEF8 /* SimpleView.swift in Sources */,
 				E3803A071E936CBF0024D76E /* AppDelegate.swift in Sources */,
-				E36844291EB86CD900CBB3F3 /* WallpaperDrawUpView.swift in Sources */,
 				E34FC52F1EAB402200D9313F /* DeviceInfoDataManager.swift in Sources */,
 				E34FC5351EAB43C600D9313F /* Storyboardable.swift in Sources */,
 				E350A8101E9C9C6E00CECF5E /* Log.swift in Sources */,
@@ -840,6 +847,7 @@
 				E351D3FD1EA0DAAA000600A7 /* GradientLabel.swift in Sources */,
 				E32D05581E9CBB9C009C41D2 /* WallpaperListInteractor.swift in Sources */,
 				E34FC51B1EAB3E7700D9313F /* DeviceInfoContract.swift in Sources */,
+				E368442C1EBDAB4A00CBB3F3 /* Wallpaperable.swift in Sources */,
 				E34FC5421EAC767300D9313F /* AppleDeviceAPI.swift in Sources */,
 				E32D05651E9F46F7009C41D2 /* WallpaperPresenter.swift in Sources */,
 				E3B9D0AC1EADE7E100312F28 /* DetailView.swift in Sources */,
