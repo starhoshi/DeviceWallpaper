@@ -3,7 +3,7 @@
   "commitish" : "1.2.1",
   "iOS" : [
     {
-      "hash" : "d6f430ea45a1a98983ca69d42434f487129ebd05a0535f64abe7cfaebb47781d",
+      "hash" : "45b271182dc93c9b57f99f54d5396971516da455b34d93a4e13a5eaec39afc63",
       "name" : "SwiftyBeaver"
     }
   ]

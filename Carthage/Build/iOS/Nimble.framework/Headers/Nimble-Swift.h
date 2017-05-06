@@ -173,6 +173,10 @@ SWIFT_CLASS("_TtC6Nimble14FailureMessage")
 @end
 
 
+@interface FailureMessage (SWIFT_EXTENSION(Nimble))
+@end
+
+
 /// Protocol for types that support only beEmpty(), haveCount() matchers
 SWIFT_PROTOCOL("_TtP6Nimble13NMBCollection_")
 @protocol NMBCollection
@@ -392,12 +396,12 @@ SWIFT_CLASS("_TtC6Nimble11NMBStringer")
 
 
 @interface NSDate (SWIFT_EXTENSION(Nimble))
-@property (nonatomic, readonly) double doubleValue;
+@property (nonatomic, readonly, copy) NSString * _Nonnull testDescription;
 @end
 
 
 @interface NSDate (SWIFT_EXTENSION(Nimble))
-@property (nonatomic, readonly, copy) NSString * _Nonnull testDescription;
+@property (nonatomic, readonly) double doubleValue;
 @end
 
 
@@ -441,11 +445,11 @@ SWIFT_CLASS("_TtC6Nimble11NMBStringer")
 @end
 
 
-@interface NSSet (SWIFT_EXTENSION(Nimble)) <NMBContainer>
+@interface NSSet (SWIFT_EXTENSION(Nimble)) <NMBCollection>
 @end
 
 
-@interface NSSet (SWIFT_EXTENSION(Nimble)) <NMBCollection>
+@interface NSSet (SWIFT_EXTENSION(Nimble)) <NMBContainer>
 @end
 
 

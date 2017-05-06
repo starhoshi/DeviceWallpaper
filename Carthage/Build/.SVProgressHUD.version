@@ -3,7 +3,7 @@
   "commitish" : "2.1.2",
   "iOS" : [
     {
-      "hash" : "51fda4f0e531d977eaf0c10cab1395e0ac7a1ab33a71337c639531d4668e282b",
+      "hash" : "a467d6bdcf688083583b7f09fff69e3d651a1fb80363a830ebfc75ead3961c68",
       "name" : "SVProgressHUD"
     }
   ]
