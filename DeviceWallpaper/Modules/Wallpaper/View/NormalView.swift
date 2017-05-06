@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 import SnapKit
 
-final class NormalView: UIView {
+//final class NormalView: UIView {
+final class NormalView: WallpaperDrawUpView {
     let osLabel: GradientLabel = {
         let height = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height) / 2
 
@@ -55,12 +56,12 @@ final class NormalView: UIView {
     }()
 
     init(with deviceModel: DeviceModel, colorTheme: ColorTheme) {
-        super.init(frame: .zero)
+        super.init(size: deviceModel.size)
         backgroundColor = colorTheme.backgroundColor
 
         osLabel.colors = colorTheme.gradiation
         osLabel.text = deviceModel.systemVersion.fullName
-        addSubview(osLabel)
+        contentView.addSubview(osLabel)
         osLabel.snp.makeConstraints { make in
             switch deviceModel.type {
             case .iPad:
@@ -72,7 +73,7 @@ final class NormalView: UIView {
             make.right.equalTo(-8)
         }
 
-        addSubview(nameLabel)
+        contentView.addSubview(nameLabel)
         nameLabel.text = deviceModel.modelName
         nameLabel.textColor = colorTheme.fontColor
         nameLabel.snp.makeConstraints { make in
@@ -82,7 +83,7 @@ final class NormalView: UIView {
             make.top.equalTo(osLabel.snp.bottom).offset(8)
         }
 
-        addSubview(hardwareLabel)
+        contentView.addSubview(hardwareLabel)
         hardwareLabel.text = "Model: " + deviceModel.hardware
         hardwareLabel.textColor = colorTheme.fontColor
         hardwareLabel.snp.makeConstraints { make in
@@ -97,7 +98,7 @@ final class NormalView: UIView {
             }
         }
 
-        addSubview(phoneLabel)
+        contentView.addSubview(phoneLabel)
         phoneLabel.text = "Name: " + deviceModel.phoneName
         phoneLabel.textColor = colorTheme.fontColor
         phoneLabel.snp.makeConstraints { make in
