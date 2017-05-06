@@ -25,7 +25,7 @@ final class DetailView: UIView, Wallpaperable {
         let height = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height) / 2
 
         let label = GradientLabel(frame: CGRect(x: 0, y: 0, width: 0, height: height))
-        label.font = UIFont(name: "HelveticaNeue-UltraLight", size: CGFloat(height * 0.8))
+        label.font = UIFont(name: "HelveticaNeue-UltraLight", size: CGFloat(height * 0.7))
         label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.1
