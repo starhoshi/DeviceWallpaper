@@ -20,11 +20,11 @@ extension Size {
         case .screen4_7Inch:
             return (width: 426, height: 804)
         case .screen5_5Inch:
-            return (width: 888, height: 888)
+            return (width: 466, height: 888)
         case .screen7_9Inch:
             return (width: 631, height: 631)
         case .screen9_7Inch:
-            return (width: 1271, height: 1271)
+            return (width: 1024, height: 1024)
         case .screen12_9Inch:
             return (width: 1366, height: 1366)
         case .unknownSize:
@@ -41,7 +41,7 @@ extension Size {
         case .screen4_7Inch:
             return (width: 375, height: 667)
         case .screen5_5Inch:
-            return (width: 414, height: 414)
+            return (width: 414, height: 736)
         case .screen7_9Inch:
             return (width: 768, height: 768)
         case .screen9_7Inch:

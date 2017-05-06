@@ -16,6 +16,8 @@ final class WallpaperViewController: UIViewController {
             navigationController?.setNavigationBarHidden(barHidden, animated: true)
         }
     }
+    var wallpaper: Wallpaperable!
+
     init(presenter: WallpaperPresentation) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -59,6 +61,7 @@ extension WallpaperViewController: WallpaperView {
         let normal = NormalView(with: deviceModel, colorTheme: colorTheme)
         navigationItem.title = WallpapersType.normal(colorTheme).title
         view = normal
+        wallpaper = normal
     }
 
     func showDetail(deviceModel: DeviceModel, colorTheme: ColorTheme) {
@@ -68,6 +71,7 @@ extension WallpaperViewController: WallpaperView {
     }
 
     func toUIImage() -> UIImage {
-        return view.snapshot()
+//        return view.snapshot()
+        return wallpaper.wallpaper.snapshot()
     }
 }
