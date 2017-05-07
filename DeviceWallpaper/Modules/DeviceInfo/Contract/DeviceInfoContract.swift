@@ -20,7 +20,7 @@ protocol DeviceInfoView: class {
     var loading: Bool { get set }
 
     func show(deviceInfo: DeviceInfo)
-    func showErrorDeviceInfo()
+    func showDeviceInfoError()
     func show(deviceModel: DeviceModel)
 }
 
@@ -42,6 +42,6 @@ protocol DeviceInfoUseCase: class {
 
 protocol DeviceInfoInteractorOutput: class {
     func didRetrieve(_ deviceInfo: DeviceInfo)
-    func onErrorDeviceInfo()
+    func didRetrieveDeviceInfoFail()
     func didRetrieve(_ deviceModel: DeviceModel)
 }

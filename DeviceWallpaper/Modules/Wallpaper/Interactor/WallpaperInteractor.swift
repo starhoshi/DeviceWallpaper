@@ -12,10 +12,9 @@ import Photos
 
 final class WallpaperInteractor: NSObject, WallpaperUseCase {
     weak var output: WallpaperInteractorOutput?
-    var dataManager: WallpaperDataManagerInputProtocol?
 
     func retrieveDeviceModel() {
-        dataManager?.retrieve()
+        output?.didRetrieve(DeviceModel())
     }
 
     func save(image: UIImage) {
@@ -35,12 +34,5 @@ final class WallpaperInteractor: NSObject, WallpaperUseCase {
         } else {
             output?.didSaveImage()
         }
-    }
-}
-
-extension WallpaperInteractor: WallpaperDataManagerOutputProtocol {
-    func onRetrieved(_ deviceModel: DeviceModel) {
-        log?.debug(deviceModel)
-        output?.didRetrieve(deviceModel)
     }
 }

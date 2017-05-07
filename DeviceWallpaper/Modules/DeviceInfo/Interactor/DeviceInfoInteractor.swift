@@ -24,7 +24,7 @@ final class DeviceInfoInteractor: DeviceInfoUseCase {
                 self?.output?.didRetrieve(deviceInfo)
             case .failure(let e):
                 log?.warning(e)
-                self?.output?.onErrorDeviceInfo()
+                self?.output?.didRetrieveDeviceInfoFail()
             }
         }
     }

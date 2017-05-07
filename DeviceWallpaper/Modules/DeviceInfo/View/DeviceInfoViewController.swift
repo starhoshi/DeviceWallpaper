@@ -59,7 +59,7 @@ extension DeviceInfoViewController: DeviceInfoView {
         simCard.text = deviceInfo.simCard ?? "No Data"
     }
 
-    func showErrorDeviceInfo() {
+    func showDeviceInfoError() {
         releaseDate.text = "Error"
         ram.text = "Error"
         simCard.text = "Error"

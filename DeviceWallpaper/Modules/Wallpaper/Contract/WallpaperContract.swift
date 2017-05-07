@@ -43,7 +43,6 @@ protocol WallpaperPresentation: class {
 
 protocol WallpaperUseCase: class {
     weak var output: WallpaperInteractorOutput? { get set }
-    var dataManager: WallpaperDataManagerInputProtocol? { get set }
 
     func retrieveDeviceModel()
     func save(image: UIImage)
@@ -54,16 +53,4 @@ protocol WallpaperInteractorOutput: class {
     func notAuthorizedPhotoLibrary()
     func didSaveImage()
     func didSaveImageFail(with message: String)
-}
-
-protocol WallpaperDataManagerInputProtocol: class {
-    var requestHandler: WallpaperDataManagerOutputProtocol? { get set }
-
-    // INTERACTOR -> DATAMANAGER
-    func retrieve()
-}
-
-protocol WallpaperDataManagerOutputProtocol: class {
-    // DATAMANAGER -> INTERACTOR
-    func onRetrieved(_ deviceModel: DeviceModel)
 }

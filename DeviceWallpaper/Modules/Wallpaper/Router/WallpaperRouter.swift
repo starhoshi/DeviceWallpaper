@@ -16,14 +16,10 @@ final class WallpaperRouter: WallpaperWireframe {
         let router = WallpaperRouter()
         let presenter = WallpaperPresenter(interactor: interactor, router: router, wallpaper: wallpaper)
         let view = WallpaperViewController(presenter: presenter)
-        let dataManager = WallpaperDataManager()
 
         presenter.view = view
 
-        interactor.dataManager = dataManager
         interactor.output = presenter
-
-        dataManager.requestHandler = interactor
 
         router.viewController = view
 

@@ -30,9 +30,9 @@ extension DeviceInfoPresenter: DeviceInfoInteractorOutput {
         view?.show(deviceInfo: deviceInfo)
     }
 
-    func onErrorDeviceInfo() {
+    func didRetrieveDeviceInfoFail() {
         view?.loading = false
-        view?.showErrorDeviceInfo()
+        view?.showDeviceInfoError()
     }
 
     func didRetrieve(_ deviceModel: DeviceModel) {
