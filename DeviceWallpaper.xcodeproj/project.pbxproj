@@ -352,6 +352,7 @@
 				E368442B1EBDAB4A00CBB3F3 /* Wallpaperable.swift */,
 			);
 			name = Protocols;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		E379B4F91E9CB03A00D1CDEF /* Root */ = {
