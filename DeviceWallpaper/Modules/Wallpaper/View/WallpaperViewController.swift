@@ -16,7 +16,11 @@ final class WallpaperViewController: UIViewController {
             navigationController?.setNavigationBarHidden(barHidden, animated: true)
         }
     }
-    var wallpaper: Wallpaperable!
+    var wallpaper: WallpaperDrawUpView? {
+        didSet {
+            view = wallpaper
+        }
+    }
 
     init(presenter: WallpaperPresentation) {
         self.presenter = presenter
@@ -73,7 +77,6 @@ extension WallpaperViewController: WallpaperView {
     }
 
     func toUIImage() -> UIImage {
-//        return view.snapshot()
-        return wallpaper.wallpaper.snapshot()
+        return wallpaper!.snapshot()
     }
 }
