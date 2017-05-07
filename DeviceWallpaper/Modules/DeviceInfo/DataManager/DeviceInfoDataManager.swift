@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class DeviceInfoDataManager: DeviceInfoDataManagerInputProtocol {
+    var requestHandler: DeviceInfoDataManagerOutputProtocol?
+
+    func retrieve() {
+//        requestHandler?.onRetrieved(DeviceInfo())
+    }
+}

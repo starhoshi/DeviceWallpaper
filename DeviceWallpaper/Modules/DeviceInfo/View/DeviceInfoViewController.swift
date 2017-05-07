@@ -11,6 +11,7 @@ import SVProgressHUD
 import APIKit
 
 final class DeviceInfoViewController: UITableViewController, Storyboardable {
+    var presenter: DeviceInfoPresentation!
 
     // Device Information
     @IBOutlet weak var phoneName: UILabel!
@@ -78,5 +79,10 @@ final class DeviceInfoViewController: UITableViewController, Storyboardable {
 
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
+    }
+}
+
+extension DeviceInfoViewController: DeviceInfoView {
+    func show(deviceInfo: DeviceInfo) {
     }
 }

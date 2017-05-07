@@ -16,10 +16,9 @@ protocol DeviceInfoWireframe: class {
 }
 
 protocol DeviceInfoView: class {
-    var presenter: DeviceInfoPresentation { get }
+    var presenter: DeviceInfoPresentation! { get }
 
-    init(presenter: DeviceInfoPresentation)
-    func show(deviceModel: DeviceModel)
+    func show(deviceInfo: DeviceInfo)
 }
 
 protocol DeviceInfoPresentation: class {
@@ -34,12 +33,13 @@ protocol DeviceInfoPresentation: class {
 
 protocol DeviceInfoUseCase: class {
     weak var output: DeviceInfoInteractorOutput? { get set }
+    var dataManager: DeviceInfoDataManagerInputProtocol? { get set }
 
-    func retrieveDeviceModel()
+    func retrieveDeviceInfo()
 }
 
 protocol DeviceInfoInteractorOutput: class {
-    func didRetrieve(_ deviceModel: DeviceModel)
+    func didRetrieve(_ deviceInfo: DeviceInfo)
 }
 
 protocol DeviceInfoDataManagerInputProtocol: class {
@@ -51,5 +51,5 @@ protocol DeviceInfoDataManagerInputProtocol: class {
 
 protocol DeviceInfoDataManagerOutputProtocol: class {
     // DATAMANAGER -> INTERACTOR
-    func onRetrieved(_ deviceModel: DeviceModel)
+    func onRetrieved(_ deviceInfo: DeviceInfo)
 }

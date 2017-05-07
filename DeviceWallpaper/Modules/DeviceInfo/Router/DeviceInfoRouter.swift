@@ -13,23 +13,23 @@ final class DeviceInfoRouter: DeviceInfoWireframe {
     weak var viewController: UIViewController?
 
     static func assembleModule() -> UIViewController {
-//        let interactor = WallpaperInteractor()
-//        let router = WallpaperRouter()
-//        let presenter = WallpaperPresenter(interactor: interactor, router: router, wallpaper: wallpaper)
+        let interactor = DeviceInfoInteractor()
+        let router = DeviceInfoRouter()
+        let presenter = DeviceInfoPresenter(interactor: interactor, router: router)
         let view = DeviceInfoViewController.instantiate()
-//        let view = WallpaperViewController(presenter: presenter)
-//        let dataManager = WallpaperDataManager()
-//
-//        presenter.view = view
-//
-//        interactor.dataManager = dataManager
-//        interactor.output = presenter
-//
-//        dataManager.requestHandler = interactor
-//
-//        router.viewController = view
+        view.presenter = presenter
+
+        let dataManager = DeviceInfoDataManager()
+
+        presenter.view = view
+
+        interactor.dataManager = dataManager
+        interactor.output = presenter
+
+        dataManager.requestHandler = interactor
+
+        router.viewController = view
 
         return view
     }
-
 }

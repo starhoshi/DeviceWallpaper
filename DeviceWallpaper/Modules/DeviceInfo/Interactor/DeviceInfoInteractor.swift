@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+final class DeviceInfoInteractor: DeviceInfoUseCase {
+    weak var output: DeviceInfoInteractorOutput?
+    var dataManager: DeviceInfoDataManagerInputProtocol?
+
+    func retrieveDeviceInfo() {
+
+    }
+}
+
+extension DeviceInfoInteractor: DeviceInfoDataManagerOutputProtocol {
+    func onRetrieved(_ deviceInfo: DeviceInfo) {
+        log?.debug(deviceInfo)
+        output?.didRetrieve(deviceInfo)
+    }
+}
