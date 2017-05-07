@@ -45,9 +45,7 @@
 		E350A8211E9C9FBD00CECF5E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A8161E9C9FBD00CECF5E /* Result.framework */; };
 		E350A8251E9C9FBD00CECF5E /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81A1E9C9FBD00CECF5E /* SnapKit.framework */; };
 		E350A8261E9C9FBD00CECF5E /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81B1E9C9FBD00CECF5E /* SVProgressHUD.framework */; };
-		E350A8271E9C9FBD00CECF5E /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81C1E9C9FBD00CECF5E /* SwiftDate.framework */; };
 		E350A8281E9C9FBD00CECF5E /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81D1E9C9FBD00CECF5E /* SwiftyBeaver.framework */; };
-		E350A8291E9C9FBD00CECF5E /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A81E1E9C9FBD00CECF5E /* SwiftyUserDefaults.framework */; };
 		E351D3FD1EA0DAAA000600A7 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351D3FC1EA0DAAA000600A7 /* GradientLabel.swift */; };
 		E368442C1EBDAB4A00CBB3F3 /* Wallpaperable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E368442B1EBDAB4A00CBB3F3 /* Wallpaperable.swift */; };
 		E379B4FB1E9CB07400D1CDEF /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E379B4FA1E9CB07400D1CDEF /* RootRouter.swift */; };
@@ -170,9 +168,7 @@
 				E350A8251E9C9FBD00CECF5E /* SnapKit.framework in Frameworks */,
 				E350A8261E9C9FBD00CECF5E /* SVProgressHUD.framework in Frameworks */,
 				E3CF2C641EA3C4F00098706F /* Device.framework in Frameworks */,
-				E350A8271E9C9FBD00CECF5E /* SwiftDate.framework in Frameworks */,
 				E350A8281E9C9FBD00CECF5E /* SwiftyBeaver.framework in Frameworks */,
-				E350A8291E9C9FBD00CECF5E /* SwiftyUserDefaults.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,9 +741,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftDate.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
@@ -782,9 +776,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftDate.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
