@@ -25,7 +25,7 @@ final class AppleDeviceAPI {
         }
 
         // MARK: RequestType
-        typealias Response = TargetDevice
+        typealias Response = DeviceInfo
 
         var method: HTTPMethod {
             return .get

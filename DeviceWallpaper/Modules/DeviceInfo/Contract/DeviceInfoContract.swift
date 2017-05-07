@@ -41,3 +41,15 @@ protocol DeviceInfoUseCase: class {
 protocol DeviceInfoInteractorOutput: class {
     func didRetrieve(_ deviceModel: DeviceModel)
 }
+
+protocol DeviceInfoDataManagerInputProtocol: class {
+    var requestHandler: DeviceInfoDataManagerOutputProtocol? { get set }
+
+    // INTERACTOR -> DATAMANAGER
+    func retrieve()
+}
+
+protocol DeviceInfoDataManagerOutputProtocol: class {
+    // DATAMANAGER -> INTERACTOR
+    func onRetrieved(_ deviceModel: DeviceModel)
+}

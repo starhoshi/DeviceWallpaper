@@ -51,8 +51,8 @@ final class DeviceInfoViewController: UITableViewController, Storyboardable {
         Session.shared.send(targetDeviceRequest) { [weak self] result in
             SVProgressHUD.dismiss()
             switch result {
-            case .success(let targetDevice):
-                self?.setInfo(targetDevice: targetDevice)
+            case .success(let deviceInfo):
+                self?.set(deviceInfo: deviceInfo)
             case .failure(let e):
                 log?.warning(e)
                 self?.setError()
@@ -60,10 +60,10 @@ final class DeviceInfoViewController: UITableViewController, Storyboardable {
         }
     }
 
-    func setInfo(targetDevice: TargetDevice) {
-        releaseDate.text = targetDevice.releaseDate
-        ram.text = targetDevice.ram ?? "No Data"
-        simCard.text = targetDevice.simCard ?? "No Data"
+    func set(deviceInfo: DeviceInfo) {
+        releaseDate.text = deviceInfo.releaseDate
+        ram.text = deviceInfo.ram ?? "No Data"
+        simCard.text = deviceInfo.simCard ?? "No Data"
     }
 
     func setError() {

@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-final class TargetDevice: ImmutableMappable {
+final class DeviceInfo: ImmutableMappable {
     let url: URL
     let image: URL
     let display: String?
