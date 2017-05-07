@@ -12,6 +12,15 @@ import APIKit
 
 final class DeviceInfoViewController: UITableViewController, Storyboardable {
     var presenter: DeviceInfoPresentation!
+    var loading: Bool = false {
+        didSet {
+            if loading {
+                SVProgressHUD.show()
+            } else {
+                SVProgressHUD.dismiss()
+            }
+        }
+    }
 
     // Device Information
     @IBOutlet weak var phoneName: UILabel!
@@ -31,46 +40,7 @@ final class DeviceInfoViewController: UITableViewController, Storyboardable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let deviceModel = DeviceModel()
-        loadAppleDevice(model: deviceModel)
-
-        phoneName.text = deviceModel.phoneName
-        oSNumber.text = deviceModel.systemVersion.fullName
-        model.text = deviceModel.modelName
-
-        hardware.text = deviceModel.hardware
-        releaseLevel.text = deviceModel.releaseLevel
-        versionLevel.text = deviceModel.versionLevel
-        multiTaskEnabled.text = deviceModel.multiTaskEnabled ? "YES" : "NO"
-        oSName.text = deviceModel.osName
-        type.text = deviceModel.type.rawValue
-    }
-
-    func loadAppleDevice(model: DeviceModel) {
-        SVProgressHUD.show()
-        let targetDeviceRequest = AppleDeviceAPI.TargetDeviceRequest(type: model.type, target: model.version)
-        Session.shared.send(targetDeviceRequest) { [weak self] result in
-            SVProgressHUD.dismiss()
-            switch result {
-            case .success(let deviceInfo):
-                self?.set(deviceInfo: deviceInfo)
-            case .failure(let e):
-                log?.warning(e)
-                self?.setError()
-            }
-        }
-    }
-
-    func set(deviceInfo: DeviceInfo) {
-        releaseDate.text = deviceInfo.releaseDate
-        ram.text = deviceInfo.ram ?? "No Data"
-        simCard.text = deviceInfo.simCard ?? "No Data"
-    }
-
-    func setError() {
-        releaseDate.text = "Error"
-        ram.text = "Error"
-        simCard.text = "Error"
+        presenter.viewDidLoad()
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -84,5 +54,27 @@ final class DeviceInfoViewController: UITableViewController, Storyboardable {
 
 extension DeviceInfoViewController: DeviceInfoView {
     func show(deviceInfo: DeviceInfo) {
+        releaseDate.text = deviceInfo.releaseDate
+        ram.text = deviceInfo.ram ?? "No Data"
+        simCard.text = deviceInfo.simCard ?? "No Data"
+    }
+
+    func showErrorDeviceInfo() {
+        releaseDate.text = "Error"
+        ram.text = "Error"
+        simCard.text = "Error"
+    }
+
+    func show(deviceModel: DeviceModel) {
+        phoneName.text = deviceModel.phoneName
+        oSNumber.text = deviceModel.systemVersion.fullName
+        model.text = deviceModel.modelName
+
+        hardware.text = deviceModel.hardware
+        releaseLevel.text = deviceModel.releaseLevel
+        versionLevel.text = deviceModel.versionLevel
+        multiTaskEnabled.text = deviceModel.multiTaskEnabled ? "YES" : "NO"
+        oSName.text = deviceModel.osName
+        type.text = deviceModel.type.rawValue
     }
 }

@@ -19,12 +19,23 @@ final class DeviceInfoPresenter: DeviceInfoPresentation {
     }
 
     func viewDidLoad() {
-
+        view?.loading = true
+        interactor.retrieve()
     }
 }
 
 extension DeviceInfoPresenter: DeviceInfoInteractorOutput {
     func didRetrieve(_ deviceInfo: DeviceInfo) {
+        view?.loading = false
+        view?.show(deviceInfo: deviceInfo)
+    }
 
+    func onErrorDeviceInfo() {
+        view?.loading = false
+        view?.showErrorDeviceInfo()
+    }
+
+    func didRetrieve(_ deviceModel: DeviceModel) {
+        view?.show(deviceModel: deviceModel)
     }
 }

@@ -7,19 +7,25 @@
 //
 
 import Foundation
+import APIKit
 
 final class DeviceInfoInteractor: DeviceInfoUseCase {
     weak var output: DeviceInfoInteractorOutput?
-    var dataManager: DeviceInfoDataManagerInputProtocol?
 
-    func retrieveDeviceInfo() {
+    func retrieve() {
+        let deviceModel = DeviceModel()
+        output?.didRetrieve(deviceModel)
 
-    }
-}
-
-extension DeviceInfoInteractor: DeviceInfoDataManagerOutputProtocol {
-    func onRetrieved(_ deviceInfo: DeviceInfo) {
-        log?.debug(deviceInfo)
-        output?.didRetrieve(deviceInfo)
+        let targetDeviceRequest = AppleDeviceAPI.TargetDeviceRequest(type: deviceModel.type, target: deviceModel.version)
+        Session.shared.send(targetDeviceRequest) { [weak self] result in
+            switch result {
+            case .success(let deviceInfo):
+                log?.info(deviceInfo)
+                self?.output?.didRetrieve(deviceInfo)
+            case .failure(let e):
+                log?.warning(e)
+                self?.output?.onErrorDeviceInfo()
+            }
+        }
     }
 }

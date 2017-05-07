@@ -19,14 +19,9 @@ final class DeviceInfoRouter: DeviceInfoWireframe {
         let view = DeviceInfoViewController.instantiate()
         view.presenter = presenter
 
-        let dataManager = DeviceInfoDataManager()
-
         presenter.view = view
 
-        interactor.dataManager = dataManager
         interactor.output = presenter
-
-        dataManager.requestHandler = interactor
 
         router.viewController = view
 
