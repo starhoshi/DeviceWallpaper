@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyUserDefaults
 
 @UIApplicationMain
 class AppDelegate: UIResponder {
@@ -16,18 +15,9 @@ class AppDelegate: UIResponder {
 
 extension AppDelegate: UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        initializeApplicationIfFirstStart()
-
         window = UIWindow(frame: UIScreen.main.bounds)
         RootRouter().presentArticlesScreen(in: window!)
 
         return true
-    }
-
-    private func initializeApplicationIfFirstStart() {
-        if !Defaults[.initialized] {
-            Defaults[.colorTheme] = .white
-            Defaults[.initialized] = true
-        }
     }
 }

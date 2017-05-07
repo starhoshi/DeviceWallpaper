@@ -40,7 +40,6 @@
 		E34FC5461EAC79B300D9313F /* TargetDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC5451EAC79B300D9313F /* TargetDevice.swift */; };
 		E34FC5481EAC823F00D9313F /* DeviceType+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34FC5471EAC823F00D9313F /* DeviceType+Ex.swift */; };
 		E350A8101E9C9C6E00CECF5E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E350A80F1E9C9C6E00CECF5E /* Log.swift */; };
-		E350A8131E9C9F0300CECF5E /* DefaultsKeys+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E350A8121E9C9F0300CECF5E /* DefaultsKeys+Ex.swift */; };
 		E350A81F1E9C9FBD00CECF5E /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A8141E9C9FBD00CECF5E /* APIKit.framework */; };
 		E350A8201E9C9FBD00CECF5E /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A8151E9C9FBD00CECF5E /* ObjectMapper.framework */; };
 		E350A8211E9C9FBD00CECF5E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E350A8161E9C9FBD00CECF5E /* Result.framework */; };
@@ -124,7 +123,6 @@
 		E34FC5451EAC79B300D9313F /* TargetDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDevice.swift; sourceTree = "<group>"; };
 		E34FC5471EAC823F00D9313F /* DeviceType+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DeviceType+Ex.swift"; sourceTree = "<group>"; };
 		E350A80F1E9C9C6E00CECF5E /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		E350A8121E9C9F0300CECF5E /* DefaultsKeys+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DefaultsKeys+Ex.swift"; sourceTree = "<group>"; };
 		E350A8141E9C9FBD00CECF5E /* APIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIKit.framework; path = Carthage/Build/iOS/APIKit.framework; sourceTree = "<group>"; };
 		E350A8151E9C9FBD00CECF5E /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		E350A8161E9C9FBD00CECF5E /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
@@ -351,7 +349,6 @@
 			children = (
 				E368442B1EBDAB4A00CBB3F3 /* Wallpaperable.swift */,
 			);
-			name = Protocols;
 			path = Protocols;
 			sourceTree = "<group>";
 		};
@@ -522,7 +519,6 @@
 		E393D7101E9C8AD4001CC93D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E350A8121E9C9F0300CECF5E /* DefaultsKeys+Ex.swift */,
 				E3CFA44C1EB8481600CACBF9 /* DeviceSize+Ex.swift */,
 				E34FC5471EAC823F00D9313F /* DeviceType+Ex.swift */,
 				E3CF2C671EA3D5E00098706F /* DeviceVersion+Ex.swift */,
@@ -856,7 +852,6 @@
 				E324C5211EA0E7A200654BC5 /* DeviceModel.swift in Sources */,
 				E34FC52D1EAB401800D9313F /* DeviceInfoPresenter.swift in Sources */,
 				E34FC5331EAB436300D9313F /* NSObjectProtocol+Ex.swift in Sources */,
-				E350A8131E9C9F0300CECF5E /* DefaultsKeys+Ex.swift in Sources */,
 				E32D05611E9CE499009C41D2 /* WallpapersType.swift in Sources */,
 				E34FC52A1EAB3FE800D9313F /* DeviceInfoViewController.swift in Sources */,
 				E32D055D1E9CD017009C41D2 /* WallpaperListContract.swift in Sources */,
