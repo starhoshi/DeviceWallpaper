@@ -1,9 +1,9 @@
 {
-  "xcodeVersion" : "Xcode 8.3.1\nBuild version 8E1000a",
+  "xcodeVersion" : "Xcode 8.3.2\nBuild version 8E2002",
   "commitish" : "3.0.1",
   "iOS" : [
     {
-      "hash" : "022ffd12f97d2bc31d0a72431e6c7b1cfd844191efa64c7f08807c0f0e2e7a12",
+      "hash" : "a5d8a3ba155b435d388b04042d13752916c1f9967d87197b93eba8a02278236d",
       "name" : "Device"
     }
   ]
