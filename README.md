@@ -16,7 +16,7 @@ If you have a lot of test devices, it is useful to display the device name and O
     * ~~DataManager~~
 
 This application does not using DataManager.  
-I thind DataManager is over-engineering.
+I think DataManager is over-engineering.
 
 ### Reference
 
