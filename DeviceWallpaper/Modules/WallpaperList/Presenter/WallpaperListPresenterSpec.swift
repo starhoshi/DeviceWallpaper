@@ -33,7 +33,7 @@ class WallpaperListPresenterSpec: QuickSpec {
         describe("didSelect(wallpaper: WallpapersType)") {
             beforeEach {
                 router.presentWasCalled = false
-                presenter.didSelect(wallpaper: .normal)
+                presenter.didSelect(wallpaper: .normal(.white))
             }
             it("present(for wallpaper: WallpapersType) is called") {
                 expect(router.presentWasCalled).to(beTrue())

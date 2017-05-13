@@ -13,9 +13,14 @@ import UIKit.UIViewController
 final class MockWallpaperListWireframe: WallpaperListWireframe {
     weak var viewController: UIViewController?
     var presentWasCalled = false
+    var presentDeviceInfoWasCalled = false
 
     func present(for wallpaper: WallpapersType) {
         presentWasCalled = true
+    }
+
+    func presentDeviceInfo() {
+        presentDeviceInfoWasCalled = true
     }
 
     static func assembleModule() -> UIViewController {
@@ -41,6 +46,7 @@ final class MockWallpaperListPresenter: WallpaperListPresentation {
     var router: WallpaperListWireframe
     var viewDidLoadWasCalled = false
     var didSelectWasCalled = false
+    var didTapDeviceInfoWasCalled = false
 
     init(interactor: WallpaperListUseCase, router: WallpaperListWireframe) {
         self.interactor = interactor
@@ -51,6 +57,9 @@ final class MockWallpaperListPresenter: WallpaperListPresentation {
     }
     func didSelect(wallpaper: WallpapersType) {
         didSelectWasCalled = true
+    }
+    func didTapDeviceInfo() {
+        didTapDeviceInfoWasCalled = true
     }
 }
 

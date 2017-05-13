@@ -9,7 +9,7 @@
 import Foundation
 import UIKit.UIColor
 
-enum WallpapersType {
+enum WallpapersType: Equatable {
     case simple(ColorTheme)
     case normal(ColorTheme)
     case detail(ColorTheme)
@@ -25,6 +25,19 @@ extension WallpapersType {
                 .detail(.white),
                 .detail(.black)
         ]
+    }
+}
+
+func == (lhs: WallpapersType, rhs: WallpapersType) -> Bool {
+    switch (lhs, rhs) {
+    case (.simple(let lhsNext), .simple(let rhsNext)):
+        return lhsNext == rhsNext
+    case (.normal(let lhsNext), .normal(let rhsNext)):
+        return lhsNext == rhsNext
+    case (.detail(let lhsNext), .detail(let rhsNext)):
+        return lhsNext == rhsNext
+    default:
+        return false
     }
 }
 

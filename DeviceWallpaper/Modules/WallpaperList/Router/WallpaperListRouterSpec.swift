@@ -28,7 +28,7 @@ class WallpaperListRouterSpec: QuickSpec {
 
         describe("present(for wallpaper: WallpapersType)") {
             beforeEach {
-                router.present(for: .normal)
+                router.present(for: .normal(.white))
             }
             it("pushed WallpaperViewController") {
                 expect(navivation.pushedViewController).to(beAnInstanceOf(WallpaperViewController.self))
