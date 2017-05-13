@@ -5,6 +5,8 @@
 This application can output your device information as wallpaper.  
 If you have a lot of test devices, it is useful to display the device name and OS number on the wallpaper.
 
+![Screen\.gif \(346×620\)](https://raw.githubusercontent.com/starhoshi/DeviceWallpaper/master/Screen.gif)
+
 ## VIPER Architecture
 
 * Module
