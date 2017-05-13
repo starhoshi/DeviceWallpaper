@@ -3,7 +3,7 @@
 [DeviceWallpaper - App Store](https://itunes.apple.com/jp/app/devicewallpaper/id1226955020?mt=8)
 
 This application can output your device information as wallpaper.  
-If you have a lot of validation devices, it is useful to display the device name and OS number on the wallpaper.
+If you have a lot of test devices, it is useful to display the device name and OS number on the wallpaper.
 
 ## VIPER Architecture
 
