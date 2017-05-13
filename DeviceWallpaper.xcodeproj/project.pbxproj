@@ -110,7 +110,7 @@
 		E34FC52C1EAB401800D9313F /* DeviceInfoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfoPresenter.swift; sourceTree = "<group>"; };
 		E34FC5301EAB40DB00D9313F /* DeviceInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DeviceInfoViewController.storyboard; sourceTree = "<group>"; };
 		E34FC5321EAB436300D9313F /* NSObjectProtocol+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObjectProtocol+Ex.swift"; sourceTree = "<group>"; };
-		E34FC5341EAB43C600D9313F /* Storyboardable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Storyboardable.swift; path = ../../Extensions/Storyboardable.swift; sourceTree = "<group>"; };
+		E34FC5341EAB43C600D9313F /* Storyboardable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Storyboardable.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		E34FC53F1EAC751000D9313F /* AppleDeviceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleDeviceRequest.swift; sourceTree = "<group>"; };
 		E34FC5411EAC767300D9313F /* AppleDeviceAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleDeviceAPI.swift; sourceTree = "<group>"; };
 		E34FC5451EAC79B300D9313F /* DeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
