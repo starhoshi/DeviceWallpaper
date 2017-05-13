@@ -40,6 +40,16 @@ class WallpaperListPresenterSpec: QuickSpec {
             }
         }
 
+        describe("didTapDeviceInfo") {
+            beforeEach {
+                router.presentDeviceInfoWasCalled = false
+                presenter.didTapDeviceInfo()
+            }
+            it("present(for wallpaper: WallpapersType) is called") {
+                expect(router.presentDeviceInfoWasCalled).to(beTrue())
+            }
+        }
+
         describe("wallpapersFetched(_ wallpapers: [WallpapersType])") {
             beforeEach {
                 view.showWallpapersWasCalled = false
