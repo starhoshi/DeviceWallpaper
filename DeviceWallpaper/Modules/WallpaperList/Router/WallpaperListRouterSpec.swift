@@ -34,5 +34,14 @@ class WallpaperListRouterSpec: QuickSpec {
                 expect(navivation.pushedViewController).to(beAnInstanceOf(WallpaperViewController.self))
             }
         }
+
+        describe("presentDeviceInfo") {
+            beforeEach {
+                router.presentDeviceInfo()
+            }
+            it("pushed WallpaperViewController") {
+                expect(navivation.pushedViewController).to(beAnInstanceOf(DeviceInfoViewController.self))
+            }
+        }
     }
 }
