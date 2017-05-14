@@ -1,6 +1,9 @@
 # DeviceWallpaper
 
-[DeviceWallpaper - App Store](https://itunes.apple.com/jp/app/devicewallpaper/id1226955020?mt=8)
+[![Build Status](https://travis-ci.org/starhoshi/DeviceWallpaper.svg?branch=master)](https://travis-ci.org/starhoshi/DeviceWallpaper)
+
+
+[![Build Status](https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg)](https://itunes.apple.com/us/app/devicewallpaper/id1226955020?mt=8)
 
 This application can output your device information as wallpaper.  
 If you have a lot of test devices, it is useful to display the device name and OS number on the wallpaper.
