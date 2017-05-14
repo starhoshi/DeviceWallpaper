@@ -1,5 +1,5 @@
 osx_image: xcode8.3
 language: swift
 script:
-  - fastlane test
+  - bundle exec fastlane test --verbose
 
