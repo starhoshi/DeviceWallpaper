@@ -14,7 +14,7 @@ class WallpaperListRouterSpec: QuickSpec {
     override func spec() {
         let router = WallpaperListRouter()
         let view = UIViewController()
-        let navivation = MockNavigationController(rootViewController: view)
+        let navigation = MockNavigationController(rootViewController: view)
         beforeEach {
             router.viewController = view
         }
@@ -31,7 +31,7 @@ class WallpaperListRouterSpec: QuickSpec {
                 router.present(for: .normal(.white))
             }
             it("pushed WallpaperViewController") {
-                expect(navivation.pushedViewController).to(beAnInstanceOf(WallpaperViewController.self))
+                expect(navigation.pushedViewController).to(beAnInstanceOf(WallpaperViewController.self))
             }
         }
 
@@ -40,7 +40,7 @@ class WallpaperListRouterSpec: QuickSpec {
                 router.presentDeviceInfo()
             }
             it("pushed WallpaperViewController") {
-                expect(navivation.pushedViewController).to(beAnInstanceOf(DeviceInfoViewController.self))
+                expect(navigation.pushedViewController).to(beAnInstanceOf(DeviceInfoViewController.self))
             }
         }
     }
