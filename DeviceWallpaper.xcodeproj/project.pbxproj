@@ -68,6 +68,7 @@
 		E3CF2C681EA3D5E00098706F /* DeviceVersion+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF2C671EA3D5E00098706F /* DeviceVersion+Ex.swift */; };
 		E3CFA44D1EB8481600CACBF9 /* DeviceSize+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CFA44C1EB8481600CACBF9 /* DeviceSize+Ex.swift */; };
 		E3DE48A21EA89263001A5E6A /* WallpaperListPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DE48A11EA89263001A5E6A /* WallpaperListPresenterSpec.swift */; };
+		E3EC98971EC819C400F26904 /* MockWallpaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EC98951EC819BA00F26904 /* MockWallpaper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,7 @@
 		E3CF2C671EA3D5E00098706F /* DeviceVersion+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DeviceVersion+Ex.swift"; sourceTree = "<group>"; };
 		E3CFA44C1EB8481600CACBF9 /* DeviceSize+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DeviceSize+Ex.swift"; sourceTree = "<group>"; };
 		E3DE48A11EA89263001A5E6A /* WallpaperListPresenterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperListPresenterSpec.swift; sourceTree = "<group>"; };
+		E3EC98951EC819BA00F26904 /* MockWallpaper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockWallpaper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -436,6 +438,7 @@
 		E38AF1C91EA7C47A00A14EB0 /* Contract */ = {
 			isa = PBXGroup;
 			children = (
+				E3EC98951EC819BA00F26904 /* MockWallpaper.swift */,
 				E32D05621E9F469A009C41D2 /* WallpaperContract.swift */,
 			);
 			path = Contract;
@@ -828,6 +831,7 @@
 				E338DC281EAA24AA00536908 /* MockNavigationController.swift in Sources */,
 				E34FC5031EA8FD9100D9313F /* WallpaperListRouterSpec.swift in Sources */,
 				E3DE48A21EA89263001A5E6A /* WallpaperListPresenterSpec.swift in Sources */,
+				E3EC98971EC819C400F26904 /* MockWallpaper.swift in Sources */,
 				E3B8CE2E1EA8877E00FDB599 /* WallpaperListInteractorSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
