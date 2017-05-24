@@ -15,7 +15,7 @@ final class MockWallpaperListWireframe: WallpaperListWireframe {
     var presentWasCalled = false
     var presentDeviceInfoWasCalled = false
 
-    func present(for wallpaper: WallpapersType) {
+    func present(for wallpaper: WallpaperType) {
         presentWasCalled = true
     }
 
@@ -35,7 +35,7 @@ final class MockWallpaperListView: WallpaperListView {
     init(presenter: WallpaperListPresentation) {
         self.presenter = presenter
     }
-    func show(wallpapers: [WallpapersType]) {
+    func show(wallpapers: [WallpaperType]) {
         showWallpapersWasCalled = true
     }
 }
@@ -55,7 +55,7 @@ final class MockWallpaperListPresenter: WallpaperListPresentation {
     func viewDidLoad() {
         viewDidLoadWasCalled = true
     }
-    func didSelect(wallpaper: WallpapersType) {
+    func didSelect(wallpaper: WallpaperType) {
         didSelectWasCalled = true
     }
     func didTapDeviceInfo() {
@@ -73,9 +73,9 @@ final class MockWallpaperListUseCase: WallpaperListUseCase {
 }
 
 class MockWallpaperListInteractorOutput: WallpaperListInteractorOutput {
-    var wallpapers: [WallpapersType]?
+    var wallpapers: [WallpaperType]?
 
-    func wallpapersFetched(_ wallpapers: [WallpapersType]) {
+    func wallpapersFetched(_ wallpapers: [WallpaperType]) {
         self.wallpapers = wallpapers
     }
 }

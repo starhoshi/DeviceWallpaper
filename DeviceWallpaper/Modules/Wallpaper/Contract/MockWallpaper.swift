@@ -36,7 +36,7 @@ final class MockWallpaperWireframe: WallpaperWireframe {
         presentSavedFailureDialogMessage = message
     }
 
-    static func assembleModule(wallpaper: WallpapersType) -> UIViewController {
+    static func assembleModule(wallpaper: WallpaperType) -> UIViewController {
         return UIViewController()
     }
 }
@@ -72,7 +72,7 @@ final class MockWallpaperPresenter: WallpaperPresentation {
     var viewDidLoadWasCalled = false
     var didTapActionButtonWasCalled = false
 
-    init(interactor: WallpaperUseCase, router: WallpaperWireframe, wallpaper: WallpapersType) {
+    init(interactor: WallpaperUseCase, router: WallpaperWireframe, wallpaper: WallpaperType) {
         self.interactor = interactor
         self.router = router
     }

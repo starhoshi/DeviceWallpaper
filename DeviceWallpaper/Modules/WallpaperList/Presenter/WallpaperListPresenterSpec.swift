@@ -30,12 +30,12 @@ class WallpaperListPresenterSpec: QuickSpec {
             }
         }
 
-        describe("didSelect(wallpaper: WallpapersType)") {
+        describe("didSelect(wallpaper: WallpaperType)") {
             beforeEach {
                 router.presentWasCalled = false
                 presenter.didSelect(wallpaper: .normal(.white))
             }
-            it("present(for wallpaper: WallpapersType) is called") {
+            it("present(for wallpaper: WallpaperType) is called") {
                 expect(router.presentWasCalled).to(beTrue())
             }
         }
@@ -45,15 +45,15 @@ class WallpaperListPresenterSpec: QuickSpec {
                 router.presentDeviceInfoWasCalled = false
                 presenter.didTapDeviceInfo()
             }
-            it("present(for wallpaper: WallpapersType) is called") {
+            it("present(for wallpaper: WallpaperType) is called") {
                 expect(router.presentDeviceInfoWasCalled).to(beTrue())
             }
         }
 
-        describe("wallpapersFetched(_ wallpapers: [WallpapersType])") {
+        describe("wallpapersFetched(_ wallpapers: [WallpaperType])") {
             beforeEach {
                 view.showWallpapersWasCalled = false
-                presenter.wallpapersFetched(WallpapersType.toArray())
+                presenter.wallpapersFetched(WallpaperType.toArray())
             }
             it("view.show(wallpapers: wallpapers) is called") {
                 expect(view.showWallpapersWasCalled).to(beTrue())

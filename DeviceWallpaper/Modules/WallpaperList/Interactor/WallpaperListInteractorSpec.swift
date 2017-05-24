@@ -22,7 +22,7 @@ class WallpaperListInteractorSpec: QuickSpec {
                 interactor.fetchWallpapers()
             }
             it("return wallpapers") {
-                expect(output.wallpapers).to(equal(WallpapersType.toArray()))
+                expect(output.wallpapers).to(equal(WallpaperType.toArray()))
             }
         }
     }
