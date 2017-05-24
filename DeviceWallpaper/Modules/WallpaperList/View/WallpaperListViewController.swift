@@ -11,7 +11,7 @@ import UIKit
 final class WallpaperListViewController: UIViewController {
     let tableView = UITableView(frame: .zero, style: .plain)
     let presenter: WallpaperListPresentation
-    var wallpapers: [WallpapersType] = [] {
+    var wallpapers: [WallpaperType] = [] {
         didSet {
             tableView.reloadData()
         }
@@ -55,7 +55,7 @@ final class WallpaperListViewController: UIViewController {
 }
 
 extension WallpaperListViewController: WallpaperListView {
-    func show(wallpapers: [WallpapersType]) {
+    func show(wallpapers: [WallpaperType]) {
         self.wallpapers = wallpapers
     }
 }

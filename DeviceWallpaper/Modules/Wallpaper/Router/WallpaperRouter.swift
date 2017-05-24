@@ -11,7 +11,7 @@ import UIKit.UIViewController
 
 final class WallpaperRouter: WallpaperWireframe {
     weak var viewController: UIViewController?
-    static func assembleModule(wallpaper: WallpapersType) -> UIViewController {
+    static func assembleModule(wallpaper: WallpaperType) -> UIViewController {
         let interactor = WallpaperInteractor()
         let router = WallpaperRouter()
         let presenter = WallpaperPresenter(interactor: interactor, router: router, wallpaper: wallpaper)

@@ -12,7 +12,7 @@ import UIKit.UIViewController
 protocol WallpaperListWireframe: class {
     weak var viewController: UIViewController? { get set }
 
-    func present(for wallpaper: WallpapersType)
+    func present(for wallpaper: WallpaperType)
     func presentDeviceInfo()
 
     static func assembleModule() -> UIViewController
@@ -22,7 +22,7 @@ protocol WallpaperListView: class {
     var presenter: WallpaperListPresentation { get }
 
     init(presenter: WallpaperListPresentation)
-    func show(wallpapers: [WallpapersType])
+    func show(wallpapers: [WallpaperType])
 }
 
 protocol WallpaperListPresentation: class {
@@ -32,7 +32,7 @@ protocol WallpaperListPresentation: class {
 
     init(interactor: WallpaperListUseCase, router: WallpaperListWireframe)
     func viewDidLoad()
-    func didSelect(wallpaper: WallpapersType)
+    func didSelect(wallpaper: WallpaperType)
     func didTapDeviceInfo()
 }
 
@@ -43,5 +43,5 @@ protocol WallpaperListUseCase: class {
 }
 
 protocol WallpaperListInteractorOutput: class {
-    func wallpapersFetched(_ wallpapers: [WallpapersType])
+    func wallpapersFetched(_ wallpapers: [WallpaperType])
 }

@@ -13,7 +13,7 @@ final class WallpaperListPresenter: WallpaperListPresentation {
     let interactor: WallpaperListUseCase
     let router: WallpaperListWireframe
 
-    var wallpapers: [WallpapersType] = [] {
+    var wallpapers: [WallpaperType] = [] {
         didSet {
             view?.show(wallpapers: wallpapers)
         }
@@ -28,7 +28,7 @@ final class WallpaperListPresenter: WallpaperListPresentation {
         interactor.fetchWallpapers()
     }
 
-    func didSelect(wallpaper: WallpapersType) {
+    func didSelect(wallpaper: WallpaperType) {
         router.present(for: wallpaper)
     }
 
@@ -38,7 +38,7 @@ final class WallpaperListPresenter: WallpaperListPresentation {
 }
 
 extension WallpaperListPresenter: WallpaperListInteractorOutput {
-    func wallpapersFetched(_ wallpapers: [WallpapersType]) {
+    func wallpapersFetched(_ wallpapers: [WallpaperType]) {
         self.wallpapers = wallpapers
     }
 }

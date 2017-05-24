@@ -9,14 +9,14 @@
 import Foundation
 import UIKit.UIColor
 
-enum WallpapersType: Equatable {
+enum WallpaperType: Equatable {
     case simple(ColorTheme)
     case normal(ColorTheme)
     case detail(ColorTheme)
 }
 
-extension WallpapersType {
-    public static func toArray() -> [WallpapersType] {
+extension WallpaperType {
+    public static func toArray() -> [WallpaperType] {
         return [
                 .simple(.white),
                 .simple(.black),
@@ -28,7 +28,7 @@ extension WallpapersType {
     }
 }
 
-func == (lhs: WallpapersType, rhs: WallpapersType) -> Bool {
+func == (lhs: WallpaperType, rhs: WallpaperType) -> Bool {
     switch (lhs, rhs) {
     case (.simple(let lhsNext), .simple(let rhsNext)):
         return lhsNext == rhsNext
@@ -41,7 +41,7 @@ func == (lhs: WallpapersType, rhs: WallpapersType) -> Bool {
     }
 }
 
-extension WallpapersType {
+extension WallpaperType {
     var title: String {
         switch self {
         case .simple(let colorTheme):

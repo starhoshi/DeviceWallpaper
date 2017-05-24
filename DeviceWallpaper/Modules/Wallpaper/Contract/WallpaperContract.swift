@@ -17,7 +17,7 @@ protocol WallpaperWireframe: class {
     func presentAuthorizationDialog()
     func presentSavedSuccessDialog()
     func presentSavedFailureDialog(with message: String)
-    static func assembleModule(wallpaper: WallpapersType) -> UIViewController
+    static func assembleModule(wallpaper: WallpaperType) -> UIViewController
 }
 
 protocol WallpaperView: class {
@@ -35,7 +35,7 @@ protocol WallpaperPresentation: class {
     var interactor: WallpaperUseCase { get }
     var router: WallpaperWireframe { get }
 
-    init(interactor: WallpaperUseCase, router: WallpaperWireframe, wallpaper: WallpapersType)
+    init(interactor: WallpaperUseCase, router: WallpaperWireframe, wallpaper: WallpaperType)
 
     func viewDidLoad()
     func didTapActionButton()

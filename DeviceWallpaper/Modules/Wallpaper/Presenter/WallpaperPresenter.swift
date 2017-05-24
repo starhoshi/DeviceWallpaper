@@ -12,9 +12,9 @@ final class WallpaperPresenter: WallpaperPresentation {
     weak var view: WallpaperView?
     let interactor: WallpaperUseCase
     let router: WallpaperWireframe
-    let wallpaper: WallpapersType
+    let wallpaper: WallpaperType
 
-    init(interactor: WallpaperUseCase, router: WallpaperWireframe, wallpaper: WallpapersType) {
+    init(interactor: WallpaperUseCase, router: WallpaperWireframe, wallpaper: WallpaperType) {
         self.interactor = interactor
         self.router = router
         self.wallpaper = wallpaper

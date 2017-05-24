@@ -57,19 +57,19 @@ final class WallpaperViewController: UIViewController {
 extension WallpaperViewController: WallpaperView {
     func showSimple(deviceModel: DeviceModel, colorTheme: ColorTheme) {
         let simple = SimpleView(with: deviceModel, colorTheme: colorTheme)
-        navigationItem.title = WallpapersType.simple(colorTheme).title
+        navigationItem.title = WallpaperType.simple(colorTheme).title
         wallpaper = simple
     }
 
     func showNormal(deviceModel: DeviceModel, colorTheme: ColorTheme) {
         let normal = NormalView(with: deviceModel, colorTheme: colorTheme)
-        navigationItem.title = WallpapersType.normal(colorTheme).title
+        navigationItem.title = WallpaperType.normal(colorTheme).title
         wallpaper = normal
     }
 
     func showDetail(deviceModel: DeviceModel, colorTheme: ColorTheme) {
         let detail = DetailView(with: deviceModel, colorTheme: colorTheme)
-        navigationItem.title = WallpapersType.normal(colorTheme).title
+        navigationItem.title = WallpaperType.normal(colorTheme).title
         wallpaper = detail
     }
 
